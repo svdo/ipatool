@@ -137,6 +137,8 @@ ipatool_resign() {
 	if ( ! test -f "$absprofile" ); then
 		fatal "$absprofile: file not found"
 	fi
+	keychain="`security default-keychain|sed 's/[ \"]//g'`"
+	security show-keychain-info $keychain > /dev/null 2>&1 || security unlock-keychain "$keychain"
 	ipatool_resign_execute "$absipa" "$absprofile" "$newBundle" || fatal "resign failed"
 	resigned_ipa="`dirname $absipa`/`basename $ipa .ipa`_resigned.ipa"
 	mv "$extracted_ipa/resigned.zip" "$resigned_ipa"
@@ -169,7 +171,11 @@ ipatool_resign_execute() {
 	fi
 	
 	SigningCertName="`ipatool_extract_signing_authority $absprofile`"
-	codesign -f -vv -s "$SigningCertName" -i $BundleID "$AppInternalName" || fatal "codesign failed"
+	if ( test "$bundleId" != "" -a "$bundleId" != "$OrgBundleID" ); then
+		codesign -f -vv -s "$SigningCertName" -i $BundleID "$AppInternalName" || fatal "codesign failed"
+	else
+		codesign -f -vv -s "$SigningCertName" "$AppInternalName" || fatal "codesign failed"
+	fi
 
 	cd ..
 	zip -r -q "$extracted_ipa/resigned.zip" . || fatal "Could not compress new ipa"
