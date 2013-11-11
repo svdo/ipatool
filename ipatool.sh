@@ -26,6 +26,8 @@ usage() {
 	echo ""
 	echo "Available options:"
 	echo "  info [default]  Shows high level info about the IPA"
+	echo "  version         Shows the version number (CFBundleShortVersionString)"
+	echo "  build           Shows the build number (CFBundleVersion)"
 	echo "  extract-certs   Extracts certificates used for code signing and writes them"
 	echo "                  to files in the current working directory."
 	echo "  expiration      Shows expiration date of the embedded provisioning profile"
@@ -204,6 +206,14 @@ case $command in
 info)
 	extract_ipa "$ipa" || fatal "Failed to extract IPA"
 	ipatool_info "$ipa"
+	;;
+version)
+	extract_ipa "$ipa" || fatal "Failed to extract IPA"
+	ipatool_bundle_info CFBundleShortVersionString
+	;;
+build)
+	extract_ipa "$ipa" || fatal "Failed to extract IPA"
+	ipatool_bundle_info CFBundleVersion
 	;;
 resign)
 	extract_ipa "$ipa" || fatal "Failed to extract IPA"
