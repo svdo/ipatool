@@ -11,13 +11,20 @@ scriptName="`basename $0`"
 absScriptDir="`cd $scriptDir; pwd`"
 
 fatal() {
-        echo "[fatal] $1" 1>&2
-        delete_temps
-        exit 1
+	echo "[fatal] $1" 1>&2
+	delete_temps
+	exit 1
 }
 
 absPath() {
-        echo `cd $1; pwd`
+	case "$1" in
+		/*)
+			printf "%s\n" "$1"
+			;;
+		*)
+			printf "%s\n" "$PWD/$1"
+			;;
+	esac;
 }
 
 usage() {
@@ -42,7 +49,7 @@ extracted_ipa=""
 
 extract_ipa() {
 	ipa="$1"
-	absipa="`absPath $PWD`/$ipa"
+	absipa="`absPath $ipa`"
 	if ( ! test -f "$absipa" ); then
 		fatal "$absipa: file not found"
 	fi
@@ -134,7 +141,7 @@ ipatool_resign() {
 		fatal "New provisioning profile is not given on command line."
 	fi
 	
-	absipa="`absPath $PWD`/$ipa"
+	absipa="`absPath $ipa`"
 	absprofile="`absPath $PWD`/$newProfile"
 	if ( ! test -f "$absprofile" ); then
 		fatal "$absprofile: file not found"
