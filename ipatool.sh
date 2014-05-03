@@ -181,7 +181,7 @@ ipatool_resign_execute() {
 	
 	SigningCertName="`ipatool_extract_signing_authority $absprofile`"
 	if ( test "$bundleId" != "" -a "$bundleId" != "$OrgBundleID" ); then
-		codesign -f -vv -s "$SigningCertName" -i $BundleID "$AppInternalName" || fatal "codesign failed"
+		codesign -f -vv -s "$SigningCertName" -i $bundleId "$AppInternalName" || fatal "codesign failed"
 	else
 		codesign -f -vv -s "$SigningCertName" "$AppInternalName" || fatal "codesign failed"
 	fi
