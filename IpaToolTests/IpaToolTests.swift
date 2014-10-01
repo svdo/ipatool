@@ -11,19 +11,14 @@ import XCTest
 
 class IpaToolTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var ipaTool : IpaToolMain = IpaToolMain()
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    override func setUp() {
+        ipaTool = IpaToolMain()
     }
     
     func testUsage()
     {
-        var ipaTool = IpaToolMain()
         var output = ipaTool.run([])
         var range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
