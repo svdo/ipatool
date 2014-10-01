@@ -7,45 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8D5B4C119D9B94F00A779D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4C019D9B94F00A779D2 /* AppDelegate.swift */; };
-		F8D5B4C319D9B94F00A779D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4C219D9B94F00A779D2 /* ViewController.swift */; };
-		F8D5B4C619D9B94F00A779D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D5B4C419D9B94F00A779D2 /* Main.storyboard */; };
-		F8D5B4C819D9B94F00A779D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D5B4C719D9B94F00A779D2 /* Images.xcassets */; };
-		F8D5B4CB19D9B94F00A779D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D5B4C919D9B94F00A779D2 /* LaunchScreen.xib */; };
+		F8AEA27419DC58C0008F2C85 /* IpaToolMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */; };
 		F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F8D5B4D119D9B94F00A779D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8D5B4B319D9B94F00A779D2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8D5B4BA19D9B94F00A779D2;
-			remoteInfo = IpaTool;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		F8D5B4BB19D9B94F00A779D2 /* IpaTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IpaTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D5B4BF19D9B94F00A779D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8D5B4C019D9B94F00A779D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8D5B4C219D9B94F00A779D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F8D5B4C519D9B94F00A779D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F8D5B4C719D9B94F00A779D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F8D5B4CA19D9B94F00A779D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpaToolMain.swift; sourceTree = "<group>"; };
+		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
+		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
+		F8AEA27B19DC5A56008F2C85 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		F8D5B4D019D9B94F00A779D2 /* IpaToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpaToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D5B4D519D9B94F00A779D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpaToolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F8D5B4B819D9B94F00A779D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8D5B4CD19D9B94F00A779D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +32,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8AEA25219DC4EA2008F2C85 /* IpaTool */ = {
+			isa = PBXGroup;
+			children = (
+				F8AEA27219DC58C0008F2C85 /* Source */,
+				F8AEA27A19DC5A56008F2C85 /* header.swift */,
+				F8AEA27919DC5A56008F2C85 /* footer.swift */,
+				F8AEA27B19DC5A56008F2C85 /* Makefile */,
+			);
+			path = IpaTool;
+			sourceTree = "<group>";
+		};
+		F8AEA27219DC58C0008F2C85 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		F8D5B4B219D9B94F00A779D2 = {
 			isa = PBXGroup;
 			children = (
-				F8D5B4BD19D9B94F00A779D2 /* IpaTool */,
+				F8AEA25219DC4EA2008F2C85 /* IpaTool */,
 				F8D5B4D319D9B94F00A779D2 /* IpaToolTests */,
 				F8D5B4BC19D9B94F00A779D2 /* Products */,
 			);
@@ -68,31 +63,9 @@
 		F8D5B4BC19D9B94F00A779D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8D5B4BB19D9B94F00A779D2 /* IpaTool.app */,
 				F8D5B4D019D9B94F00A779D2 /* IpaToolTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F8D5B4BD19D9B94F00A779D2 /* IpaTool */ = {
-			isa = PBXGroup;
-			children = (
-				F8D5B4C019D9B94F00A779D2 /* AppDelegate.swift */,
-				F8D5B4C219D9B94F00A779D2 /* ViewController.swift */,
-				F8D5B4C419D9B94F00A779D2 /* Main.storyboard */,
-				F8D5B4C719D9B94F00A779D2 /* Images.xcassets */,
-				F8D5B4C919D9B94F00A779D2 /* LaunchScreen.xib */,
-				F8D5B4BE19D9B94F00A779D2 /* Supporting Files */,
-			);
-			path = IpaTool;
-			sourceTree = "<group>";
-		};
-		F8D5B4BE19D9B94F00A779D2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8D5B4BF19D9B94F00A779D2 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F8D5B4D319D9B94F00A779D2 /* IpaToolTests */ = {
@@ -114,24 +87,24 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		F8D5B4BA19D9B94F00A779D2 /* IpaTool */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8D5B4DA19D9B94F00A779D2 /* Build configuration list for PBXNativeTarget "IpaTool" */;
+/* Begin PBXLegacyTarget section */
+		F8AEA27519DC59EA008F2C85 /* ipatool */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = F8AEA27619DC59EA008F2C85 /* Build configuration list for PBXLegacyTarget "ipatool" */;
 			buildPhases = (
-				F8D5B4B719D9B94F00A779D2 /* Sources */,
-				F8D5B4B819D9B94F00A779D2 /* Frameworks */,
-				F8D5B4B919D9B94F00A779D2 /* Resources */,
 			);
-			buildRules = (
-			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = IpaTool;
 			dependencies = (
 			);
-			name = IpaTool;
-			productName = IpaTool;
-			productReference = F8D5B4BB19D9B94F00A779D2 /* IpaTool.app */;
-			productType = "com.apple.product-type.application";
+			name = ipatool;
+			passBuildSettingsInEnvironment = 1;
+			productName = ipatool;
 		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
 		F8D5B4CF19D9B94F00A779D2 /* IpaToolTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D5B4DD19D9B94F00A779D2 /* Build configuration list for PBXNativeTarget "IpaToolTests" */;
@@ -143,7 +116,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F8D5B4D219D9B94F00A779D2 /* PBXTargetDependency */,
 			);
 			name = IpaToolTests;
 			productName = IpaToolTests;
@@ -159,7 +131,7 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Stefan van den Oord";
 				TargetAttributes = {
-					F8D5B4BA19D9B94F00A779D2 = {
+					F8AEA27519DC59EA008F2C85 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					F8D5B4CF19D9B94F00A779D2 = {
@@ -181,23 +153,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8D5B4BA19D9B94F00A779D2 /* IpaTool */,
 				F8D5B4CF19D9B94F00A779D2 /* IpaToolTests */,
+				F8AEA27519DC59EA008F2C85 /* ipatool */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F8D5B4B919D9B94F00A779D2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8D5B4C619D9B94F00A779D2 /* Main.storyboard in Resources */,
-				F8D5B4CB19D9B94F00A779D2 /* LaunchScreen.xib in Resources */,
-				F8D5B4C819D9B94F00A779D2 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8D5B4CE19D9B94F00A779D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,53 +170,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F8D5B4B719D9B94F00A779D2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8D5B4C319D9B94F00A779D2 /* ViewController.swift in Sources */,
-				F8D5B4C119D9B94F00A779D2 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8D5B4CC19D9B94F00A779D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */,
+				F8AEA27419DC58C0008F2C85 /* IpaToolMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F8D5B4D219D9B94F00A779D2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F8D5B4BA19D9B94F00A779D2 /* IpaTool */;
-			targetProxy = F8D5B4D119D9B94F00A779D2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F8D5B4C419D9B94F00A779D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8D5B4C519D9B94F00A779D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F8D5B4C919D9B94F00A779D2 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8D5B4CA19D9B94F00A779D2 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		F8AEA27719DC59EA008F2C85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8AEA27819DC59EA008F2C85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		F8D5B4D819D9B94F00A779D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,26 +291,6 @@
 			};
 			name = Release;
 		};
-		F8D5B4DB19D9B94F00A779D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = IpaTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		F8D5B4DC19D9B94F00A779D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = IpaTool/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		F8D5B4DE19D9B94F00A779D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +328,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F8AEA27619DC59EA008F2C85 /* Build configuration list for PBXLegacyTarget "ipatool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8AEA27719DC59EA008F2C85 /* Debug */,
+				F8AEA27819DC59EA008F2C85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F8D5B4B619D9B94F00A779D2 /* Build configuration list for PBXProject "IpaTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -400,14 +345,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8D5B4DA19D9B94F00A779D2 /* Build configuration list for PBXNativeTarget "IpaTool" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8D5B4DB19D9B94F00A779D2 /* Debug */,
-				F8D5B4DC19D9B94F00A779D2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		F8D5B4DD19D9B94F00A779D2 /* Build configuration list for PBXNativeTarget "IpaToolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -415,6 +352,7 @@
 				F8D5B4DF19D9B94F00A779D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

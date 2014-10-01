@@ -2,7 +2,7 @@
 //  IpaToolTests.swift
 //  IpaToolTests
 //
-//  Created by Stefan on 29/09/14.
+//  Created by Stefan on 01/10/14.
 //  Copyright (c) 2014 Stefan van den Oord. All rights reserved.
 //
 
@@ -21,16 +21,11 @@ class IpaToolTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testUsage()
+    {
+        var ipaTool = IpaToolMain()
+        var output = ipaTool.run()
+        var range = output.lowercaseString.rangeOfString("usage")
+        XCTAssertTrue(range != nil)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
