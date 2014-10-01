@@ -1,4 +1,4 @@
 
 var ipaTool = IpaToolMain()
-println(ipaTool.run())
+println(ipaTool.run(Process.arguments))
 

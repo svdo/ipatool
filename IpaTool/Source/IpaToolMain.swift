@@ -10,7 +10,7 @@ import Foundation
 
 class IpaToolMain
 {
-    func run() -> String
+    func run(args:[String]) -> String
     {
         return "Usage: ipatool.sh IPA [OPTIONS]\n" +
             "IPA is a file with extension '.ipa'\n" +

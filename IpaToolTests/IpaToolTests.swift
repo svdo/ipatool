@@ -24,7 +24,7 @@ class IpaToolTests: XCTestCase {
     func testUsage()
     {
         var ipaTool = IpaToolMain()
-        var output = ipaTool.run()
+        var output = ipaTool.run([])
         var range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
