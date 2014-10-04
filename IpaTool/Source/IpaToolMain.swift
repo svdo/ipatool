@@ -1,5 +1,5 @@
 //
-//  IpaToolMain.swift
+//  ITMain.swift
 //  IpaTool
 //
 //  Created by Stefan on 01/10/14.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-class IpaToolMain
+class ITMain
 {
+    var registeredCommands : [IpaToolCommand] = []
+    
     func run(args:[String]) -> String
     {
         return "Usage: ipatool.sh IPA [OPTIONS]\n" +

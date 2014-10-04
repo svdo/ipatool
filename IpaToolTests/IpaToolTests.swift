@@ -11,10 +11,10 @@ import XCTest
 
 class IpaToolTests: XCTestCase {
     
-    var ipaTool : IpaToolMain = IpaToolMain()
+    var ipaTool : ITMain = ITMain()
     
     override func setUp() {
-        ipaTool = IpaToolMain()
+        ipaTool = ITMain()
     }
     
     func testUsage()
@@ -23,4 +23,9 @@ class IpaToolTests: XCTestCase {
         var range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
+    
+//    func testHasCommands()
+//    {
+//        XCTAssertTrue(ipaTool.registeredCommands.count > 0)
+//    }
 }
