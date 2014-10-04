@@ -1,5 +1,5 @@
 //
-//  IpaToolCommand.swift
+//  ITCommand.swift
 //  IpaTool
 //
 //  Created by Stefan on 01/10/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(IpaToolCommand) class IpaToolCommand : NSObject
+@objc(ITCommand) class ITCommand : NSObject
 {
     
 }

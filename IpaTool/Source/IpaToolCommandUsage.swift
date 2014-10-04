@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(IpaToolCommandUsage) class IpaToolCommandUsage : IpaToolCommand
+@objc(IpaToolCommandUsage) class IpaToolCommandUsage : ITCommand
 {
     
     override class func initialize()

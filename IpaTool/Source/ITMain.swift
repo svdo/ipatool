@@ -10,7 +10,7 @@ import Foundation
 
 class ITMain
 {
-    var registeredCommands : [IpaToolCommand] = []
+    var registeredCommands : [ITCommand] = []
     
     func run(args:[String]) -> String
     {
