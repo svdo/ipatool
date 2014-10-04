@@ -137,6 +137,7 @@
 		F8D5B4B319D9B94F00A779D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IT;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Stefan van den Oord";
 				TargetAttributes = {
