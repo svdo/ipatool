@@ -11,7 +11,7 @@
 		F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
 		F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
 		F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
-		F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */; };
+		F8D5B4D719D9B94F00A779D2 /* ITMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactoryTests.swift; sourceTree = "<group>"; };
 		F8D5B4D019D9B94F00A779D2 /* IpaToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpaToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D5B4D519D9B94F00A779D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpaToolTests.swift; sourceTree = "<group>"; };
+		F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D5B4D419D9B94F00A779D2 /* Supporting Files */,
-				F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */,
+				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
 				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
 			);
 			path = IpaToolTests;
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */,
-				F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */,
+				F8D5B4D719D9B94F00A779D2 /* ITMainTests.swift in Sources */,
 				F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */,
 				F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */,
 				F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */,

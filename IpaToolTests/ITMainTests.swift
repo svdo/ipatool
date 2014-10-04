@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class IpaToolTests: XCTestCase {
+class ITMainTests: XCTestCase {
     
     var ipaTool : ITMain = ITMain()
     
