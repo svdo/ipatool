@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
 		F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
-		F8C5D30019E07F5300B19D97 /* IpaToolCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* IpaToolCommandUsage.swift */; };
+		F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
 		F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
 		F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* IpaToolTests.swift */; };
 /* End PBXBuildFile section */
@@ -20,7 +20,7 @@
 		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
 		F8AEA27B19DC5A56008F2C85 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommand.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F8C5D2FF19E07F5300B19D97 /* IpaToolCommandUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IpaToolCommandUsage.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommandUsage.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactoryTests.swift; sourceTree = "<group>"; };
 		F8D5B4D019D9B94F00A779D2 /* IpaToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpaToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D5B4D519D9B94F00A779D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			children = (
 				F8AEA27319DC58C0008F2C85 /* ITMain.swift */,
 				F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */,
-				F8C5D2FF19E07F5300B19D97 /* IpaToolCommandUsage.swift */,
+				F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C5D30019E07F5300B19D97 /* IpaToolCommandUsage.swift in Sources */,
+				F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */,
 				F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */,
 				F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */,
 				F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */,

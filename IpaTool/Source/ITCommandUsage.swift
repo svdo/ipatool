@@ -1,5 +1,5 @@
 //
-//  IpaToolCommandUsage.swift
+//  ITCommandUsage.swift
 //  IpaTool
 //
 //  Created by Stefan on 04/10/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(IpaToolCommandUsage) class IpaToolCommandUsage : ITCommand
+@objc(ITCommandUsage) class ITCommandUsage : ITCommand
 {
     
     override class func initialize()
