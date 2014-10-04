@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8AEA27419DC58C0008F2C85 /* IpaToolMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */; };
+		F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
 		F8AEA27D19DC5E37008F2C85 /* IpaToolCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* IpaToolCommand.swift */; };
 		F8C5D30019E07F5300B19D97 /* IpaToolCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* IpaToolCommandUsage.swift */; };
 		F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpaToolMain.swift; sourceTree = "<group>"; };
+		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMain.swift; sourceTree = "<group>"; };
 		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
 		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
 		F8AEA27B19DC5A56008F2C85 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		F8AEA27219DC58C0008F2C85 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F8AEA27319DC58C0008F2C85 /* IpaToolMain.swift */,
+				F8AEA27319DC58C0008F2C85 /* ITMain.swift */,
 				F8AEA27C19DC5E37008F2C85 /* IpaToolCommand.swift */,
 				F8C5D2FF19E07F5300B19D97 /* IpaToolCommandUsage.swift */,
 			);
@@ -188,7 +188,7 @@
 				F8D5B4D719D9B94F00A779D2 /* IpaToolTests.swift in Sources */,
 				F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */,
 				F8AEA27D19DC5E37008F2C85 /* IpaToolCommand.swift in Sources */,
-				F8AEA27419DC58C0008F2C85 /* IpaToolMain.swift in Sources */,
+				F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
