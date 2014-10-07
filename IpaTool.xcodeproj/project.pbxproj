@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F85331F919E3FBF700F999B7 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
 		F85331FB19E47EA000F999B7 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
+		F85331FD19E4886000F999B7 /* ITIpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FC19E4886000F999B7 /* ITIpaTests.swift */; };
+		F85331FF19E4896A00F999B7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FE19E4896A00F999B7 /* ITIpa.swift */; };
 		F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
 		F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
 		F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
+		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
+		F85331FE19E4896A00F999B7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
 		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITMain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
 		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 				F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */,
 				F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */,
 				F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */,
+				F85331FE19E4896A00F999B7 /* ITIpa.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				F8D5B4D419D9B94F00A779D2 /* Supporting Files */,
 				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
 				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
+				F85331FC19E4886000F999B7 /* ITIpaTests.swift */,
 			);
 			path = IpaToolTests;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 				F85331FB19E47EA000F999B7 /* ITCommandInfo.swift in Sources */,
 				F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */,
 				F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */,
+				F85331FD19E4886000F999B7 /* ITIpaTests.swift in Sources */,
 				F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */,
+				F85331FF19E4896A00F999B7 /* ITIpa.swift in Sources */,
 				F85331F919E3FBF700F999B7 /* ITCommandFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
