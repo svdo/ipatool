@@ -16,14 +16,14 @@ class ITCommandFactory
     
     class func registerCommand(name:String, command:ITCommand)
     {
-        Statics.commandFactoryCommands[name] = command
+        ITCommandFactory.Statics.commandFactoryCommands[name] = command
     }
     
     var commands : Dictionary<String, ITCommand>
         {
         get
         {
-            return Statics.commandFactoryCommands
+            return ITCommandFactory.Statics.commandFactoryCommands
         }
     }
 }
