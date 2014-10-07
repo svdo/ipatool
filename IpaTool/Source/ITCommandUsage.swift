@@ -11,11 +11,6 @@ import Foundation
 @objc(ITCommandUsage) class ITCommandUsage : ITCommand
 {
     
-    override class func initialize()
-    {
-        ITCommandFactory.registerCommand("usage", command:ITCommandUsage())
-    }
-    
     override func execute(args:[String]) -> String
     {
         return "Usage: ipatool.sh IPA [OPTIONS]\n" +

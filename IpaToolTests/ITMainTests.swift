@@ -24,23 +24,22 @@ class ITMainTests: XCTestCase {
     
     func testShowsUsageWithoutParameters()
     {
-        var output = ipaTool.run([])
-        var range = output.lowercaseString.rangeOfString("usage")
+        let output = ipaTool.run([])
+        let range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
     
     func testShowsUsageWithInvalidParameters()
     {
-        var output = ipaTool.run(["invalid_parameter"])
-        var range = output.lowercaseString.rangeOfString("usage")
+        let output = ipaTool.run(["invalid_parameter"])
+        let range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
     
-    func testUsage()
+    func testInfoCommand()
     {
-        var output = ipaTool.run(["usage"])
-        var range = output.lowercaseString.rangeOfString("usage")
-        XCTAssertTrue(range != nil)
+        let command:ITCommand? = ipaTool.commandForArguments(["some.ipa", "info"])
+        XCTAssertNotNil(command)
+        XCTAssertTrue(command is ITCommandInfo)
     }
-    
 }

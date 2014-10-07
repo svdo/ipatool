@@ -11,12 +11,9 @@ import Foundation
 class ITCommandFactory
 {
     struct Statics {
-        static var commandFactoryCommands = Dictionary<String, ITCommand>()
-    }
-    
-    class func registerCommand(name:String, command:ITCommand)
-    {
-        ITCommandFactory.Statics.commandFactoryCommands[name] = command
+        static var commandFactoryCommands:Dictionary<String, ITCommand> = [
+            "info" : ITCommandInfo(),
+            "usage":ITCommandUsage()]
     }
     
     var commands : Dictionary<String, ITCommand>

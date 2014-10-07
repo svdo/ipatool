@@ -11,11 +11,13 @@ import Foundation
 class ITMain
 {
     let commandFactory : ITCommandFactory = ITCommandFactory()
-    
+
     func run(args:[String]) -> String
     {
-        let commandName = "usage";
-        let command = commandFactory.commandWithName(commandName)
+        var x:ITCommand = ITCommandInfo()
+        x = ITCommandUsage()
+        
+        let command = commandForArguments(args)
         var output:String
         if let c = command {
             output = c.execute(args)
@@ -24,6 +26,13 @@ class ITMain
             output = "Invocation error. Please refer to documentation."
         }
         return output
+    }
+    
+    func commandForArguments(args:[String]) -> ITCommand?
+    {
+        var commandName = (args.count >= 2) ? args[1] : "usage"
+        let command = commandFactory.commandWithName(commandName)
+        return command
     }
 }
 
