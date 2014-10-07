@@ -26,5 +26,10 @@ class ITCommandFactory
             return ITCommandFactory.Statics.commandFactoryCommands
         }
     }
+    
+    func commandWithName(name:String) -> ITCommand?
+    {
+        return ITCommandFactory.Statics.commandFactoryCommands[name]
+    }
 }
 

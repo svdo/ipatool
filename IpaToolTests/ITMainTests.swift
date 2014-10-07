@@ -17,20 +17,30 @@ class ITMainTests: XCTestCase {
         ipaTool = ITMain()
     }
     
-    func testUsage()
+    func testHasCommandFactory()
+    {
+        XCTAssertNotNil(ipaTool.commandFactory)
+    }
+    
+    func testShowsUsageWithoutParameters()
     {
         var output = ipaTool.run([])
         var range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
     
-    func testHasCommandFactory()
+    func testShowsUsageWithInvalidParameters()
     {
-        XCTAssertNotNil(ipaTool.commandFactory)
+        var output = ipaTool.run(["invalid_parameter"])
+        var range = output.lowercaseString.rangeOfString("usage")
+        XCTAssertTrue(range != nil)
     }
     
-//    func testHasCommands()
-//    {
-//        XCTAssertTrue(ipaTool.registeredCommands.count > 0)
-//    }
+    func testUsage()
+    {
+        var output = ipaTool.run(["usage"])
+        var range = output.lowercaseString.rangeOfString("usage")
+        XCTAssertTrue(range != nil)
+    }
+    
 }

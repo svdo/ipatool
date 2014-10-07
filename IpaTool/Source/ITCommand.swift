@@ -10,5 +10,8 @@ import Foundation
 
 @objc(ITCommand) class ITCommand : NSObject
 {
-    
+    func execute(args:[String]) -> String
+    {
+        fatalError("abstract method")
+    }
 }
