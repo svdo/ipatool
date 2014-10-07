@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(ITCommandUsage) class ITCommandUsage : ITCommand
+class ITCommandUsage : ITCommand
 {
     
     override func execute(args:[String]) -> String

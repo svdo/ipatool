@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(ITCommandInfo) class ITCommandInfo : ITCommand
+class ITCommandInfo : ITCommand
 {
     
 }

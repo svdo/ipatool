@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(ITCommand) class ITCommand : NSObject
+class ITCommand
 {
     func execute(args:[String]) -> String
     {
