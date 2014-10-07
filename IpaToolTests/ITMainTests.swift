@@ -24,6 +24,11 @@ class ITMainTests: XCTestCase {
         XCTAssertTrue(range != nil)
     }
     
+    func testHasCommandFactory()
+    {
+        XCTAssertNotNil(ipaTool.commandFactory)
+    }
+    
 //    func testHasCommands()
 //    {
 //        XCTAssertTrue(ipaTool.registeredCommands.count > 0)

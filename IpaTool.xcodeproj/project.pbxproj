@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F85331F919E3FBF700F999B7 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
 		F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
 		F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
 		F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITMain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
 		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				F8AEA27319DC58C0008F2C85 /* ITMain.swift */,
 				F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */,
 				F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */,
+				F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */,
 				F8AEA27D19DC5E37008F2C85 /* ITCommand.swift in Sources */,
 				F8AEA27419DC58C0008F2C85 /* ITMain.swift in Sources */,
+				F85331F919E3FBF700F999B7 /* ITCommandFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

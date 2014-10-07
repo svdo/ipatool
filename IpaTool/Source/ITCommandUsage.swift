@@ -13,7 +13,7 @@ import Foundation
     
     override class func initialize()
     {
-        println("initialize");
+        ITCommandFactory.registerCommand("usage", command:ITCommandUsage())
     }
     
 }
