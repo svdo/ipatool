@@ -14,9 +14,6 @@ class ITMain
 
     func run(args:[String]) -> String
     {
-        var x:ITCommand = ITCommandInfo()
-        x = ITCommandUsage()
-        
         let command = commandForArguments(args)
         var output:String
         if let c = command {
