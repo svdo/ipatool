@@ -10,7 +10,7 @@ import Foundation
 
 class ITMain
 {
-    var commandFactory : ITCommandFactory = ITCommandFactory()
+    let commandFactory : ITCommandFactory = ITCommandFactory()
     
     func run(args:[String]) -> String
     {
