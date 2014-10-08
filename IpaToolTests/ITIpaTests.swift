@@ -16,7 +16,7 @@ class ITIpaTests: XCTestCase {
     
     override func setUp() {
         config = loadConfig()
-        tempDirUrl = createTempDir()
+        tempDirUrl = ITIpa.createTempDir()
     }
     
     override func tearDown() {
@@ -57,24 +57,15 @@ class ITIpaTests: XCTestCase {
         
         let ok = SSZipArchive.unzipFileAtPath(ipaPath, toDestination: tempDirUrl?.path!)
         XCTAssertTrue(ok)
-        
-        var contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(tempDirUrl!.path!, error: nil)
-        println(contents!.description)
     }
     
-    func createTempDir() -> NSURL!
+    func testAppName()
     {
-        let systemTempDir = NSTemporaryDirectory()
-        let uniqueId = NSProcessInfo.processInfo().globallyUniqueString
-        let tempDirPath = systemTempDir.stringByAppendingPathComponent(uniqueId)
-        let tempDirUrl = NSURL.fileURLWithPath(tempDirPath, isDirectory: true)
-        println("tempDirUrl = \(tempDirUrl!)")
-        
-        var error:NSError?
-        let created = NSFileManager.defaultManager().createDirectoryAtURL(tempDirUrl!, withIntermediateDirectories: true, attributes: nil, error: &error)
-        XCTAssertTrue(created)
-        
-        return tempDirUrl
+        let ipa = ITIpa()
+        let ipaPath = config!["ipaPath"] as String
+        let (ok, error) = ipa.load(ipaPath)
+        XCTAssertTrue(ok)
+        XCTAssertEqual(config!["appName"] as String, ipa.appName)
     }
 }
 

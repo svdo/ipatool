@@ -1,7 +1,4 @@
 {
-    "type": "MultiPolygon",
-    "coordinates": [
-        
-    ],
-    "ipaPath":"/Users/stefan/Desktop/Blaat.ipa"
+    "ipaPath":"/Users/stefan/Desktop/Blaat.ipa",
+    "appName":"Blaat.app"
 }
