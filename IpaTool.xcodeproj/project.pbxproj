@@ -17,14 +17,19 @@
 		F8C5D30019E07F5300B19D97 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
 		F8C5D30219E0823500B19D97 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
 		F8D5B4D719D9B94F00A779D2 /* ITMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */; };
+		FE488359B6B21E764382E4FB /* libPods-IpaToolTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.release.xcconfig"; sourceTree = "<group>"; };
+		C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IpaToolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
 		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
 		F85331FE19E4896A00F999B7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
 		F853320019E570AE00F999B7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
+		F853320219E5D5BB00F999B7 /* IpaToolTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IpaToolTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITMain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
 		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
@@ -42,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE488359B6B21E764382E4FB /* libPods-IpaToolTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FE61AAFD7857F95DEBB11B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */,
+				73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AFDB59120423F242B8AC50B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8AEA25219DC4EA2008F2C85 /* IpaTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +101,8 @@
 				F8AEA25219DC4EA2008F2C85 /* IpaTool */,
 				F8D5B4D319D9B94F00A779D2 /* IpaToolTests */,
 				F8D5B4BC19D9B94F00A779D2 /* Products */,
+				1FE61AAFD7857F95DEBB11B4 /* Pods */,
+				5AFDB59120423F242B8AC50B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +119,7 @@
 			children = (
 				F8D5B4D419D9B94F00A779D2 /* Supporting Files */,
 				F853320019E570AE00F999B7 /* testConfig.json */,
+				F853320219E5D5BB00F999B7 /* IpaToolTests-Bridging-Header.h */,
 				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
 				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
 				F85331FC19E4886000F999B7 /* ITIpaTests.swift */,
@@ -133,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D5B4DD19D9B94F00A779D2 /* Build configuration list for PBXNativeTarget "IpaToolTests" */;
 			buildPhases = (
+				B54B5D27B974B1229EF5436C /* Check Pods Manifest.lock */,
 				F8D5B4CC19D9B94F00A779D2 /* Sources */,
 				F8D5B4CD19D9B94F00A779D2 /* Frameworks */,
 				F8D5B4CE19D9B94F00A779D2 /* Resources */,
+				98BB628E506F21C76E13DBE3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +222,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98BB628E506F21C76E13DBE3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B54B5D27B974B1229EF5436C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8D5B4CC19D9B94F00A779D2 /* Sources */ = {
@@ -326,6 +387,7 @@
 		};
 		F8D5B4DE19D9B94F00A779D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -338,12 +400,14 @@
 				INFOPLIST_FILE = IpaToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IpaToolTests/IpaToolTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IpaTool.app/IpaTool";
 			};
 			name = Debug;
 		};
 		F8D5B4DF19D9B94F00A779D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -352,6 +416,7 @@
 				INFOPLIST_FILE = IpaToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IpaToolTests/IpaToolTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IpaTool.app/IpaTool";
 			};
 			name = Release;

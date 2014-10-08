@@ -55,8 +55,11 @@ class ITIpaTests: XCTestCase {
     {
         let ipaPath = config!["ipaPath"] as String
         
-
+        let ok = SSZipArchive.unzipFileAtPath(ipaPath, toDestination: tempDirUrl?.path!)
+        XCTAssertTrue(ok)
         
+        var contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(tempDirUrl!.path!, error: nil)
+        println(contents!.description)
     }
     
     func createTempDir() -> NSURL!

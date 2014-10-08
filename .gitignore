@@ -1,2 +1,6 @@
 ipatool.sh
 *.xcuserstate
+IpaTool.xcworkspace/xcuserdata
+Pods/Pods.xcodeproj/xcuserdata
+.ruby-gemset
+.ruby-version
