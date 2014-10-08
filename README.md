@@ -1,6 +1,12 @@
 ipatool
 =======
 
+Please Note
+-----------
+I'm currently rewriting this tool in Swift, in a test-driven fashion. At the moment, I'm not worrying about the ability to run the command-line tool itself, I'm only focussing on the unit tests. The reason is that running the command-line version requires OS X SDK 10.10, which is not available yet.
+
+Introduction
+------------
 Shell script to query iOS IPA files and to resign an IPA with a new provisioning profile. Sample use cases:
 
    * Check expiration of enterprise-signed IPAs so that you know when you have to ship new releases to your customers.
