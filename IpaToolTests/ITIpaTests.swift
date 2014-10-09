@@ -9,13 +9,13 @@
 import UIKit
 import XCTest
 
-class ITIpaTests: XCTestCase {
+class ITIpaTests_testConfig: XCTestCase {
 
     var config:AnyObject?
     var tempDirUrl:NSURL?
     
     override func setUp() {
-        config = loadConfig()
+        config = ITIpaTests_testConfig.loadConfig()
         tempDirUrl = ITIpa.createTempDir()
     }
     
@@ -37,8 +37,8 @@ class ITIpaTests: XCTestCase {
         XCTAssertNotNil(ipaPath)
     }
 
-    func loadConfig() -> AnyObject? {
-        let bundle = NSBundle(forClass: self.dynamicType)
+    class func loadConfig() -> AnyObject? {
+        let bundle = NSBundle(forClass: self)
         let configFilePath:String? = bundle.pathForResource("testConfig", ofType: "json")
         XCTAssertNotNil(configFilePath)
         
@@ -54,11 +54,27 @@ class ITIpaTests: XCTestCase {
     func testExtractIpa()
     {
         let ipaPath = config!["ipaPath"] as String
-        
         let ok = SSZipArchive.unzipFileAtPath(ipaPath, toDestination: tempDirUrl?.path!)
         XCTAssertTrue(ok)
     }
     
+}
+
+class ITIpaTests: XCTestCase
+{
+    var config:AnyObject?
+    var tempDirUrl:NSURL?
+
+    override func setUp() {
+        config = ITIpaTests_testConfig.loadConfig()
+        tempDirUrl = ITIpa.createTempDir()
+    }
+    
+    override func tearDown() {
+        var error:NSError?
+        NSFileManager.defaultManager().removeItemAtURL(tempDirUrl!, error: &error)
+    }
+
     func testAppName()
     {
         let ipa = ITIpa()
@@ -68,5 +84,3 @@ class ITIpaTests: XCTestCase {
         XCTAssertEqual(config!["appName"] as String, ipa.appName)
     }
 }
-
-
