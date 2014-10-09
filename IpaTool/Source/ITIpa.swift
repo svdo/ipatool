@@ -12,11 +12,14 @@ class ITIpa
 {
     var appName = ""
     var appPath = ""
-    var displayName = ""
-    var bundleShortVersionString = ""
-    var bundleVersion = ""
-    var bundleIdentifier = ""
-    var minimumOSVersion = ""
+    
+    var displayName:String { get { return infoPlistContents!["CFBundleDisplayName"] as String } }
+    var bundleShortVersionString:String { get { return infoPlistContents!["CFBundleShortVersionString"] as String } }
+    var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as String } }
+    var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
+    var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as String } }
+
+    private var infoPlistContents:NSDictionary? = nil
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -61,11 +64,6 @@ class ITIpa
     func extractInfoPlist(extractedIpaPath:String)
     {
         let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
-        var infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
-        displayName = infoPlistContents["CFBundleDisplayName"] as String
-        bundleShortVersionString = infoPlistContents["CFBundleShortVersionString"] as String
-        bundleVersion = infoPlistContents["CFBundleVersion"] as String
-        bundleIdentifier = infoPlistContents["CFBundleIdentifier"] as String
-        minimumOSVersion = infoPlistContents["MinimumOSVersion"] as String
+        infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
     }
 }
