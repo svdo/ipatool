@@ -11,21 +11,22 @@ import Foundation
 class ITIpa
 {
     var appName:String! = nil
+    var appPath:String! = nil
+    var displayName:String! = nil
     
     func load(path:String) -> (result:Bool, error:String!)
     {
         let tempDirUrl = ITIpa.createTempDir()
-        let tempPath:String = tempDirUrl.path!
-        let ok = SSZipArchive.unzipFileAtPath(path, toDestination: tempPath)
+        let extractedIpaPath:String = tempDirUrl.path!
+        let ok = SSZipArchive.unzipFileAtPath(path, toDestination: extractedIpaPath)
         if !ok {
             return (false, "could not extract ipa")
         }
         
-        let payloadDir:String = tempPath.stringByAppendingPathComponent("Payload")
-        let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir, error: nil) as [String]
-        appName = contents[0]
+        extractAppName(extractedIpaPath)
+        extractDisplayName(extractedIpaPath)
         
-        NSFileManager.defaultManager().removeItemAtPath(tempPath, error: nil)
+        NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
         return (true, nil)
     }
     
@@ -45,6 +46,19 @@ class ITIpa
         return created ? tempDirUrl : nil
     }
     
-
+    func extractAppName(extractedIpaPath:String)
+    {
+        let payloadDir:String = extractedIpaPath.stringByAppendingPathComponent("Payload")
+        let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir, error: nil) as [String]
+        appName = contents[0]
+        appPath = payloadDir.stringByAppendingPathComponent(appName)
+    }
+    
+    func extractDisplayName(extractedIpaPath:String)
+    {
+        let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
+        var infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
+        displayName = infoPlistContents["CFBundleDisplayName"] as String
+    }
     
 }

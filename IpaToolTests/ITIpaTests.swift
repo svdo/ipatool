@@ -12,7 +12,7 @@ import XCTest
 class ITIpaTests_testConfig: XCTestCase {
 
     var config:AnyObject?
-    var tempDirUrl:NSURL?
+    var tempDirUrl:NSURL!
     
     override func setUp() {
         config = ITIpaTests_testConfig.loadConfig()
@@ -21,7 +21,7 @@ class ITIpaTests_testConfig: XCTestCase {
     
     override func tearDown() {
         var error:NSError?
-        NSFileManager.defaultManager().removeItemAtURL(tempDirUrl!, error: &error)
+        NSFileManager.defaultManager().removeItemAtURL(tempDirUrl, error: &error)
     }
     
     func testLoad()
@@ -63,24 +63,31 @@ class ITIpaTests_testConfig: XCTestCase {
 class ITIpaTests: XCTestCase
 {
     var config:AnyObject?
-    var tempDirUrl:NSURL?
+    var tempDirUrl:NSURL!
+    var ipa:ITIpa!
 
     override func setUp() {
         config = ITIpaTests_testConfig.loadConfig()
         tempDirUrl = ITIpa.createTempDir()
+
+        ipa = ITIpa()
+        let ipaPath = config!["ipaPath"] as String
+        let (ok, error) = ipa.load(ipaPath)
+        XCTAssertTrue(ok)
     }
     
     override func tearDown() {
         var error:NSError?
-        NSFileManager.defaultManager().removeItemAtURL(tempDirUrl!, error: &error)
+        NSFileManager.defaultManager().removeItemAtURL(tempDirUrl, error: &error)
     }
 
     func testAppName()
     {
-        let ipa = ITIpa()
-        let ipaPath = config!["ipaPath"] as String
-        let (ok, error) = ipa.load(ipaPath)
-        XCTAssertTrue(ok)
         XCTAssertEqual(config!["appName"] as String, ipa.appName)
+    }
+    
+    func testDisplayName()
+    {
+        XCTAssertEqual(config!["displayName"] as String, ipa.displayName)
     }
 }
