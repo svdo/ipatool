@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <key>AppIDName</key>
+  <string>Blaat</string>
+
+  <key>ApplicationIdentifierPrefix</key>
+  <array>
+    <string>7EQ9KX3BR9</string>
+  </array>
+
+  <key>CreationDate</key>
+  <date>2014-09-29T15:48:44Z</date>
+
+  <key>DeveloperCertificates</key>
+  <array>
+    <data>MIIFqTCCBJGgAwIBAgIIEE1KNKgRcJYwDQYJKoZIhvcNAQEFBQAwgZYxCzAJBgNVBAYTAlVTMRMwEQYDVQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBsZSBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBwbGUgV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwNDE2MDkyNTUwWhcNMTUwNDE2MDkyNTUwWjCBnDEaMBgGCgmSJomT8ixkAQEMCjdFUTlLWDNCUjkxPjA8BgNVBAMMNWlQaG9uZSBEaXN0cmlidXRpb246IFN0ZWZhbiB2YW4gZGVuIE9vcmQgKDdFUTlLWDNCUjkpMRMwEQYDVQQLDAo3RVE5S1gzQlI5MRwwGgYDVQQKDBNTdGVmYW4gdmFuIGRlbiBPb3JkMQswCQYDVQQGEwJOTDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN+U/78mVsWzq1RlSv4yDrpyxufwGEhSi3Tz2YXKCmTIg22DUvzL2xU427Dy0XNIgoKwu2ruuRySJi6Yu2zpSzGqRe7HxNQn+HRpwprDrXZF1ikc2Ib86y5+fu0PgcwjKwBQ4h96y9ht3yroEB3tMg6jbExcT8pm8+UqTgUyUWd5pNVpPZuUSWYSU68mIx35xYLjWrB00hysc2En4GT9jeOSgJzxmS2q8p0jfr4GKKAQgVrOqe+PRr3r/dMtiDxyWjHtd0ykVO7SsapKjsF88de95tJtG2o/nvEs2Oic7HgWnOJu1WEpX0svLxshCazlT6v0Se8n0bmuOh9cO/KgB7cCAwEAAaOCAfEwggHtMB0GA1UdDgQWBBR8xv60B77G0xQJO9xCOknlnd4NPDAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFIgnFwmpthhgi+zruvZHWcVSVKO3MIIBDwYDVR0gBIIBBjCCAQIwgf8GCSqGSIb3Y2QFATCB8TCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjApBggrBgEFBQcCARYdaHR0cDovL3d3dy5hcHBsZS5jb20vYXBwbGVjYS8wTQYDVR0fBEYwRDBCoECgPoY8aHR0cDovL2RldmVsb3Blci5hcHBsZS5jb20vY2VydGlmaWNhdGlvbmF1dGhvcml0eS93d2RyY2EuY3JsMA4GA1UdDwEB/wQEAwIHgDAWBgNVHSUBAf8EDDAKBggrBgEFBQcDAzATBgoqhkiG92NkBgEEAQH/BAIFADANBgkqhkiG9w0BAQUFAAOCAQEAjOnrJVH4NU7k+eTL8pXDhFwyki3UlQ7ErJeVR0icGEJkfOgfv/43jSA46OurrFHbpDwyFvSwuMNGCuiNhzuGOoPLEusuD/XrIaWT9b7iFUWcQmZV7Stvk4/I/E/xSWMu8GO3Rojwd/PWj1ts7QiyfdfxpLGvDDgdgnJFe/ehCLfSUiFNVdJ+ewOdWGNs/OZ8zGibZizUmeNXtt9jTYziM03vjV/0mh0xk00HLAqhBCKR1JaaZY7cUiqUyGk17eTUnRNUGiIh1D6x2Yi6Xs08Ur/COiW28uFeuu8WB+UU6+RZRskOxG/nvRua7FjUovfvzTtHdtIMXiZIlIrA3Zc07A==</data>
+  </array>
+
+  <key>Entitlements</key>
+  <dict>
+
+    <key>com.apple.developer.team-identifier</key>
+    <string>7EQ9KX3BR9</string>
+
+    <key>keychain-access-groups</key>
+    <array>
+      <string>7EQ9KX3BR9.*</string>
+    </array>
+
+    <key>application-identifier</key>
+    <string>7EQ9KX3BR9.com.vandenoord.Blaat</string>
+
+    <key>get-task-allow</key>
+    <false/>
+  </dict>
+
+  <key>ExpirationDate</key>
+  <date>2015-04-15T15:48:44Z</date>
+
+  <key>Name</key>
+  <string>Blaat ad hoc</string>
+
+  <key>ProvisionedDevices</key>
+  <array>
+    <string>eb24d175db2c0cf84d4b7cb97a48055de5794150</string>
+    <string>2bcea2f07105d2616d796ef979704b06952cb103</string>
+    <string>2d8cbf5e687c7d23cde2e8a9a4554d5bdb94f760</string>
+    <string>1fe085d17e88b4fb6cce91dfb49d3b6f19be6a10</string>
+    <string>2c89f37bfa53e5674db56ad06258c0c3d5ccbd41</string>
+    <string>4f1e902013cc9e1cec73e69b3aafa5560cea02a6</string>
+    <string>81e7461e5f4214d79e47855f259fc2e710a1ff62</string>
+  </array>
+
+  <key>TeamIdentifier</key>
+  <array>
+    <string>7EQ9KX3BR9</string>
+  </array>
+
+  <key>TeamName</key>
+  <string>Stefan van den Oord</string>
+
+  <key>TimeToLive</key>
+  <integer>198</integer>
+
+  <key>UUID</key>
+  <string>1c68425e-d9ee-40e5-8edb-2d2fdd254e52</string>
+
+  <key>Version</key>
+  <integer>1</integer>
+</dict>
+</plist>

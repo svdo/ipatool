@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8043FE819E6DC1E0053C433 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE619E6DC1E0053C433 /* Blaat.ipa */; };
+		F8043FE919E6DC1E0053C433 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE719E6DC1E0053C433 /* prov.plist */; };
 		F85331F919E3FBF700F999B7 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
 		F85331FB19E47EA000F999B7 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
 		F85331FD19E4886000F999B7 /* ITIpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FC19E4886000F999B7 /* ITIpaTests.swift */; };
@@ -24,6 +26,8 @@
 		622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.release.xcconfig"; sourceTree = "<group>"; };
 		C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IpaToolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8043FE619E6DC1E0053C433 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
+		F8043FE719E6DC1E0053C433 /* prov.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
 		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
 		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 				C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8043FE519E6DC1E0053C433 /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				F8043FE619E6DC1E0053C433 /* Blaat.ipa */,
+				F8043FE719E6DC1E0053C433 /* prov.plist */,
+			);
+			path = testdata;
 			sourceTree = "<group>";
 		};
 		F8AEA25219DC4EA2008F2C85 /* IpaTool */ = {
@@ -117,6 +130,7 @@
 		F8D5B4D319D9B94F00A779D2 /* IpaToolTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8043FE519E6DC1E0053C433 /* testdata */,
 				F8D5B4D419D9B94F00A779D2 /* Supporting Files */,
 				F853320019E570AE00F999B7 /* testConfig.json */,
 				F853320219E5D5BB00F999B7 /* IpaToolTests-Bridging-Header.h */,
@@ -218,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F853320119E572D200F999B7 /* testConfig.json in Resources */,
+				F8043FE919E6DC1E0053C433 /* prov.plist in Resources */,
+				F8043FE819E6DC1E0053C433 /* Blaat.ipa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

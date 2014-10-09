@@ -54,7 +54,9 @@ class ITIpaTests_testConfig: XCTestCase {
     func testExtractIpa()
     {
         let ipaPath = config!["ipaPath"] as String
-        let ok = SSZipArchive.unzipFileAtPath(ipaPath, toDestination: tempDirUrl?.path!)
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let ipaFullPath = bundle.pathForResource(ipaPath.stringByDeletingPathExtension, ofType:"ipa")
+        let ok = SSZipArchive.unzipFileAtPath(ipaFullPath, toDestination: tempDirUrl?.path!)
         XCTAssertTrue(ok)
     }
     
@@ -72,7 +74,9 @@ class ITIpaTests: XCTestCase
 
         ipa = ITIpa()
         let ipaPath = config!["ipaPath"] as String
-        let (ok, error) = ipa.load(ipaPath)
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let ipaFullPath = bundle.pathForResource(ipaPath.stringByDeletingPathExtension, ofType:"ipa")
+        let (ok, error) = ipa.load(ipaFullPath!)
         XCTAssertTrue(ok)
     }
     
@@ -114,7 +118,9 @@ class ITIpaTests: XCTestCase
     func testReadProvisioningInformation()
     {
         // TODO This file is created using 'security cms -D -i embedded.mobileprovision -o prov.plist'. The required APIs are not available on iOS, and I don't have 10.10 SDK yet
-        var provPlist = NSDictionary(contentsOfFile: "/Users/stefan/Desktop/xx/Payload/Blaat.app/prov.plist")
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let provPlistPath = bundle.pathForResource("prov", ofType: "plist")
+        var provPlist = NSDictionary(contentsOfFile: provPlistPath!)
         
         var certificates = provPlist["DeveloperCertificates"]! as [NSData]
         var certificate = certificates[0]
