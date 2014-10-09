@@ -10,12 +10,13 @@ import Foundation
 
 class ITIpa
 {
-    var appName:String = ""
-    var appPath:String = ""
-    var displayName:String = ""
-    var bundleShortVersionString:String = ""
-    var bundleVersion:String = ""
-    var bundleIdentifier:String = ""
+    var appName = ""
+    var appPath = ""
+    var displayName = ""
+    var bundleShortVersionString = ""
+    var bundleVersion = ""
+    var bundleIdentifier = ""
+    var minimumOSVersion = ""
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -65,5 +66,6 @@ class ITIpa
         bundleShortVersionString = infoPlistContents["CFBundleShortVersionString"] as String
         bundleVersion = infoPlistContents["CFBundleVersion"] as String
         bundleIdentifier = infoPlistContents["CFBundleIdentifier"] as String
+        minimumOSVersion = infoPlistContents["MinimumOSVersion"] as String
     }
 }

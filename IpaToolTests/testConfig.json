@@ -4,5 +4,6 @@
     "displayName":"Bèèèh!",
     "bundleShortVersionString":"1.0",
     "bundleVersion":"1",
-    "bundleIdentifier":"com.vandenoord.Blaat"
+    "bundleIdentifier":"com.vandenoord.Blaat",
+    "minimumOSVersion":"8.0"
 }

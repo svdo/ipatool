@@ -105,4 +105,9 @@ class ITIpaTests: XCTestCase
     {
         XCTAssertEqual(config!["bundleIdentifier"] as String, ipa.bundleIdentifier)
     }
+    
+    func testMinimumOSVersion()
+    {
+        XCTAssertEqual(config!["minimumOSVersion"] as String, ipa.minimumOSVersion)
+    }
 }
