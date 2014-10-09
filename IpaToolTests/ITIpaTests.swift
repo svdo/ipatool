@@ -110,4 +110,16 @@ class ITIpaTests: XCTestCase
     {
         XCTAssertEqual(config!["minimumOSVersion"] as String, ipa.minimumOSVersion)
     }
+    
+    func testReadProvisioningInformation()
+    {
+        // TODO This file is created using 'security cms -D -i embedded.mobileprovision -o prov.plist'. The required APIs are not available on iOS, and I don't have 10.10 SDK yet
+        var provPlist = NSDictionary(contentsOfFile: "/Users/stefan/Desktop/xx/Payload/Blaat.app/prov.plist")
+        
+        var certificates = provPlist["DeveloperCertificates"]! as [NSData]
+        var certificate = certificates[0]
+        var decodedCertificate:SecCertificate = SecCertificateCreateWithData(nil, certificate).takeUnretainedValue()
+        var summary:String = String(SecCertificateCopySubjectSummary(decodedCertificate).takeUnretainedValue())
+        XCTAssertEqual(config!["codeSigningAuthority"] as String, summary)
+    }
 }
