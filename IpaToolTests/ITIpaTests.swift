@@ -122,13 +122,11 @@ class ITIpaTests: XCTestCase
         var summary:String = String(SecCertificateCopySubjectSummary(decodedCertificate).takeUnretainedValue())
         XCTAssertEqual(config!["codeSigningAuthority"] as String, summary)
         
-        XCTAssertEqual(config!["provisioningName"] as String, provPlist["Name"] as String)
-        
         var df = NSDateFormatter()
         df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         var expectedDate = df.dateFromString(config!["provisioningExpiration"] as String)
         XCTAssertEqual(expectedDate!, provPlist["ExpirationDate"]! as NSDate)
-        
+        XCTAssertEqual(config!["provisioningName"] as String, provPlist["Name"] as String)
         XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist["AppIDName"] as String)
         XCTAssertEqual(config!["provisioningTeam"] as String, provPlist["TeamName"] as String)
     }
