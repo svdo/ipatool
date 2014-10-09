@@ -4,5 +4,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'IpaToolTests' do
-	pod 'SSZipArchive', '~> 0.3.1'
+	pod 'SSZipArchive', '~> 0.3.1', :inhibit_warnings => true
 end
