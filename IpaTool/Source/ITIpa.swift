@@ -14,6 +14,7 @@ class ITIpa
     var appPath:String! = nil
     var displayName:String! = nil
     var bundleShortVersionString:String! = nil
+    var bundleVersion:String! = nil
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -61,5 +62,6 @@ class ITIpa
         var infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
         displayName = infoPlistContents["CFBundleDisplayName"] as String
         bundleShortVersionString = infoPlistContents["CFBundleShortVersionString"] as String
+        bundleVersion = infoPlistContents["CFBundleVersion"] as String
     }
 }
