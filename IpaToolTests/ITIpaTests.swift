@@ -123,9 +123,12 @@ class ITIpaTests: XCTestCase
         XCTAssertEqual(config!["codeSigningAuthority"] as String, summary)
         
         XCTAssertEqual(config!["provisioningName"] as String, provPlist["Name"] as String)
+        
         var df = NSDateFormatter()
         df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         var expectedDate = df.dateFromString(config!["provisioningExpiration"] as String)
         XCTAssertEqual(expectedDate!, provPlist["ExpirationDate"]! as NSDate)
+        
+        XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist["AppIDName"] as String)
     }
 }
