@@ -3,5 +3,6 @@
     "appName":"Blaat.app",
     "displayName":"Bèèèh!",
     "bundleShortVersionString":"1.0",
-    "bundleVersion":"1"
+    "bundleVersion":"1",
+    "bundleIdentifier":"com.vandenoord.Blaat"
 }

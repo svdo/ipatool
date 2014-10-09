@@ -15,6 +15,7 @@ class ITIpa
     var displayName:String = ""
     var bundleShortVersionString:String = ""
     var bundleVersion:String = ""
+    var bundleIdentifier:String = ""
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -63,5 +64,6 @@ class ITIpa
         displayName = infoPlistContents["CFBundleDisplayName"] as String
         bundleShortVersionString = infoPlistContents["CFBundleShortVersionString"] as String
         bundleVersion = infoPlistContents["CFBundleVersion"] as String
+        bundleIdentifier = infoPlistContents["CFBundleIdentifier"] as String
     }
 }
