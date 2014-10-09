@@ -130,5 +130,6 @@ class ITIpaTests: XCTestCase
         XCTAssertEqual(expectedDate!, provPlist["ExpirationDate"]! as NSDate)
         
         XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist["AppIDName"] as String)
+        XCTAssertEqual(config!["provisioningTeam"] as String, provPlist["TeamName"] as String)
     }
 }
