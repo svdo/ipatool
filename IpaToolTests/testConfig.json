@@ -1,5 +1,6 @@
 {
     "ipaPath":"/Users/stefan/Desktop/Blaat.ipa",
     "appName":"Blaat.app",
-    "displayName":"Bèèèh!"
+    "displayName":"Bèèèh!",
+    "bundleShortVersionString":"1.0"
 }

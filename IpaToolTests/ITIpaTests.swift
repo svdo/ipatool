@@ -90,4 +90,9 @@ class ITIpaTests: XCTestCase
     {
         XCTAssertEqual(config!["displayName"] as String, ipa.displayName)
     }
+    
+    func testBundleVersion()
+    {
+        XCTAssertEqual(config!["bundleShortVersionString"] as String, ipa.bundleShortVersionString)
+    }
 }

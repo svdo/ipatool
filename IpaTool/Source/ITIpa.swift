@@ -13,6 +13,7 @@ class ITIpa
     var appName:String! = nil
     var appPath:String! = nil
     var displayName:String! = nil
+    var bundleShortVersionString:String! = nil
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -24,7 +25,7 @@ class ITIpa
         }
         
         extractAppName(extractedIpaPath)
-        extractDisplayName(extractedIpaPath)
+        extractInfoPlist(extractedIpaPath)
         
         NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
         return (true, nil)
@@ -54,11 +55,11 @@ class ITIpa
         appPath = payloadDir.stringByAppendingPathComponent(appName)
     }
     
-    func extractDisplayName(extractedIpaPath:String)
+    func extractInfoPlist(extractedIpaPath:String)
     {
         let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
         var infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
         displayName = infoPlistContents["CFBundleDisplayName"] as String
+        bundleShortVersionString = infoPlistContents["CFBundleShortVersionString"] as String
     }
-    
 }
