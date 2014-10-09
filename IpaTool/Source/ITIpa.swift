@@ -10,11 +10,11 @@ import Foundation
 
 class ITIpa
 {
-    var appName:String! = nil
-    var appPath:String! = nil
-    var displayName:String! = nil
-    var bundleShortVersionString:String! = nil
-    var bundleVersion:String! = nil
+    var appName:String = ""
+    var appPath:String = ""
+    var displayName:String = ""
+    var bundleShortVersionString:String = ""
+    var bundleVersion:String = ""
     
     func load(path:String) -> (result:Bool, error:String!)
     {
@@ -38,7 +38,7 @@ class ITIpa
         let uniqueId = NSProcessInfo.processInfo().globallyUniqueString
         let tempDirPath = systemTempDir.stringByAppendingPathComponent(uniqueId)
         let tempDirUrl = NSURL.fileURLWithPath(tempDirPath, isDirectory: true)
-        println("tempDirUrl = \(tempDirUrl!)")
+//        println("tempDirUrl = \(tempDirUrl!)")
         
         var error:NSError?
         let created = NSFileManager.defaultManager().createDirectoryAtURL(tempDirUrl!, withIntermediateDirectories: true, attributes: nil, error: &error)
