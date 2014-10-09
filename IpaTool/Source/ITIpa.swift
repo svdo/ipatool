@@ -40,7 +40,7 @@ class ITIpa
         let uniqueId = NSProcessInfo.processInfo().globallyUniqueString
         let tempDirPath = systemTempDir.stringByAppendingPathComponent(uniqueId)
         let tempDirUrl = NSURL.fileURLWithPath(tempDirPath, isDirectory: true)
-//        println("tempDirUrl = \(tempDirUrl!)")
+//        println("tempDirUrl = \(tempDirUrl!)") // TODO: find properway of doing configurable logging, preferably at least as powerful as Android logging
         
         var error:NSError?
         let created = NSFileManager.defaultManager().createDirectoryAtURL(tempDirUrl!, withIntermediateDirectories: true, attributes: nil, error: &error)
