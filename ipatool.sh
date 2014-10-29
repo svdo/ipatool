@@ -49,7 +49,7 @@ extracted_ipa=""
 
 extract_ipa() {
 	ipa="$1"
-	absipa="`absPath $ipa`"
+	absipa=`absPath "$ipa"`
 	if ( ! test -f "$absipa" ); then
 		fatal "$absipa: file not found"
 	fi
@@ -141,8 +141,8 @@ ipatool_resign() {
 		fatal "New provisioning profile is not given on command line."
 	fi
 	
-	absipa="`absPath $ipa`"
-	absprofile="`absPath $PWD`/$newProfile"
+	absipa=`absPath "$ipa"`
+	absprofile="`absPath \"$PWD\"`/$newProfile"
 	if ( ! test -f "$absprofile" ); then
 		fatal "$absprofile: file not found"
 	fi
