@@ -194,7 +194,7 @@ ipatool_extract_signing_authority() {
 	absprofile="$1"
 	security cms -D -i "$absprofile" -o "$extracted_ipa/newprov.plist"
 	end=`grep -n --binary-files=text '</plist>' "$extracted_ipa/newprov.plist"|cut -d: -f-1`
- 	subject="`sed -n \"2,${end}p\" \"$1\"|xpath '//data' 2>/dev/null|sed -e '1d' -e '$d'|base64 -D| openssl x509 -subject -inform der|head -n 1`}"
+ 	subject="`sed -n \"2,${end}p\" \"$extracted_ipa/newprov.plist\"|xpath '//data' 2>/dev/null|sed 's/<data>//' |sed 's/<\/data>//'|base64 -D| openssl x509 -subject -inform der|head -n 1`}"
  	echo $subject | sed 's|^.*CN=\([^/]*\)/.*$|\1|'
 }
 
