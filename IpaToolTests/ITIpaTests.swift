@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Stefan van den Oord. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class ITIpaTests_testConfig: XCTestCase {
@@ -43,9 +42,9 @@ class ITIpaTests_testConfig: XCTestCase {
         XCTAssertNotNil(configFilePath)
         
         var error:NSError?
-        let jsonData = NSData.dataWithContentsOfFile(configFilePath!, options:NSDataReadingOptions(0), error: &error)
+        let jsonData = NSData(contentsOfFile:configFilePath!, options:NSDataReadingOptions(0), error: &error)
         XCTAssertNotNil(jsonData)
-        let config: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData, options:NSJSONReadingOptions(0), error:&error)
+        let config: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions(0), error:&error)
         XCTAssertNotNil(config)
 
         return config
@@ -122,7 +121,7 @@ class ITIpaTests: XCTestCase
         let provPlistPath = bundle.pathForResource("prov", ofType: "plist")
         var provPlist = NSDictionary(contentsOfFile: provPlistPath!)
         
-        var certificates = provPlist["DeveloperCertificates"]! as [NSData]
+        var certificates = provPlist!["DeveloperCertificates"]! as [NSData]
         var certificate = certificates[0]
         var decodedCertificate:SecCertificate = SecCertificateCreateWithData(nil, certificate).takeUnretainedValue()
         var summary:String = String(SecCertificateCopySubjectSummary(decodedCertificate).takeUnretainedValue())
@@ -131,9 +130,9 @@ class ITIpaTests: XCTestCase
         var df = NSDateFormatter()
         df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         var expectedDate = df.dateFromString(config!["provisioningExpiration"] as String)
-        XCTAssertEqual(expectedDate!, provPlist["ExpirationDate"]! as NSDate)
-        XCTAssertEqual(config!["provisioningName"] as String, provPlist["Name"] as String)
-        XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist["AppIDName"] as String)
-        XCTAssertEqual(config!["provisioningTeam"] as String, provPlist["TeamName"] as String)
+        XCTAssertEqual(expectedDate!, provPlist!["ExpirationDate"]! as NSDate)
+        XCTAssertEqual(config!["provisioningName"] as String, provPlist!["Name"] as String)
+        XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist!["AppIDName"] as String)
+        XCTAssertEqual(config!["provisioningTeam"] as String, provPlist!["TeamName"] as String)
     }
 }

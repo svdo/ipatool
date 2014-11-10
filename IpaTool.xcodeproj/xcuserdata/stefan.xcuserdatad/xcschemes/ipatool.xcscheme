@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8AEA27519DC59EA008F2C85"
+               BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
                BuildableName = "ipatool"
                BlueprintName = "ipatool"
                ReferencedContainer = "container:IpaTool.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8AEA27519DC59EA008F2C85"
+            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
             ReferencedContainer = "container:IpaTool.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8AEA27519DC59EA008F2C85"
+            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
             ReferencedContainer = "container:IpaTool.xcodeproj">

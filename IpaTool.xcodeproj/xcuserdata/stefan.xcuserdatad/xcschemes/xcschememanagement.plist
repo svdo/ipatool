@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>IpaToolTests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>ipatool.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+		<key>ipatoolTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -43,6 +43,21 @@
 			<true/>
 		</dict>
 		<key>F8AEA27519DC59EA008F2C85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8B63F2F1A0E13FB006378A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8B63F3A1A0E1433006378A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8B63F471A0E14CC006378A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

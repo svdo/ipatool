@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Stefan van den Oord. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class ITMainTests: XCTestCase {
