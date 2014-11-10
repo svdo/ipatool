@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
                BuildableName = "ipatool"
                BlueprintName = "ipatool"
-               ReferencedContainer = "container:IpaTool.xcodeproj">
+               ReferencedContainer = "container:ipatool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
+            BuildableName = "ipatool"
+            BlueprintName = "ipatool"
+            ReferencedContainer = "container:ipatool.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,15 +48,25 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
-            ReferencedContainer = "container:IpaTool.xcodeproj">
+            ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "$(SOURCE_ROOT)/ipatoolTests/testdata/Blaat.ipa"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "info"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -63,7 +82,7 @@
             BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
-            ReferencedContainer = "container:IpaTool.xcodeproj">
+            ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

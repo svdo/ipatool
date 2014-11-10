@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
                BuildableName = "ipatoolTests.xctest"
                BlueprintName = "ipatoolTests"
-               ReferencedContainer = "container:IpaTool.xcodeproj">
+               ReferencedContainer = "container:ipatool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
                BuildableName = "ipatoolTests.xctest"
                BlueprintName = "ipatoolTests"
-               ReferencedContainer = "container:IpaTool.xcodeproj">
+               ReferencedContainer = "container:ipatool.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
-            ReferencedContainer = "container:IpaTool.xcodeproj">
+            ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
-            ReferencedContainer = "container:IpaTool.xcodeproj">
+            ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
-            ReferencedContainer = "container:IpaTool.xcodeproj">
+            ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
