@@ -1,1331 +1,540 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>12D7BD73B1AD6F3F83CB9A70</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ipatoolTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1FE61AAFD7857F95DEBB11B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>622758A4DE1C1F492CA68FD4</string>
-				<string>73691DD4040900EC325A7088</string>
-				<string>12D7BD73B1AD6F3F83CB9A70</string>
-				<string>CFBA3E1A8E3D96F17148E0FE</string>
-				<string>8B34C7C6C226D8BD5BA290C0</string>
-				<string>9ECB255692A2DB19A315A0AE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5AFDB59120423F242B8AC50B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C01A618BDFD3665E88509315</string>
-				<string>9A381FDA4BD21F3916D2AD9E</string>
-				<string>8F30845863DEA435107D4D4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>622758A4DE1C1F492CA68FD4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-IpaToolTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73691DD4040900EC325A7088</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-IpaToolTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B34C7C6C226D8BD5BA290C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C43A7006C101B1EA744D215</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>8F30845863DEA435107D4D4F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9A381FDA4BD21F3916D2AD9E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ipatoolTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9ECB255692A2DB19A315A0AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A00718ECEB5E2DD079A06D21</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A06329E590FDEB83D31B1441</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9A381FDA4BD21F3916D2AD9E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C01A618BDFD3665E88509315</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-IpaToolTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CFBA3E1A8E3D96F17148E0FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ipatoolTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D66E13689E7C7A853AB8B91B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F8043FE519E6DC1E0053C433</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8043FE619E6DC1E0053C433</string>
-				<string>F8043FE719E6DC1E0053C433</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>testdata</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8043FE619E6DC1E0053C433</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>Blaat.ipa</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8043FE719E6DC1E0053C433</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>prov.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F85331F819E3FBF700F999B7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITCommandFactory.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F85331FA19E47EA000F999B7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITCommandInfo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F85331FC19E4886000F999B7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITIpaTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F85331FE19E4896A00F999B7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITIpa.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F853320019E570AE00F999B7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>testConfig.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F853320219E5D5BB00F999B7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ipatool-Bridging-Header.h</string>
-			<key>path</key>
-			<string>../../IpaTool/ipatool-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F893C49A1A11370500FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8AEA27319DC58C0008F2C85</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F893C49B1A11370A00FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8AEA27C19DC5E37008F2C85</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F893C49C1A11370A00FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8C5D2FF19E07F5300B19D97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F893C49D1A11370A00FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331F819E3FBF700F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F893C49E1A11370A00FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331FA19E47EA000F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F893C49F1A11370A00FE5C2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331FE19E4896A00F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8AEA25219DC4EA2008F2C85</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8AEA27219DC58C0008F2C85</string>
-				<string>F8AEA27A19DC5A56008F2C85</string>
-				<string>F8AEA27919DC5A56008F2C85</string>
-				<string>F8AEA27B19DC5A56008F2C85</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ipatool</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AEA27219DC58C0008F2C85</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F853320219E5D5BB00F999B7</string>
-				<string>F8AEA27319DC58C0008F2C85</string>
-				<string>F8AEA27C19DC5E37008F2C85</string>
-				<string>F8C5D2FF19E07F5300B19D97</string>
-				<string>F85331F819E3FBF700F999B7</string>
-				<string>F85331FA19E47EA000F999B7</string>
-				<string>F85331FE19E4896A00F999B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Source</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AEA27319DC58C0008F2C85</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>lineEnding</key>
-			<string>0</string>
-			<key>path</key>
-			<string>ITMain.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.swift</string>
-		</dict>
-		<key>F8AEA27919DC5A56008F2C85</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>footer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AEA27A19DC5A56008F2C85</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>header.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AEA27B19DC5A56008F2C85</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.make</string>
-			<key>path</key>
-			<string>Makefile</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AEA27C19DC5E37008F2C85</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>lineEnding</key>
-			<string>0</string>
-			<key>path</key>
-			<string>ITCommand.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.swift</string>
-		</dict>
-		<key>F8B63F2C1A0E13FB006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F893C49C1A11370A00FE5C2B</string>
-				<string>F893C49B1A11370A00FE5C2B</string>
-				<string>F893C49E1A11370A00FE5C2B</string>
-				<string>F8B63F331A0E13FB006378A8</string>
-				<string>F893C49D1A11370A00FE5C2B</string>
-				<string>F893C49F1A11370A00FE5C2B</string>
-				<string>F893C49A1A11370500FE5C2B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F8B63F2D1A0E13FB006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FCF45118BFA503F3F1938218</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F8B63F2E1A0E13FB006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>/usr/share/man/man1/</string>
-			<key>dstSubfolderSpec</key>
-			<string>0</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>1</string>
-		</dict>
-		<key>F8B63F2F1A0E13FB006378A8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F8B63F341A0E13FB006378A8</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8C43A7006C101B1EA744D215</string>
-				<string>F8B63F2C1A0E13FB006378A8</string>
-				<string>F8B63F2D1A0E13FB006378A8</string>
-				<string>F8B63F2E1A0E13FB006378A8</string>
-				<string>D66E13689E7C7A853AB8B91B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ipatool</string>
-			<key>productName</key>
-			<string>ipatool</string>
-			<key>productReference</key>
-			<string>F8B63F301A0E13FB006378A8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.tool</string>
-		</dict>
-		<key>F8B63F301A0E13FB006378A8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>compiled.mach-o.executable</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ipatool</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F8B63F311A0E13FB006378A8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8B63F321A0E13FB006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ipatool</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8B63F321A0E13FB006378A8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>main.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8B63F331A0E13FB006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8B63F321A0E13FB006378A8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F341A0E13FB006378A8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F8B63F351A0E13FB006378A8</string>
-				<string>F8B63F361A0E13FB006378A8</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F8B63F351A0E13FB006378A8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8B34C7C6C226D8BD5BA290C0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.10</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ipatool/ipatool-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F8B63F361A0E13FB006378A8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9ECB255692A2DB19A315A0AE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.10</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ipatool/ipatool-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F8B63F441A0E14CC006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F8B63F551A0E14E5006378A8</string>
-				<string>F8B63F561A0E14E5006378A8</string>
-				<string>F8B63F531A0E14E1006378A8</string>
-				<string>F8B63F521A0E14DE006378A8</string>
-				<string>F8B63F591A0E14E5006378A8</string>
-				<string>F8B63F581A0E14E5006378A8</string>
-				<string>F8B63F571A0E14E5006378A8</string>
-				<string>F8B63F511A0E14DC006378A8</string>
-				<string>F8B63F541A0E14E5006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F8B63F451A0E14CC006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A06329E590FDEB83D31B1441</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F8B63F461A0E14CC006378A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F8B63F601A0E9679006378A8</string>
-				<string>F8B63F611A0E96A6006378A8</string>
-				<string>F8B63F621A0E96BA006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F8B63F471A0E14CC006378A8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F8B63F4E1A0E14CC006378A8</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F9AFE0ACCA5F4AB444CD8BCB</string>
-				<string>F8B63F441A0E14CC006378A8</string>
-				<string>F8B63F451A0E14CC006378A8</string>
-				<string>F8B63F461A0E14CC006378A8</string>
-				<string>A00718ECEB5E2DD079A06D21</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ipatoolTests</string>
-			<key>productName</key>
-			<string>ipatoolTests</string>
-			<key>productReference</key>
-			<string>F8B63F481A0E14CC006378A8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>F8B63F481A0E14CC006378A8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ipatoolTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F8B63F4A1A0E14CC006378A8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8B63F4B1A0E14CC006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8B63F4B1A0E14CC006378A8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8B63F4E1A0E14CC006378A8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F8B63F4F1A0E14CC006378A8</string>
-				<string>F8B63F501A0E14CC006378A8</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F8B63F4F1A0E14CC006378A8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>12D7BD73B1AD6F3F83CB9A70</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ipatoolTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.10</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ipatoolTests/IpaToolTests-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F8B63F501A0E14CC006378A8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CFBA3E1A8E3D96F17148E0FE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ipatoolTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.10</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ipatoolTests/IpaToolTests-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F8B63F511A0E14DC006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8D5B4D619D9B94F00A779D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F521A0E14DE006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8C5D30119E0823500B19D97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F531A0E14E1006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331FC19E4886000F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F541A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8AEA27319DC58C0008F2C85</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F551A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8AEA27C19DC5E37008F2C85</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F561A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8C5D2FF19E07F5300B19D97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F571A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331F819E3FBF700F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F581A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331FA19E47EA000F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F591A0E14E5006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F85331FE19E4896A00F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F601A0E9679006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F853320019E570AE00F999B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F611A0E96A6006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8043FE619E6DC1E0053C433</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8B63F621A0E96BA006378A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8043FE719E6DC1E0053C433</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8C5D2FF19E07F5300B19D97</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>lineEnding</key>
-			<string>0</string>
-			<key>path</key>
-			<string>ITCommandUsage.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.swift</string>
-		</dict>
-		<key>F8C5D30119E0823500B19D97</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITCommandFactoryTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8D5B4B219D9B94F00A779D2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8AEA25219DC4EA2008F2C85</string>
-				<string>F8D5B4D319D9B94F00A779D2</string>
-				<string>F8B63F311A0E13FB006378A8</string>
-				<string>F8D5B4BC19D9B94F00A779D2</string>
-				<string>1FE61AAFD7857F95DEBB11B4</string>
-				<string>5AFDB59120423F242B8AC50B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8D5B4B319D9B94F00A779D2</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>IT</string>
-				<key>LastUpgradeCheck</key>
-				<string>0600</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Stefan van den Oord</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>F8B63F2F1A0E13FB006378A8</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-					</dict>
-					<key>F8B63F471A0E14CC006378A8</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>F8D5B4B619D9B94F00A779D2</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>F8D5B4B219D9B94F00A779D2</string>
-			<key>productRefGroup</key>
-			<string>F8D5B4BC19D9B94F00A779D2</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>F8B63F2F1A0E13FB006378A8</string>
-				<string>F8B63F471A0E14CC006378A8</string>
-			</array>
-		</dict>
-		<key>F8D5B4B619D9B94F00A779D2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F8D5B4D819D9B94F00A779D2</string>
-				<string>F8D5B4D919D9B94F00A779D2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F8D5B4BC19D9B94F00A779D2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8B63F301A0E13FB006378A8</string>
-				<string>F8B63F481A0E14CC006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8D5B4D319D9B94F00A779D2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8043FE519E6DC1E0053C433</string>
-				<string>F853320019E570AE00F999B7</string>
-				<string>F8D5B4D619D9B94F00A779D2</string>
-				<string>F8C5D30119E0823500B19D97</string>
-				<string>F85331FC19E4886000F999B7</string>
-				<string>F8B63F4A1A0E14CC006378A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ipatoolTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8D5B4D619D9B94F00A779D2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ITMainTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8D5B4D819D9B94F00A779D2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_TREAT_WARNINGS_AS_ERRORS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F8D5B4D919D9B94F00A779D2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_TREAT_WARNINGS_AS_ERRORS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F9AFE0ACCA5F4AB444CD8BCB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>FCF45118BFA503F3F1938218</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F30845863DEA435107D4D4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>F8D5B4B319D9B94F00A779D2</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F893C49A1A11370500FE5C2B /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
+		F893C49B1A11370A00FE5C2B /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
+		F893C49C1A11370A00FE5C2B /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
+		F893C49D1A11370A00FE5C2B /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
+		F893C49E1A11370A00FE5C2B /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
+		F893C49F1A11370A00FE5C2B /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FE19E4896A00F999B7 /* ITIpa.swift */; };
+		F8B63F331A0E13FB006378A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B63F321A0E13FB006378A8 /* main.swift */; };
+		F8B63F511A0E14DC006378A8 /* ITMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */; };
+		F8B63F521A0E14DE006378A8 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
+		F8B63F531A0E14E1006378A8 /* ITIpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FC19E4886000F999B7 /* ITIpaTests.swift */; };
+		F8B63F541A0E14E5006378A8 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
+		F8B63F551A0E14E5006378A8 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
+		F8B63F561A0E14E5006378A8 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
+		F8B63F571A0E14E5006378A8 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
+		F8B63F581A0E14E5006378A8 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
+		F8B63F591A0E14E5006378A8 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FE19E4896A00F999B7 /* ITIpa.swift */; };
+		F8B63F601A0E9679006378A8 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F853320019E570AE00F999B7 /* testConfig.json */; };
+		F8B63F611A0E96A6006378A8 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE619E6DC1E0053C433 /* Blaat.ipa */; };
+		F8B63F621A0E96BA006378A8 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE719E6DC1E0053C433 /* prov.plist */; };
+		F9527E1A87192A7319A9E8BB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F30845863DEA435107D4D4F /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8B63F2E1A0E13FB006378A8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		12D7BD73B1AD6F3F83CB9A70 /* Pods-ipatoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatoolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8F30845863DEA435107D4D4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A381FDA4BD21F3916D2AD9E /* libPods-ipatoolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ipatoolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IpaToolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBA3E1A8E3D96F17148E0FE /* Pods-ipatoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatoolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8043FE619E6DC1E0053C433 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
+		F8043FE719E6DC1E0053C433 /* prov.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
+		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
+		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
+		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
+		F85331FE19E4896A00F999B7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
+		F853320019E570AE00F999B7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
+		F853320219E5D5BB00F999B7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ipatool-Bridging-Header.h"; path = "../../IpaTool/ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITMain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
+		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
+		F8AEA27B19DC5A56008F2C85 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommand.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F8B63F301A0E13FB006378A8 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B63F321A0E13FB006378A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B63F4B1A0E14CC006378A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommandUsage.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactoryTests.swift; sourceTree = "<group>"; };
+		F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B63F2D1A0E13FB006378A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9527E1A87192A7319A9E8BB /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B63F451A0E14CC006378A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FE61AAFD7857F95DEBB11B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */,
+				73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */,
+				12D7BD73B1AD6F3F83CB9A70 /* Pods-ipatoolTests.debug.xcconfig */,
+				CFBA3E1A8E3D96F17148E0FE /* Pods-ipatoolTests.release.xcconfig */,
+				8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */,
+				9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AFDB59120423F242B8AC50B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */,
+				9A381FDA4BD21F3916D2AD9E /* libPods-ipatoolTests.a */,
+				8F30845863DEA435107D4D4F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8043FE519E6DC1E0053C433 /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				F8043FE619E6DC1E0053C433 /* Blaat.ipa */,
+				F8043FE719E6DC1E0053C433 /* prov.plist */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
+		F8AEA25219DC4EA2008F2C85 /* ipatool */ = {
+			isa = PBXGroup;
+			children = (
+				F8AEA27219DC58C0008F2C85 /* Source */,
+				F8AEA27A19DC5A56008F2C85 /* header.swift */,
+				F8AEA27919DC5A56008F2C85 /* footer.swift */,
+				F8AEA27B19DC5A56008F2C85 /* Makefile */,
+			);
+			path = ipatool;
+			sourceTree = "<group>";
+		};
+		F8AEA27219DC58C0008F2C85 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F853320219E5D5BB00F999B7 /* ipatool-Bridging-Header.h */,
+				F8AEA27319DC58C0008F2C85 /* ITMain.swift */,
+				F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */,
+				F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */,
+				F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */,
+				F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */,
+				F85331FE19E4896A00F999B7 /* ITIpa.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F8B63F311A0E13FB006378A8 /* ipatool */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63F321A0E13FB006378A8 /* main.swift */,
+			);
+			path = ipatool;
+			sourceTree = "<group>";
+		};
+		F8B63F4A1A0E14CC006378A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63F4B1A0E14CC006378A8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8D5B4B219D9B94F00A779D2 = {
+			isa = PBXGroup;
+			children = (
+				F8AEA25219DC4EA2008F2C85 /* ipatool */,
+				F8D5B4D319D9B94F00A779D2 /* ipatoolTests */,
+				F8B63F311A0E13FB006378A8 /* ipatool */,
+				F8D5B4BC19D9B94F00A779D2 /* Products */,
+				1FE61AAFD7857F95DEBB11B4 /* Pods */,
+				5AFDB59120423F242B8AC50B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F8D5B4BC19D9B94F00A779D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63F301A0E13FB006378A8 /* ipatool */,
+				F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8D5B4D319D9B94F00A779D2 /* ipatoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8043FE519E6DC1E0053C433 /* testdata */,
+				F853320019E570AE00F999B7 /* testConfig.json */,
+				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
+				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
+				F85331FC19E4886000F999B7 /* ITIpaTests.swift */,
+				F8B63F4A1A0E14CC006378A8 /* Supporting Files */,
+			);
+			path = ipatoolTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B63F2F1A0E13FB006378A8 /* ipatool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B63F341A0E13FB006378A8 /* Build configuration list for PBXNativeTarget "ipatool" */;
+			buildPhases = (
+				5358C2158A9CD8194D041F05 /* Check Pods Manifest.lock */,
+				F8B63F2C1A0E13FB006378A8 /* Sources */,
+				F8B63F2D1A0E13FB006378A8 /* Frameworks */,
+				F8B63F2E1A0E13FB006378A8 /* CopyFiles */,
+				A3CDA1EC659CFF266A53CD2F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ipatool;
+			productName = ipatool;
+			productReference = F8B63F301A0E13FB006378A8 /* ipatool */;
+			productType = "com.apple.product-type.tool";
+		};
+		F8B63F471A0E14CC006378A8 /* ipatoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B63F4E1A0E14CC006378A8 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
+			buildPhases = (
+				F8B63F441A0E14CC006378A8 /* Sources */,
+				F8B63F451A0E14CC006378A8 /* Frameworks */,
+				F8B63F461A0E14CC006378A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ipatoolTests;
+			productName = ipatoolTests;
+			productReference = F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8D5B4B319D9B94F00A779D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IT;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Stefan van den Oord";
+				TargetAttributes = {
+					F8B63F2F1A0E13FB006378A8 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F8B63F471A0E14CC006378A8 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = F8D5B4B619D9B94F00A779D2 /* Build configuration list for PBXProject "ipatool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8D5B4B219D9B94F00A779D2;
+			productRefGroup = F8D5B4BC19D9B94F00A779D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B63F2F1A0E13FB006378A8 /* ipatool */,
+				F8B63F471A0E14CC006378A8 /* ipatoolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8B63F461A0E14CC006378A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B63F601A0E9679006378A8 /* testConfig.json in Resources */,
+				F8B63F611A0E96A6006378A8 /* Blaat.ipa in Resources */,
+				F8B63F621A0E96BA006378A8 /* prov.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5358C2158A9CD8194D041F05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3CDA1EC659CFF266A53CD2F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B63F2C1A0E13FB006378A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F893C49C1A11370A00FE5C2B /* ITCommandUsage.swift in Sources */,
+				F893C49B1A11370A00FE5C2B /* ITCommand.swift in Sources */,
+				F893C49E1A11370A00FE5C2B /* ITCommandInfo.swift in Sources */,
+				F8B63F331A0E13FB006378A8 /* main.swift in Sources */,
+				F893C49D1A11370A00FE5C2B /* ITCommandFactory.swift in Sources */,
+				F893C49F1A11370A00FE5C2B /* ITIpa.swift in Sources */,
+				F893C49A1A11370500FE5C2B /* ITMain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B63F441A0E14CC006378A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B63F551A0E14E5006378A8 /* ITCommand.swift in Sources */,
+				F8B63F561A0E14E5006378A8 /* ITCommandUsage.swift in Sources */,
+				F8B63F531A0E14E1006378A8 /* ITIpaTests.swift in Sources */,
+				F8B63F521A0E14DE006378A8 /* ITCommandFactoryTests.swift in Sources */,
+				F8B63F591A0E14E5006378A8 /* ITIpa.swift in Sources */,
+				F8B63F581A0E14E5006378A8 /* ITCommandInfo.swift in Sources */,
+				F8B63F571A0E14E5006378A8 /* ITCommandFactory.swift in Sources */,
+				F8B63F511A0E14DC006378A8 /* ITMainTests.swift in Sources */,
+				F8B63F541A0E14E5006378A8 /* ITMain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F8B63F351A0E13FB006378A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F8B63F361A0E13FB006378A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F8B63F4F1A0E14CC006378A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ipatoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F8B63F501A0E14CC006378A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ipatoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F8D5B4D819D9B94F00A779D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8D5B4D919D9B94F00A779D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B63F341A0E13FB006378A8 /* Build configuration list for PBXNativeTarget "ipatool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B63F351A0E13FB006378A8 /* Debug */,
+				F8B63F361A0E13FB006378A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B63F4E1A0E14CC006378A8 /* Build configuration list for PBXNativeTarget "ipatoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B63F4F1A0E14CC006378A8 /* Debug */,
+				F8B63F501A0E14CC006378A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D5B4B619D9B94F00A779D2 /* Build configuration list for PBXProject "ipatool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D5B4D819D9B94F00A779D2 /* Debug */,
+				F8D5B4D919D9B94F00A779D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8D5B4B319D9B94F00A779D2 /* Project object */;
+}
