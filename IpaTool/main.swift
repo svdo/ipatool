@@ -8,5 +8,15 @@
 
 import Foundation
 
-println("Hello, World!")
+extension Array {
+    var match : (head: T, tail: [T])? {
+        return (count > 0) ? (self[0],Array(self[1..<count])) : nil
+    }
+}
+
+
+let ipaTool = ITMain()
+let x = ipaTool.commandFactory
+let (_,args) = Process.arguments.match!
+println(ipaTool.run(args))
 
