@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F83A7FBB1A1788B0006365FB /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */; };
 		F893C49A1A11370500FE5C2B /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
 		F893C49B1A11370A00FE5C2B /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
 		F893C49C1A11370A00FE5C2B /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
@@ -53,6 +54,7 @@
 		CFBA3E1A8E3D96F17148E0FE /* Pods-ipatoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatoolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8043FE619E6DC1E0053C433 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
 		F8043FE719E6DC1E0053C433 /* prov.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
+		F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfoTests.swift; sourceTree = "<group>"; };
 		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
 		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
@@ -189,12 +191,13 @@
 		F8D5B4D319D9B94F00A779D2 /* ipatoolTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8B63F4A1A0E14CC006378A8 /* Supporting Files */,
 				F8043FE519E6DC1E0053C433 /* testdata */,
 				F853320019E570AE00F999B7 /* testConfig.json */,
 				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
 				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
 				F85331FC19E4886000F999B7 /* ITIpaTests.swift */,
-				F8B63F4A1A0E14CC006378A8 /* Supporting Files */,
+				F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */,
 			);
 			path = ipatoolTests;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				F8B63F561A0E14E5006378A8 /* ITCommandUsage.swift in Sources */,
 				F8B63F531A0E14E1006378A8 /* ITIpaTests.swift in Sources */,
 				F8B63F521A0E14DE006378A8 /* ITCommandFactoryTests.swift in Sources */,
+				F83A7FBB1A1788B0006365FB /* ITCommandInfoTests.swift in Sources */,
 				F8B63F591A0E14E5006378A8 /* ITIpa.swift in Sources */,
 				F8B63F581A0E14E5006378A8 /* ITCommandInfo.swift in Sources */,
 				F8B63F571A0E14E5006378A8 /* ITCommandFactory.swift in Sources */,

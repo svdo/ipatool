@@ -13,7 +13,7 @@ class ITCommandFactory
     struct Statics {
         static var commandFactoryCommands:Dictionary<String, ITCommand> = [
             "info" : ITCommandInfo(),
-            "usage":ITCommandUsage()]
+            "usage": ITCommandUsage()]
     }
     
     var commands : Dictionary<String, ITCommand>
