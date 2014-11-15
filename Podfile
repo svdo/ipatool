@@ -4,3 +4,4 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'SSZipArchive', '~> 0.3.1', :inhibit_warnings => true
+link_with 'ipatool', 'ipatoolTests'
