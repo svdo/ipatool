@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FDE4A34271F90C25457B492 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9F5E493F3E9CC300FEEA69 /* libPods.a */; };
+		981160227E8150F1C5339ED0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9F5E493F3E9CC300FEEA69 /* libPods.a */; };
 		F829F4AB1A178F8C001A34A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4AA1A178F8C001A34A7 /* main.swift */; };
 		F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */; };
 		F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */; };
@@ -18,6 +20,15 @@
 		F829F4D31A179007001A34A7 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CD1A179007001A34A7 /* ITCommandUsage.swift */; };
 		F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CE1A179007001A34A7 /* ITIpa.swift */; };
 		F829F4D51A179007001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
+		F829F4D71A179110001A34A7 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CA1A179007001A34A7 /* ITCommand.swift */; };
+		F829F4D81A179110001A34A7 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */; };
+		F829F4D91A179110001A34A7 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */; };
+		F829F4DA1A179110001A34A7 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CD1A179007001A34A7 /* ITCommandUsage.swift */; };
+		F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CE1A179007001A34A7 /* ITIpa.swift */; };
+		F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
+		F829F4DD1A179128001A34A7 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C61A178FDF001A34A7 /* testConfig.json */; };
+		F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C81A178FE8001A34A7 /* Blaat.ipa */; };
+		F829F4DF1A17913D001A34A7 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C91A178FE8001A34A7 /* prov.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52AB2E1FDC5D8EFA9CD6B06D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E1DD26AF94CA682130E0EB65 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F829F4A71A178F8C001A34A7 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
 		F829F4AA1A178F8C001A34A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +64,7 @@
 		F829F4CE1A179007001A34A7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
 		F829F4CF1A179007001A34A7 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMain.swift; sourceTree = "<group>"; };
 		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ipatool-Bridging-Header.h"; path = "old/IpaTool/ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC9F5E493F3E9CC300FEEA69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981160227E8150F1C5339ED0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +80,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDE4A34271F90C25457B492 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62E796D7C3F93384917CE12E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC9F5E493F3E9CC300FEEA69 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF23F40C11877DE61AF5726F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD26AF94CA682130E0EB65 /* Pods.debug.xcconfig */,
+				52AB2E1FDC5D8EFA9CD6B06D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F829F49E1A178F8C001A34A7 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +111,8 @@
 				F829F4A91A178F8C001A34A7 /* ipatool */,
 				F829F4B61A178FAA001A34A7 /* ipatoolTests */,
 				F829F4A81A178F8C001A34A7 /* Products */,
+				DF23F40C11877DE61AF5726F /* Pods */,
+				62E796D7C3F93384917CE12E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4AE1A178F8C001A34A7 /* Build configuration list for PBXNativeTarget "ipatool" */;
 			buildPhases = (
+				34F6EBEB1E1D9675FF4B322C /* Check Pods Manifest.lock */,
 				F829F4A31A178F8C001A34A7 /* Sources */,
 				F829F4A41A178F8C001A34A7 /* Frameworks */,
 				F829F4A51A178F8C001A34A7 /* CopyFiles */,
+				24CD0C86DA8A797E878B9AA4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4BD1A178FAA001A34A7 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
 			buildPhases = (
+				B2CFE18BB13E252F6499868E /* Check Pods Manifest.lock */,
 				F829F4B11A178FAA001A34A7 /* Sources */,
 				F829F4B21A178FAA001A34A7 /* Frameworks */,
 				F829F4B31A178FAA001A34A7 /* Resources */,
+				FD2BA22E93A5E505C94DABC4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,10 +251,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F829F4DD1A179128001A34A7 /* testConfig.json in Resources */,
+				F829F4DF1A17913D001A34A7 /* prov.plist in Resources */,
+				F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24CD0C86DA8A797E878B9AA4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34F6EBEB1E1D9675FF4B322C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2CFE18BB13E252F6499868E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2BA22E93A5E505C94DABC4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F829F4A31A178F8C001A34A7 /* Sources */ = {
@@ -236,10 +341,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F829F4DA1A179110001A34A7 /* ITCommandUsage.swift in Sources */,
 				F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */,
 				F829F4C51A178FCE001A34A7 /* ITMainTests.swift in Sources */,
+				F829F4D91A179110001A34A7 /* ITCommandInfo.swift in Sources */,
+				F829F4D71A179110001A34A7 /* ITCommand.swift in Sources */,
 				F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */,
 				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
+				F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */,
+				F829F4D81A179110001A34A7 /* ITCommandFactory.swift in Sources */,
+				F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +436,7 @@
 		};
 		F829F4AF1A178F8C001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DD26AF94CA682130E0EB65 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -332,6 +444,7 @@
 		};
 		F829F4B01A178F8C001A34A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52AB2E1FDC5D8EFA9CD6B06D /* Pods.release.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -339,6 +452,7 @@
 		};
 		F829F4BB1A178FAA001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DD26AF94CA682130E0EB65 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +473,7 @@
 		};
 		F829F4BC1A178FAA001A34A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52AB2E1FDC5D8EFA9CD6B06D /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -400,6 +515,7 @@
 				F829F4BC1A178FAA001A34A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
