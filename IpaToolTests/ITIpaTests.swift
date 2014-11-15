@@ -10,11 +10,11 @@ import XCTest
 
 class ITIpaTests_testConfig: XCTestCase {
 
-    var config:AnyObject?
+    var config = ITTestConfig()
     var tempDirUrl:NSURL!
     
     override func setUp() {
-        config = ITIpaTests_testConfig.loadConfig()
+        config.load()
         tempDirUrl = ITIpa.createTempDir()
     }
     
@@ -32,30 +32,12 @@ class ITIpaTests_testConfig: XCTestCase {
 
     func testLoadTestConfig()
     {
-        let ipaPath = config!["ipaPath"] as String
-        XCTAssertNotNil(ipaPath)
+        XCTAssertNotNil(config.ipaPath)
     }
 
-    class func loadConfig() -> AnyObject? {
-        let bundle = NSBundle(forClass: self)
-        let configFilePath:String? = bundle.pathForResource("testConfig", ofType: "json")
-        XCTAssertNotNil(configFilePath)
-        
-        var error:NSError?
-        let jsonData = NSData(contentsOfFile:configFilePath!, options:NSDataReadingOptions(0), error: &error)
-        XCTAssertNotNil(jsonData)
-        let config: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions(0), error:&error)
-        XCTAssertNotNil(config)
-
-        return config
-    }
-    
     func testExtractIpa()
     {
-        let ipaPath = config!["ipaPath"] as String
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let ipaFullPath = bundle.pathForResource(ipaPath.stringByDeletingPathExtension, ofType:"ipa")
-        let ok = SSZipArchive.unzipFileAtPath(ipaFullPath, toDestination: tempDirUrl?.path!)
+        let ok = SSZipArchive.unzipFileAtPath(config.ipaFullPath!, toDestination: tempDirUrl?.path!)
         XCTAssertTrue(ok)
     }
     
@@ -63,16 +45,16 @@ class ITIpaTests_testConfig: XCTestCase {
 
 class ITIpaTests: XCTestCase
 {
-    var config:AnyObject?
+    var config = ITTestConfig()
     var tempDirUrl:NSURL!
     var ipa:ITIpa!
 
     override func setUp() {
-        config = ITIpaTests_testConfig.loadConfig()
+        config.load()
         tempDirUrl = ITIpa.createTempDir()
 
         ipa = ITIpa()
-        let ipaPath = config!["ipaPath"] as String
+        let ipaPath = config.ipaPath
         let bundle = NSBundle(forClass: self.dynamicType)
         let ipaFullPath = bundle.pathForResource(ipaPath.stringByDeletingPathExtension, ofType:"ipa")
         let (ok, error) = ipa.load(ipaFullPath!)
@@ -86,32 +68,32 @@ class ITIpaTests: XCTestCase
 
     func testAppName()
     {
-        XCTAssertEqual(config!["appName"] as String, ipa.appName)
+        XCTAssertEqual(config.appName, ipa.appName)
     }
     
     func testDisplayName()
     {
-        XCTAssertEqual(config!["displayName"] as String, ipa.displayName)
+        XCTAssertEqual(config.displayName, ipa.displayName)
     }
     
     func testBundleShortVersionString()
     {
-        XCTAssertEqual(config!["bundleShortVersionString"] as String, ipa.bundleShortVersionString)
+        XCTAssertEqual(config.bundleShortVersionString, ipa.bundleShortVersionString)
     }
     
     func testBundleVersion()
     {
-        XCTAssertEqual(config!["bundleVersion"] as String, ipa.bundleVersion)
+        XCTAssertEqual(config.bundleVersion, ipa.bundleVersion)
     }
     
     func testBundleIdentifier()
     {
-        XCTAssertEqual(config!["bundleIdentifier"] as String, ipa.bundleIdentifier)
+        XCTAssertEqual(config.bundleIdentifier, ipa.bundleIdentifier)
     }
     
     func testMinimumOSVersion()
     {
-        XCTAssertEqual(config!["minimumOSVersion"] as String, ipa.minimumOSVersion)
+        XCTAssertEqual(config.minimumOSVersion, ipa.minimumOSVersion)
     }
     
     func testReadProvisioningInformation()
@@ -125,14 +107,10 @@ class ITIpaTests: XCTestCase
         var certificate = certificates[0]
         var decodedCertificate:SecCertificate = SecCertificateCreateWithData(nil, certificate).takeUnretainedValue()
         var summary:String = String(SecCertificateCopySubjectSummary(decodedCertificate).takeUnretainedValue())
-        XCTAssertEqual(config!["codeSigningAuthority"] as String, summary)
-        
-        var df = NSDateFormatter()
-        df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        var expectedDate = df.dateFromString(config!["provisioningExpiration"] as String)
-        XCTAssertEqual(expectedDate!, provPlist!["ExpirationDate"]! as NSDate)
-        XCTAssertEqual(config!["provisioningName"] as String, provPlist!["Name"] as String)
-        XCTAssertEqual(config!["provisioningAppIdName"] as String, provPlist!["AppIDName"] as String)
-        XCTAssertEqual(config!["provisioningTeam"] as String, provPlist!["TeamName"] as String)
+        XCTAssertEqual(config.codeSigningAuthority, summary)
+        XCTAssertEqual(config.provisioningExpiration!, provPlist!["ExpirationDate"]! as NSDate)
+        XCTAssertEqual(config.provisioningName, provPlist!["Name"] as String)
+        XCTAssertEqual(config.provisioningAppIdName, provPlist!["AppIDName"] as String)
+        XCTAssertEqual(config.provisioningTeam, provPlist!["TeamName"] as String)
     }
 }

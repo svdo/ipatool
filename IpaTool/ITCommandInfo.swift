@@ -11,15 +11,14 @@ import Foundation
 class ITCommandInfo : ITCommand
 {
     override func execute(args: [String]) -> String {
-//        var ipa = ITIpa()
-//        let (success,error) = ipa.load(args[0])
-//
-//        if (success) {
-//            return ipa.displayName
-//        }
-//        else {
-//            return error
-//        }
-        return ""
+        var ipa = ITIpa()
+        let (success,error) = ipa.load(args[0])
+
+        if (success) {
+            return ipa.displayName
+        }
+        else {
+            return "Error: " + error
+        }
     }
 }

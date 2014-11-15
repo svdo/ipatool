@@ -29,6 +29,7 @@
 		F829F4DD1A179128001A34A7 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C61A178FDF001A34A7 /* testConfig.json */; };
 		F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C81A178FE8001A34A7 /* Blaat.ipa */; };
 		F829F4DF1A17913D001A34A7 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C91A178FE8001A34A7 /* prov.plist */; };
+		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		F829F4CE1A179007001A34A7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
 		F829F4CF1A179007001A34A7 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMain.swift; sourceTree = "<group>"; };
 		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
+		F882C91D1A179D5800DDC548 /* ITTestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITTestConfig.swift; sourceTree = "<group>"; };
 		FC9F5E493F3E9CC300FEEA69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				F829F4C61A178FDF001A34A7 /* testConfig.json */,
+				F882C91D1A179D5800DDC548 /* ITTestConfig.swift */,
 				F829F4C71A178FE8001A34A7 /* testdata */,
 				F829F4B71A178FAA001A34A7 /* Supporting Files */,
 				F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */,
@@ -350,6 +353,7 @@
 				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
 				F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */,
 				F829F4D81A179110001A34A7 /* ITCommandFactory.swift in Sources */,
+				F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */,
 				F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
