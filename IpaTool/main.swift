@@ -16,7 +16,6 @@ extension Array {
 
 
 let ipaTool = ITMain()
-let x = ipaTool.commandFactory
 let (_,args) = Process.arguments.match!
 println(ipaTool.run(args))
 
