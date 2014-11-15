@@ -12,62 +12,17 @@
 		<key>ipatoolTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>F8AEA23B19DC480A008F2C85</key>
+		<key>F829F4A61A178F8C001A34A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8AEA24219DC482A008F2C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AEA24D19DC496B008F2C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AEA25B19DC5710008F2C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AEA26519DC5710008F2C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AEA27519DC59EA008F2C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8B63F2F1A0E13FB006378A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8B63F3A1A0E1433006378A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8B63F471A0E14CC006378A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8D5B4BA19D9B94F00A779D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8D5B4CF19D9B94F00A779D2</key>
+		<key>F829F4B41A178FAA001A34A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

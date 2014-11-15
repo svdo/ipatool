@@ -7,31 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F83A7FBB1A1788B0006365FB /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */; };
-		F893C49A1A11370500FE5C2B /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
-		F893C49B1A11370A00FE5C2B /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
-		F893C49C1A11370A00FE5C2B /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
-		F893C49D1A11370A00FE5C2B /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
-		F893C49E1A11370A00FE5C2B /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
-		F893C49F1A11370A00FE5C2B /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FE19E4896A00F999B7 /* ITIpa.swift */; };
-		F8B63F331A0E13FB006378A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B63F321A0E13FB006378A8 /* main.swift */; };
-		F8B63F511A0E14DC006378A8 /* ITMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */; };
-		F8B63F521A0E14DE006378A8 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */; };
-		F8B63F531A0E14E1006378A8 /* ITIpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FC19E4886000F999B7 /* ITIpaTests.swift */; };
-		F8B63F541A0E14E5006378A8 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27319DC58C0008F2C85 /* ITMain.swift */; };
-		F8B63F551A0E14E5006378A8 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */; };
-		F8B63F561A0E14E5006378A8 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */; };
-		F8B63F571A0E14E5006378A8 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */; };
-		F8B63F581A0E14E5006378A8 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */; };
-		F8B63F591A0E14E5006378A8 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85331FE19E4896A00F999B7 /* ITIpa.swift */; };
-		F8B63F601A0E9679006378A8 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F853320019E570AE00F999B7 /* testConfig.json */; };
-		F8B63F611A0E96A6006378A8 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE619E6DC1E0053C433 /* Blaat.ipa */; };
-		F8B63F621A0E96BA006378A8 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8043FE719E6DC1E0053C433 /* prov.plist */; };
-		F9527E1A87192A7319A9E8BB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F30845863DEA435107D4D4F /* libPods.a */; };
+		F829F4AB1A178F8C001A34A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4AA1A178F8C001A34A7 /* main.swift */; };
+		F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */; };
+		F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */; };
+		F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4C01A178FCE001A34A7 /* ITIpaTests.swift */; };
+		F829F4C51A178FCE001A34A7 /* ITMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4C11A178FCE001A34A7 /* ITMainTests.swift */; };
+		F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CA1A179007001A34A7 /* ITCommand.swift */; };
+		F829F4D11A179007001A34A7 /* ITCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */; };
+		F829F4D21A179007001A34A7 /* ITCommandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */; };
+		F829F4D31A179007001A34A7 /* ITCommandUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CD1A179007001A34A7 /* ITCommandUsage.swift */; };
+		F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CE1A179007001A34A7 /* ITIpa.swift */; };
+		F829F4D51A179007001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F8B63F2E1A0E13FB006378A8 /* CopyFiles */ = {
+		F829F4A51A178F8C001A34A7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -43,48 +33,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		12D7BD73B1AD6F3F83CB9A70 /* Pods-ipatoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatoolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.debug.xcconfig"; sourceTree = "<group>"; };
-		622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.debug.xcconfig"; sourceTree = "<group>"; };
-		73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IpaToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IpaToolTests/Pods-IpaToolTests.release.xcconfig"; sourceTree = "<group>"; };
-		8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		8F30845863DEA435107D4D4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A381FDA4BD21F3916D2AD9E /* libPods-ipatoolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ipatoolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IpaToolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFBA3E1A8E3D96F17148E0FE /* Pods-ipatoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatoolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatoolTests/Pods-ipatoolTests.release.xcconfig"; sourceTree = "<group>"; };
-		F8043FE619E6DC1E0053C433 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
-		F8043FE719E6DC1E0053C433 /* prov.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
-		F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfoTests.swift; sourceTree = "<group>"; };
-		F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
-		F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
-		F85331FC19E4886000F999B7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
-		F85331FE19E4896A00F999B7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
-		F853320019E570AE00F999B7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
-		F853320219E5D5BB00F999B7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ipatool-Bridging-Header.h"; path = "../../IpaTool/ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
-		F8AEA27319DC58C0008F2C85 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITMain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F8AEA27919DC5A56008F2C85 /* footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footer.swift; sourceTree = "<group>"; };
-		F8AEA27A19DC5A56008F2C85 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
-		F8AEA27B19DC5A56008F2C85 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommand.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F8B63F301A0E13FB006378A8 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B63F321A0E13FB006378A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B63F4B1A0E14CC006378A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ITCommandUsage.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactoryTests.swift; sourceTree = "<group>"; };
-		F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
+		F829F4A71A178F8C001A34A7 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
+		F829F4AA1A178F8C001A34A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F829F4B81A178FAA001A34A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactoryTests.swift; sourceTree = "<group>"; };
+		F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfoTests.swift; sourceTree = "<group>"; };
+		F829F4C01A178FCE001A34A7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
+		F829F4C11A178FCE001A34A7 /* ITMainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
+		F829F4C61A178FDF001A34A7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
+		F829F4C81A178FE8001A34A7 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
+		F829F4C91A178FE8001A34A7 /* prov.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
+		F829F4CA1A179007001A34A7 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommand.swift; sourceTree = "<group>"; };
+		F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
+		F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
+		F829F4CD1A179007001A34A7 /* ITCommandUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandUsage.swift; sourceTree = "<group>"; };
+		F829F4CE1A179007001A34A7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
+		F829F4CF1A179007001A34A7 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMain.swift; sourceTree = "<group>"; };
+		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ipatool-Bridging-Header.h"; path = "old/IpaTool/ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F8B63F2D1A0E13FB006378A8 /* Frameworks */ = {
+		F829F4A41A178F8C001A34A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9527E1A87192A7319A9E8BB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8B63F451A0E14CC006378A8 /* Frameworks */ = {
+		F829F4B21A178FAA001A34A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,126 +71,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FE61AAFD7857F95DEBB11B4 /* Pods */ = {
+		F829F49E1A178F8C001A34A7 = {
 			isa = PBXGroup;
 			children = (
-				622758A4DE1C1F492CA68FD4 /* Pods-IpaToolTests.debug.xcconfig */,
-				73691DD4040900EC325A7088 /* Pods-IpaToolTests.release.xcconfig */,
-				12D7BD73B1AD6F3F83CB9A70 /* Pods-ipatoolTests.debug.xcconfig */,
-				CFBA3E1A8E3D96F17148E0FE /* Pods-ipatoolTests.release.xcconfig */,
-				8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */,
-				9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5AFDB59120423F242B8AC50B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C01A618BDFD3665E88509315 /* libPods-IpaToolTests.a */,
-				9A381FDA4BD21F3916D2AD9E /* libPods-ipatoolTests.a */,
-				8F30845863DEA435107D4D4F /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F8043FE519E6DC1E0053C433 /* testdata */ = {
-			isa = PBXGroup;
-			children = (
-				F8043FE619E6DC1E0053C433 /* Blaat.ipa */,
-				F8043FE719E6DC1E0053C433 /* prov.plist */,
-			);
-			path = testdata;
-			sourceTree = "<group>";
-		};
-		F8AEA25219DC4EA2008F2C85 /* ipatool */ = {
-			isa = PBXGroup;
-			children = (
-				F8AEA27219DC58C0008F2C85 /* Source */,
-				F8AEA27A19DC5A56008F2C85 /* header.swift */,
-				F8AEA27919DC5A56008F2C85 /* footer.swift */,
-				F8AEA27B19DC5A56008F2C85 /* Makefile */,
-			);
-			path = ipatool;
-			sourceTree = "<group>";
-		};
-		F8AEA27219DC58C0008F2C85 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				F853320219E5D5BB00F999B7 /* ipatool-Bridging-Header.h */,
-				F8AEA27319DC58C0008F2C85 /* ITMain.swift */,
-				F8AEA27C19DC5E37008F2C85 /* ITCommand.swift */,
-				F8C5D2FF19E07F5300B19D97 /* ITCommandUsage.swift */,
-				F85331F819E3FBF700F999B7 /* ITCommandFactory.swift */,
-				F85331FA19E47EA000F999B7 /* ITCommandInfo.swift */,
-				F85331FE19E4896A00F999B7 /* ITIpa.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		F8B63F311A0E13FB006378A8 /* ipatool */ = {
-			isa = PBXGroup;
-			children = (
-				F8B63F321A0E13FB006378A8 /* main.swift */,
-			);
-			path = ipatool;
-			sourceTree = "<group>";
-		};
-		F8B63F4A1A0E14CC006378A8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8B63F4B1A0E14CC006378A8 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8D5B4B219D9B94F00A779D2 = {
-			isa = PBXGroup;
-			children = (
-				F8AEA25219DC4EA2008F2C85 /* ipatool */,
-				F8D5B4D319D9B94F00A779D2 /* ipatoolTests */,
-				F8B63F311A0E13FB006378A8 /* ipatool */,
-				F8D5B4BC19D9B94F00A779D2 /* Products */,
-				1FE61AAFD7857F95DEBB11B4 /* Pods */,
-				5AFDB59120423F242B8AC50B /* Frameworks */,
+				F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */,
+				F829F4A91A178F8C001A34A7 /* ipatool */,
+				F829F4B61A178FAA001A34A7 /* ipatoolTests */,
+				F829F4A81A178F8C001A34A7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F8D5B4BC19D9B94F00A779D2 /* Products */ = {
+		F829F4A81A178F8C001A34A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8B63F301A0E13FB006378A8 /* ipatool */,
-				F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */,
+				F829F4A71A178F8C001A34A7 /* ipatool */,
+				F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8D5B4D319D9B94F00A779D2 /* ipatoolTests */ = {
+		F829F4A91A178F8C001A34A7 /* ipatool */ = {
 			isa = PBXGroup;
 			children = (
-				F8B63F4A1A0E14CC006378A8 /* Supporting Files */,
-				F8043FE519E6DC1E0053C433 /* testdata */,
-				F853320019E570AE00F999B7 /* testConfig.json */,
-				F8D5B4D619D9B94F00A779D2 /* ITMainTests.swift */,
-				F8C5D30119E0823500B19D97 /* ITCommandFactoryTests.swift */,
-				F85331FC19E4886000F999B7 /* ITIpaTests.swift */,
-				F83A7FBA1A1788B0006365FB /* ITCommandInfoTests.swift */,
+				F829F4AA1A178F8C001A34A7 /* main.swift */,
+				F829F4CA1A179007001A34A7 /* ITCommand.swift */,
+				F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */,
+				F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */,
+				F829F4CD1A179007001A34A7 /* ITCommandUsage.swift */,
+				F829F4CE1A179007001A34A7 /* ITIpa.swift */,
+				F829F4CF1A179007001A34A7 /* ITMain.swift */,
+			);
+			path = ipatool;
+			sourceTree = "<group>";
+		};
+		F829F4B61A178FAA001A34A7 /* ipatoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				F829F4C61A178FDF001A34A7 /* testConfig.json */,
+				F829F4C71A178FE8001A34A7 /* testdata */,
+				F829F4B71A178FAA001A34A7 /* Supporting Files */,
+				F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */,
+				F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */,
+				F829F4C01A178FCE001A34A7 /* ITIpaTests.swift */,
+				F829F4C11A178FCE001A34A7 /* ITMainTests.swift */,
 			);
 			path = ipatoolTests;
+			sourceTree = "<group>";
+		};
+		F829F4B71A178FAA001A34A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F829F4B81A178FAA001A34A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F829F4C71A178FE8001A34A7 /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				F829F4C81A178FE8001A34A7 /* Blaat.ipa */,
+				F829F4C91A178FE8001A34A7 /* prov.plist */,
+			);
+			path = testdata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8B63F2F1A0E13FB006378A8 /* ipatool */ = {
+		F829F4A61A178F8C001A34A7 /* ipatool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8B63F341A0E13FB006378A8 /* Build configuration list for PBXNativeTarget "ipatool" */;
+			buildConfigurationList = F829F4AE1A178F8C001A34A7 /* Build configuration list for PBXNativeTarget "ipatool" */;
 			buildPhases = (
-				5358C2158A9CD8194D041F05 /* Check Pods Manifest.lock */,
-				F8B63F2C1A0E13FB006378A8 /* Sources */,
-				F8B63F2D1A0E13FB006378A8 /* Frameworks */,
-				F8B63F2E1A0E13FB006378A8 /* CopyFiles */,
-				A3CDA1EC659CFF266A53CD2F /* Copy Pods Resources */,
+				F829F4A31A178F8C001A34A7 /* Sources */,
+				F829F4A41A178F8C001A34A7 /* Frameworks */,
+				F829F4A51A178F8C001A34A7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -221,16 +152,16 @@
 			);
 			name = ipatool;
 			productName = ipatool;
-			productReference = F8B63F301A0E13FB006378A8 /* ipatool */;
+			productReference = F829F4A71A178F8C001A34A7 /* ipatool */;
 			productType = "com.apple.product-type.tool";
 		};
-		F8B63F471A0E14CC006378A8 /* ipatoolTests */ = {
+		F829F4B41A178FAA001A34A7 /* ipatoolTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8B63F4E1A0E14CC006378A8 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
+			buildConfigurationList = F829F4BD1A178FAA001A34A7 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
 			buildPhases = (
-				F8B63F441A0E14CC006378A8 /* Sources */,
-				F8B63F451A0E14CC006378A8 /* Frameworks */,
-				F8B63F461A0E14CC006378A8 /* Resources */,
+				F829F4B11A178FAA001A34A7 /* Sources */,
+				F829F4B21A178FAA001A34A7 /* Frameworks */,
+				F829F4B31A178FAA001A34A7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -238,196 +169,84 @@
 			);
 			name = ipatoolTests;
 			productName = ipatoolTests;
-			productReference = F8B63F481A0E14CC006378A8 /* ipatoolTests.xctest */;
+			productReference = F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F8D5B4B319D9B94F00A779D2 /* Project object */ = {
+		F829F49F1A178F8C001A34A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = IT;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Stefan van den Oord";
 				TargetAttributes = {
-					F8B63F2F1A0E13FB006378A8 = {
+					F829F4A61A178F8C001A34A7 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					F8B63F471A0E14CC006378A8 = {
+					F829F4B41A178FAA001A34A7 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
-			buildConfigurationList = F8D5B4B619D9B94F00A779D2 /* Build configuration list for PBXProject "ipatool" */;
+			buildConfigurationList = F829F4A21A178F8C001A34A7 /* Build configuration list for PBXProject "ipatool" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = F8D5B4B219D9B94F00A779D2;
-			productRefGroup = F8D5B4BC19D9B94F00A779D2 /* Products */;
+			mainGroup = F829F49E1A178F8C001A34A7;
+			productRefGroup = F829F4A81A178F8C001A34A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8B63F2F1A0E13FB006378A8 /* ipatool */,
-				F8B63F471A0E14CC006378A8 /* ipatoolTests */,
+				F829F4A61A178F8C001A34A7 /* ipatool */,
+				F829F4B41A178FAA001A34A7 /* ipatoolTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F8B63F461A0E14CC006378A8 /* Resources */ = {
+		F829F4B31A178FAA001A34A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B63F601A0E9679006378A8 /* testConfig.json in Resources */,
-				F8B63F611A0E96A6006378A8 /* Blaat.ipa in Resources */,
-				F8B63F621A0E96BA006378A8 /* prov.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5358C2158A9CD8194D041F05 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A3CDA1EC659CFF266A53CD2F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		F8B63F2C1A0E13FB006378A8 /* Sources */ = {
+		F829F4A31A178F8C001A34A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F893C49C1A11370A00FE5C2B /* ITCommandUsage.swift in Sources */,
-				F893C49B1A11370A00FE5C2B /* ITCommand.swift in Sources */,
-				F893C49E1A11370A00FE5C2B /* ITCommandInfo.swift in Sources */,
-				F8B63F331A0E13FB006378A8 /* main.swift in Sources */,
-				F893C49D1A11370A00FE5C2B /* ITCommandFactory.swift in Sources */,
-				F893C49F1A11370A00FE5C2B /* ITIpa.swift in Sources */,
-				F893C49A1A11370500FE5C2B /* ITMain.swift in Sources */,
+				F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */,
+				F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */,
+				F829F4D51A179007001A34A7 /* ITMain.swift in Sources */,
+				F829F4D31A179007001A34A7 /* ITCommandUsage.swift in Sources */,
+				F829F4AB1A178F8C001A34A7 /* main.swift in Sources */,
+				F829F4D21A179007001A34A7 /* ITCommandInfo.swift in Sources */,
+				F829F4D11A179007001A34A7 /* ITCommandFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8B63F441A0E14CC006378A8 /* Sources */ = {
+		F829F4B11A178FAA001A34A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B63F551A0E14E5006378A8 /* ITCommand.swift in Sources */,
-				F8B63F561A0E14E5006378A8 /* ITCommandUsage.swift in Sources */,
-				F8B63F531A0E14E1006378A8 /* ITIpaTests.swift in Sources */,
-				F8B63F521A0E14DE006378A8 /* ITCommandFactoryTests.swift in Sources */,
-				F83A7FBB1A1788B0006365FB /* ITCommandInfoTests.swift in Sources */,
-				F8B63F591A0E14E5006378A8 /* ITIpa.swift in Sources */,
-				F8B63F581A0E14E5006378A8 /* ITCommandInfo.swift in Sources */,
-				F8B63F571A0E14E5006378A8 /* ITCommandFactory.swift in Sources */,
-				F8B63F511A0E14DC006378A8 /* ITMainTests.swift in Sources */,
-				F8B63F541A0E14E5006378A8 /* ITMain.swift in Sources */,
+				F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */,
+				F829F4C51A178FCE001A34A7 /* ITMainTests.swift in Sources */,
+				F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */,
+				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F8B63F351A0E13FB006378A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
-			};
-			name = Debug;
-		};
-		F8B63F361A0E13FB006378A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		F8B63F4F1A0E14CC006378A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B34C7C6C226D8BD5BA290C0 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ipatoolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
-			};
-			name = Debug;
-		};
-		F8B63F501A0E14CC006378A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ECB255692A2DB19A315A0AE /* Pods.release.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ipatoolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool/ipatool-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		F8D5B4D819D9B94F00A779D2 /* Debug */ = {
+		F829F4AC1A178F8C001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -444,7 +263,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -455,23 +273,22 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F8D5B4D919D9B94F00A779D2 /* Release */ = {
+		F829F4AD1A178F8C001A34A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -488,57 +305,103 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F829F4AF1A178F8C001A34A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F829F4B01A178F8C001A34A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F829F4BB1A178FAA001A34A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ipatoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F829F4BC1A178FAA001A34A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ipatoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8B63F341A0E13FB006378A8 /* Build configuration list for PBXNativeTarget "ipatool" */ = {
+		F829F4A21A178F8C001A34A7 /* Build configuration list for PBXProject "ipatool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8B63F351A0E13FB006378A8 /* Debug */,
-				F8B63F361A0E13FB006378A8 /* Release */,
+				F829F4AC1A178F8C001A34A7 /* Debug */,
+				F829F4AD1A178F8C001A34A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8B63F4E1A0E14CC006378A8 /* Build configuration list for PBXNativeTarget "ipatoolTests" */ = {
+		F829F4AE1A178F8C001A34A7 /* Build configuration list for PBXNativeTarget "ipatool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8B63F4F1A0E14CC006378A8 /* Debug */,
-				F8B63F501A0E14CC006378A8 /* Release */,
+				F829F4AF1A178F8C001A34A7 /* Debug */,
+				F829F4B01A178F8C001A34A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8D5B4B619D9B94F00A779D2 /* Build configuration list for PBXProject "ipatool" */ = {
+		F829F4BD1A178FAA001A34A7 /* Build configuration list for PBXNativeTarget "ipatoolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8D5B4D819D9B94F00A779D2 /* Debug */,
-				F8D5B4D919D9B94F00A779D2 /* Release */,
+				F829F4BB1A178FAA001A34A7 /* Debug */,
+				F829F4BC1A178FAA001A34A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F8D5B4B319D9B94F00A779D2 /* Project object */;
+	rootObject = F829F49F1A178F8C001A34A7 /* Project object */;
 }

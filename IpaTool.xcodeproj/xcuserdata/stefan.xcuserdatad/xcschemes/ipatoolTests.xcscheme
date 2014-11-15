@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
+               BlueprintIdentifier = "F829F4B41A178FAA001A34A7"
                BuildableName = "ipatoolTests.xctest"
                BlueprintName = "ipatoolTests"
                ReferencedContainer = "container:ipatool.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
+               BlueprintIdentifier = "F829F4B41A178FAA001A34A7"
                BuildableName = "ipatoolTests.xctest"
                BlueprintName = "ipatoolTests"
                ReferencedContainer = "container:ipatool.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
+            BlueprintIdentifier = "F829F4B41A178FAA001A34A7"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
             ReferencedContainer = "container:ipatool.xcodeproj">
@@ -61,7 +61,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
+            BlueprintIdentifier = "F829F4B41A178FAA001A34A7"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
             ReferencedContainer = "container:ipatool.xcodeproj">
@@ -79,7 +79,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F471A0E14CC006378A8"
+            BlueprintIdentifier = "F829F4B41A178FAA001A34A7"
             BuildableName = "ipatoolTests.xctest"
             BlueprintName = "ipatoolTests"
             ReferencedContainer = "container:ipatool.xcodeproj">

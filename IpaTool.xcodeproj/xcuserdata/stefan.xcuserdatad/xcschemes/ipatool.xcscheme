@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
+               BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
                BuildableName = "ipatool"
                BlueprintName = "ipatool"
                ReferencedContainer = "container:ipatool.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
+            BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
             ReferencedContainer = "container:ipatool.xcodeproj">
@@ -51,22 +51,12 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
+            BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
             ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "$(SOURCE_ROOT)/ipatoolTests/testdata/Blaat.ipa"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "info"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,15 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8B63F2F1A0E13FB006378A8"
+            BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
             ReferencedContainer = "container:ipatool.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
