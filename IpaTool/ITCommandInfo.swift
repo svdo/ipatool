@@ -15,7 +15,14 @@ class ITCommandInfo : ITCommand
         let (success,error) = ipa.load(args[0])
 
         if (success) {
-            return ipa.displayName
+            return "  App name:            " + ipa.appName + "\n" +
+                "  Display name:        " + ipa.displayName + "\n" +
+                "  Version:             " + ipa.bundleShortVersionString + "\n" +
+                "  Build:               " + ipa.bundleVersion + "\n" +
+                "  Bundle identifier:   " + ipa.bundleIdentifier + "\n" +
+                //            "  Code sign authority: " + ipa.codeSignAuthority + "\n" +
+                "  Minimum OS version:  " + ipa.minimumOSVersion + "\n";// +
+            //            "  Device family:       " + ipa.deviceFamily + "\n";
         }
         else {
             return "Error: " + error
