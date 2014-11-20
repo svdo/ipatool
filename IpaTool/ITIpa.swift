@@ -18,6 +18,7 @@ class ITIpa
     var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as String } }
     var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
     var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as String } }
+    var codeSigningAuthority = ""
 
     private var infoPlistContents:NSDictionary? = nil
     
@@ -32,6 +33,7 @@ class ITIpa
         
         extractAppName(extractedIpaPath)
         extractInfoPlist(extractedIpaPath)
+        extractCodeSigningAuthority(extractedIpaPath)
         
         NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
         return (true, nil)
@@ -65,5 +67,83 @@ class ITIpa
     {
         let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
         infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
+    }
+    
+    func extractCodeSigningAuthority(extractedIpaPath:String)
+    {
+        let inputFileName = appPath.stringByAppendingPathComponent("embedded.mobileprovision")
+        let provisioningData = NSData(contentsOfFile:inputFileName)
+        assert(provisioningData != nil)
+        
+        var decoder = ITCMSDecoder()
+        decoder.decodeData(provisioningData!)
+        var cmsDecoder = decoder.cmsDecoder
+        
+        var policyRef:Unmanaged<SecPolicy> = SecPolicyCreateBasicX509()
+        var secPolicy = policyRef.takeRetainedValue()
+        var signerStatus:CMSSignerStatus = 0
+        var evaluateSecTrust: Boolean = 0
+        var secTrust:Unmanaged<SecTrust>? = nil
+        var certVerifyResultCode:OSStatus = noErr
+        var status = CMSDecoderCopySignerStatus(cmsDecoder, 0, secPolicy, evaluateSecTrust, &signerStatus, &secTrust, &certVerifyResultCode)
+        assert(status == noErr)
+        assert(certVerifyResultCode == noErr) // todo: convert to run-time error (SecCopyErrorMessageString?)
+        assert(signerStatus == UInt32(kCMSSignerValid)) // todo: convert to run-time error
+        var trust = secTrust!.takeRetainedValue()
+        
+        let numCerts = SecTrustGetCertificateCount(trust)
+        var ucert:Unmanaged<SecCertificate>? = SecTrustGetCertificateAtIndex(trust, 0)
+        var cert = ucert!.takeRetainedValue()
+        
+        var uCommonName:Unmanaged<CFString>? = nil
+        SecCertificateCopyCommonName(cert, &uCommonName)
+        var commonName:NSString = uCommonName!.takeRetainedValue()
+        
+        var uSubject:Unmanaged<CFString>? = SecCertificateCopySubjectSummary(cert)
+        var subject:NSString = uSubject!.takeRetainedValue()
+        
+        var uDescription:Unmanaged<CFString>? = SecCertificateCopyShortDescription(nil, cert, nil)
+        var description:NSString = uDescription!.takeRetainedValue()
+        
+        var uNormalizedSubjectContent:Unmanaged<CFData>? = SecCertificateCopyNormalizedSubjectContent(cert, nil)
+        var normalizedSubjectContent:NSData = uNormalizedSubjectContent!.takeRetainedValue() // DER encoded certificate?
+        
+        var uLongDesc:Unmanaged<CFString>? = SecCertificateCopyLongDescription(nil, cert, nil)
+        var longDesc:NSString = uLongDesc!.takeRetainedValue()
+        
+        var uCertValues = SecCertificateCopyValues(cert, nil, nil)
+        var certValues:NSDictionary = uCertValues!.takeRetainedValue()
+        var xx = certValues[kSecOIDX509V1SubjectName]
+        
+        println("done")
+        return
+        
+        
+//        var provisioningProfile:NSDictionary? = NSPropertyListSerialization.propertyListFromData(decodedData, mutabilityOption: NSPropertyListMutabilityOptions.Immutable, format: nil, errorDescription: nil) as? NSDictionary
+//        assert(provisioningProfile != nil)
+//        
+//        var certs:[NSData] = provisioningProfile!["DeveloperCertificates"] as [NSData]
+//        var cert0 = certs[0]
+//        
+//        var cert0Bytes = UnsafeMutablePointer<UInt8>.alloc(cert0.length)
+//        cert0.getBytes(cert0Bytes, length:cert0.length)
+//        var cfrs = CFReadStreamCreateWithBytesNoCopy(nil, cert0Bytes, cert0.length, nil)
+//        
+//        var uReadTransform:Unmanaged<SecTransform>? = SecTransformCreateReadTransformWithReadStream(cfrs);
+//        var readTransform: SecTransform = uReadTransform!.takeRetainedValue()
+//        
+//        var uDecoder = SecDecodeTransformCreate(kSecBase64Encoding, nil)
+//        var decoder: SecTransform = uDecoder!.takeRetainedValue()
+//        var out:AnyObject = SecTransformExecute(decoder, nil)
+//        
+//        var uGroup:Unmanaged<SecGroupTransform>! = SecTransformCreateGroupTransform()
+//        var group: SecGroupTransform = uGroup!.takeRetainedValue()
+//        SecTransformConnectTransforms(readTransform, kSecTransformOutputAttributeName,
+//            decoder, kSecTransformInputAttributeName, group, nil);
+//        
+//        var base64decodedData = SecTransformExecute(group, nil)
+//        
+//        println(cert)
+
     }
 }

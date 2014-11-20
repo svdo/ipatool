@@ -113,4 +113,9 @@ class ITIpaTests: XCTestCase
         XCTAssertEqual(config.provisioningAppIdName, provPlist!["AppIDName"] as String)
         XCTAssertEqual(config.provisioningTeam, provPlist!["TeamName"] as String)
     }
+    
+    func testCodeSigningAuthority()
+    {
+        XCTAssertEqual(config.codeSigningAuthority, ipa.codeSigningAuthority)
+    }
 }
