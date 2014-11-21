@@ -11,7 +11,8 @@ import Foundation
 class ITCMSDecoder
 {
     var cmsDecoder:CMSDecoder?
-    var _decodedString:String?
+    private var _decodedString:String?
+    private var _decodedData:NSData?
     
     init()
     {
@@ -31,18 +32,26 @@ class ITCMSDecoder
         
         status = CMSDecoderFinalizeMessage(cmsDecoder)
         assert(status == noErr)
+        
+        decodeString()
+    }
+    
+    func decodeString()
+    {
+        var data:Unmanaged<CFData>? = nil
+        var status = CMSDecoderCopyContent(cmsDecoder, &data)
+        assert(status == noErr)
+        if let d = data {
+            _decodedData = d.takeRetainedValue()
+            _decodedString = NSString(data:_decodedData!, encoding: NSUTF8StringEncoding)
+        }
     }
     
     func decodedString() -> String?
     {
         if (_decodedString != nil) { return _decodedString }
         if (cmsDecoder == nil) { return nil }
-        
-        var data:Unmanaged<CFData>? = nil
-        var status = CMSDecoderCopyContent(cmsDecoder, &data)
-        assert(status == noErr)
-        let decodedData:NSData = data!.takeRetainedValue()
-        _decodedString = NSString(data: decodedData, encoding: NSUTF8StringEncoding)
+        decodeString()
         return _decodedString
     }
 
@@ -54,6 +63,32 @@ class ITCMSDecoder
         println("Num signers: " + String(numSigners))
         assert(numSigners == 1) // todo convert to run-time error
         return numSigners
+    }
+    
+    func trust() -> ITSecTrust
+    {
+        var policyRef:Unmanaged<SecPolicy> = SecPolicyCreateBasicX509()
+        var secPolicy = policyRef.takeRetainedValue()
+        var signerStatus:CMSSignerStatus = 0
+        var evaluateSecTrust: Boolean = 0
+        var secTrust:Unmanaged<SecTrust>? = nil
+        var certVerifyResultCode:OSStatus = noErr
+        var status = CMSDecoderCopySignerStatus(cmsDecoder, 0, secPolicy, evaluateSecTrust, &signerStatus, &secTrust, &certVerifyResultCode)
+        assert(status == noErr)
+        assert(certVerifyResultCode == noErr) // todo: convert to run-time error (SecCopyErrorMessageString?)
+        assert(signerStatus == UInt32(kCMSSignerValid)) // todo: convert to run-time error
+        var trust = secTrust!.takeRetainedValue()
+        return ITSecTrust(trust)
+    }
+    
+    func provisioningProfile() -> ITProvisioningProfile?
+    {
+        if let d = _decodedData {
+            return ITProvisioningProfile(d)
+        }
+        else {
+            return nil
+        }
     }
 }
 
