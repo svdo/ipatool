@@ -32,8 +32,6 @@
 		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 		F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
 		F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
-		F882C9231A1FC1E200DDC548 /* ITSecTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */; };
-		F882C9241A1FC1E200DDC548 /* ITSecTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */; };
 		F882C9261A1FC42700DDC548 /* ITSecCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */; };
 		F882C9271A1FC42700DDC548 /* ITSecCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */; };
 		F882C9291A1FCDA700DDC548 /* ITProvisioningProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */; };
@@ -75,7 +73,6 @@
 		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
 		F882C91D1A179D5800DDC548 /* ITTestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITTestConfig.swift; sourceTree = "<group>"; };
 		F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCMSDecoder.swift; sourceTree = "<group>"; };
-		F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecTrust.swift; sourceTree = "<group>"; };
 		F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecCertificate.swift; sourceTree = "<group>"; };
 		F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITProvisioningProfile.swift; sourceTree = "<group>"; };
 		FC9F5E493F3E9CC300FEEA69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +147,6 @@
 				F829F4CE1A179007001A34A7 /* ITIpa.swift */,
 				F829F4CF1A179007001A34A7 /* ITMain.swift */,
 				F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */,
-				F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */,
 				F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */,
 				F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */,
 			);
@@ -346,7 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F882C9231A1FC1E200DDC548 /* ITSecTrust.swift in Sources */,
 				F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */,
 				F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */,
 				F829F4D51A179007001A34A7 /* ITMain.swift in Sources */,
@@ -365,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F829F4DA1A179110001A34A7 /* ITCommandUsage.swift in Sources */,
-				F882C9241A1FC1E200DDC548 /* ITSecTrust.swift in Sources */,
 				F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */,
 				F829F4C51A178FCE001A34A7 /* ITMainTests.swift in Sources */,
 				F829F4D91A179110001A34A7 /* ITCommandInfo.swift in Sources */,

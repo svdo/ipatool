@@ -46,42 +46,6 @@ class ITSecCertificate
         }
     }
     
-    var description : String? {
-        get {
-            var desc:Unmanaged<CFString>? = SecCertificateCopyShortDescription(nil, _secCertificate, nil)
-            if let d = desc {
-                return d.takeRetainedValue()
-            }
-            else {
-                return nil
-            }
-        }
-    }
-    
-    var normalizedSubjectContent : NSData? {
-        get {
-            var nSubCont:Unmanaged<CFData>? = SecCertificateCopyNormalizedSubjectContent(_secCertificate, nil)
-            if let n = nSubCont {
-                return n.takeRetainedValue()
-            }
-            else {
-                return nil
-            }
-        }
-    }
-    
-    var longDescription : String? {
-        get {
-            var longDesc:Unmanaged<CFString>? = SecCertificateCopyLongDescription(nil, _secCertificate, nil)
-            if let d = longDesc {
-                return d.takeRetainedValue()
-            }
-            else {
-                return nil
-            }
-        }
-    }
-    
     var values : NSDictionary? {
         get {
             var certValues = SecCertificateCopyValues(_secCertificate, nil, nil)
