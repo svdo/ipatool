@@ -38,8 +38,6 @@
 		F882C9271A1FC42700DDC548 /* ITSecCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */; };
 		F882C9291A1FCDA700DDC548 /* ITProvisioningProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */; };
 		F882C92A1A1FCDA700DDC548 /* ITProvisioningProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */; };
-		F882C9321A1FE8B900DDC548 /* x509bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F882C9301A1FE8B900DDC548 /* x509bridge.m */; };
-		F882C9331A1FE8B900DDC548 /* x509bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F882C9301A1FE8B900DDC548 /* x509bridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,8 +78,6 @@
 		F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecTrust.swift; sourceTree = "<group>"; };
 		F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecCertificate.swift; sourceTree = "<group>"; };
 		F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITProvisioningProfile.swift; sourceTree = "<group>"; };
-		F882C9301A1FE8B900DDC548 /* x509bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = x509bridge.m; sourceTree = "<group>"; };
-		F882C9311A1FE8B900DDC548 /* x509bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509bridge.h; sourceTree = "<group>"; };
 		FC9F5E493F3E9CC300FEEA69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,8 +153,6 @@
 				F882C9221A1FC1E200DDC548 /* ITSecTrust.swift */,
 				F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */,
 				F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */,
-				F882C9301A1FE8B900DDC548 /* x509bridge.m */,
-				F882C9311A1FE8B900DDC548 /* x509bridge.h */,
 			);
 			path = ipatool;
 			sourceTree = "<group>";
@@ -356,7 +350,6 @@
 				F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */,
 				F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */,
 				F829F4D51A179007001A34A7 /* ITMain.swift in Sources */,
-				F882C9321A1FE8B900DDC548 /* x509bridge.m in Sources */,
 				F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */,
 				F829F4D31A179007001A34A7 /* ITCommandUsage.swift in Sources */,
 				F882C9261A1FC42700DDC548 /* ITSecCertificate.swift in Sources */,
@@ -371,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F882C9331A1FE8B900DDC548 /* x509bridge.m in Sources */,
 				F829F4DA1A179110001A34A7 /* ITCommandUsage.swift in Sources */,
 				F882C9241A1FC1E200DDC548 /* ITSecTrust.swift in Sources */,
 				F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */,

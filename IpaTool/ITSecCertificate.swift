@@ -12,9 +12,13 @@ class ITSecCertificate
 {
     var _secCertificate:SecCertificate
     
-    init(_ secCertificate:SecCertificate)
-    {
+    init(_ secCertificate:SecCertificate) {
         _secCertificate = secCertificate
+    }
+    
+    init(_ data:NSData) {
+        var uCert:Unmanaged<SecCertificate> = SecCertificateCreateWithData(nil, data)
+        _secCertificate = uCert.takeRetainedValue()
     }
     
     var commonName : String? {

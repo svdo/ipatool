@@ -23,8 +23,8 @@ class ITProvisioningProfile
         {
             var certs:[NSData] = prof["DeveloperCertificates"] as [NSData]
             var cert = certs[i]
-            let subjectCN:NSString = getX509SubjectCN(cert)
-            return subjectCN;
+            var secCert:ITSecCertificate = ITSecCertificate(cert)
+            return secCert.subject
         }
         else {
             return nil;
