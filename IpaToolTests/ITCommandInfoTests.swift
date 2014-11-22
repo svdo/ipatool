@@ -39,11 +39,11 @@ class ITCommandInfoTests: XCTestCase {
             "  Version:             1.0\n" +
             "  Build:               1\n" +
             "  Bundle identifier:   com.vandenoord.Blaat\n" +
-//            "  Code sign authority: iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)\n" +
-            "  Minimum OS version:  8.0\n";// +
-//            "  Device family:       iphone\n" +
-//            "\n" +
-//            "Provisioning:\n" +
+            "  Code sign authority: iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)\n" +
+            "  Minimum OS version:  8.0\n" +
+            "  Device family:       iphone\n" +
+            "\n" +
+            "Provisioning:\n";// +
 //            "  Name:                Blaat ad hoc\n" +
 //            "  Expiration:          Wed Apr 15 17:48:44 CET 2015\n" +
 //            "  App ID name:         Blaat\n" +

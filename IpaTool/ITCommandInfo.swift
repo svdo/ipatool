@@ -20,9 +20,11 @@ class ITCommandInfo : ITCommand
                 "  Version:             " + ipa.bundleShortVersionString + "\n" +
                 "  Build:               " + ipa.bundleVersion + "\n" +
                 "  Bundle identifier:   " + ipa.bundleIdentifier + "\n" +
-                //            "  Code sign authority: " + ipa.codeSignAuthority + "\n" +
-                "  Minimum OS version:  " + ipa.minimumOSVersion + "\n";// +
-            //            "  Device family:       " + ipa.deviceFamily + "\n";
+                "  Code sign authority: " + ipa.codeSigningAuthority + "\n" +
+                "  Minimum OS version:  " + ipa.minimumOSVersion + "\n" +
+                "  Device family:       " + ipa.deviceFamily + "\n" +
+                "\n" +
+                "Provisioning:\n";
         }
         else {
             return "Error: " + error

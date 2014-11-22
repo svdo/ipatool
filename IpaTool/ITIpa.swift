@@ -19,6 +19,21 @@ class ITIpa
     var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
     var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as String } }
     var codeSigningAuthority = ""
+    var deviceFamily:String {
+        get {
+            var result = ""
+            let families:Array<Int> = infoPlistContents!["UIDeviceFamily"] as Array<Int>
+            for f in families {
+                switch f as Int {
+                    case 1: result += "iphone "
+                    case 2: result += "ipad "
+                    case 3: result += "appletv "
+                default: continue
+                }
+            }
+            return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        }
+    }
 
     private var infoPlistContents:NSDictionary? = nil
     
