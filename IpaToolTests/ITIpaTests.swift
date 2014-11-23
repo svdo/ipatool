@@ -98,24 +98,15 @@ class ITIpaTests: XCTestCase
     
     func testReadProvisioningInformation()
     {
-        // TODO This file is created using 'security cms -D -i embedded.mobileprovision -o prov.plist'. The required APIs are not available on iOS, and I don't have 10.10 SDK yet
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let provPlistPath = bundle.pathForResource("prov", ofType: "plist")
-        var provPlist = NSDictionary(contentsOfFile: provPlistPath!)
-        
-        var certificates = provPlist!["DeveloperCertificates"]! as [NSData]
-        var certificate = certificates[0]
-        var decodedCertificate:SecCertificate = SecCertificateCreateWithData(nil, certificate).takeUnretainedValue()
-        var summary:String = String(SecCertificateCopySubjectSummary(decodedCertificate).takeUnretainedValue())
-        XCTAssertEqual(config.codeSigningAuthority, summary)
-        XCTAssertEqual(config.provisioningExpiration!, provPlist!["ExpirationDate"]! as NSDate)
-        XCTAssertEqual(config.provisioningName, provPlist!["Name"] as String)
-        XCTAssertEqual(config.provisioningAppIdName, provPlist!["AppIDName"] as String)
-        XCTAssertEqual(config.provisioningTeam, provPlist!["TeamName"] as String)
+        let provisioningProfile = ipa.provisioningProfile!
+        XCTAssertEqual(config.provisioningExpiration!, provisioningProfile.expirationDate()!)
+        XCTAssertEqual(config.provisioningName, provisioningProfile.provisioningName()!)
+        XCTAssertEqual(config.provisioningAppIdName, provisioningProfile.appIdName()!)
+        XCTAssertEqual(config.provisioningTeam, provisioningProfile.teamName()!)
     }
     
     func testCodeSigningAuthority()
     {
-        XCTAssertEqual(config.codeSigningAuthority, ipa.codeSigningAuthority)
+        XCTAssertEqual(config.codeSigningAuthority, ipa.provisioningProfile!.codeSigningAuthority()!)
     }
 }

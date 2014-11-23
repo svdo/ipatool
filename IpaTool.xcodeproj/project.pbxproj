@@ -28,7 +28,6 @@
 		F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
 		F829F4DD1A179128001A34A7 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C61A178FDF001A34A7 /* testConfig.json */; };
 		F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C81A178FE8001A34A7 /* Blaat.ipa */; };
-		F829F4DF1A17913D001A34A7 /* prov.plist in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C91A178FE8001A34A7 /* prov.plist */; };
 		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 		F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
 		F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
@@ -63,7 +62,6 @@
 		F829F4C11A178FCE001A34A7 /* ITMainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
 		F829F4C61A178FDF001A34A7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
 		F829F4C81A178FE8001A34A7 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
-		F829F4C91A178FE8001A34A7 /* prov.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = prov.plist; sourceTree = "<group>"; };
 		F829F4CA1A179007001A34A7 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommand.swift; sourceTree = "<group>"; };
 		F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				F829F4C81A178FE8001A34A7 /* Blaat.ipa */,
-				F829F4C91A178FE8001A34A7 /* prov.plist */,
 			);
 			path = testdata;
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F829F4DD1A179128001A34A7 /* testConfig.json in Resources */,
-				F829F4DF1A17913D001A34A7 /* prov.plist in Resources */,
 				F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

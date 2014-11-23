@@ -30,4 +30,29 @@ class ITProvisioningProfile
             return nil;
         }
     }
+    
+    func codeSigningAuthority() -> String?
+    {
+        return subjectCNForCertificateAtIndex(0)
+    }
+    
+    func expirationDate() -> NSDate?
+    {
+         return provisioningProfile!["ExpirationDate"] as? NSDate
+    }
+    
+    func provisioningName() -> String?
+    {
+        return provisioningProfile!["Name"] as? String
+    }
+    
+    func appIdName() -> String?
+    {
+        return provisioningProfile!["AppIDName"] as? String
+    }
+    
+    func teamName() -> String?
+    {
+        return provisioningProfile!["TeamName"] as? String
+    }
 }

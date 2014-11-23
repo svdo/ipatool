@@ -18,7 +18,6 @@ class ITIpa
     var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as String } }
     var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
     var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as String } }
-    var codeSigningAuthority = ""
     var deviceFamily:String {
         get {
             var result = ""
@@ -34,7 +33,7 @@ class ITIpa
             return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         }
     }
-
+    var provisioningProfile:ITProvisioningProfile? = nil
     private var infoPlistContents:NSDictionary? = nil
     
     func load(path:String) -> (result:Bool, error:String!)
@@ -48,7 +47,7 @@ class ITIpa
         
         extractAppName(extractedIpaPath)
         extractInfoPlist(extractedIpaPath)
-        extractCodeSigningAuthority(extractedIpaPath)
+        extractProvisioningProfile(extractedIpaPath)
         
         NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
         return (true, nil)
@@ -84,7 +83,7 @@ class ITIpa
         infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
     }
     
-    func extractCodeSigningAuthority(extractedIpaPath:String)
+    func extractProvisioningProfile(extractedIpaPath:String)
     {
         let inputFileName = appPath.stringByAppendingPathComponent("embedded.mobileprovision")
         let provisioningData = NSData(contentsOfFile:inputFileName)
@@ -93,12 +92,6 @@ class ITIpa
         var decoder = ITCMSDecoder()
         decoder.decodeData(provisioningData!)
         var cmsDecoder = decoder.cmsDecoder
-        var provisioningProfile = decoder.provisioningProfile()
-        if let auth = provisioningProfile?.subjectCNForCertificateAtIndex(0) {
-            codeSigningAuthority = auth
-        }
-        else {
-            // log error
-        }
+        provisioningProfile = decoder.provisioningProfile()
     }
 }

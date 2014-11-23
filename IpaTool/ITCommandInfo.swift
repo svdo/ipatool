@@ -20,7 +20,7 @@ class ITCommandInfo : ITCommand
                 "  Version:             " + ipa.bundleShortVersionString + "\n" +
                 "  Build:               " + ipa.bundleVersion + "\n" +
                 "  Bundle identifier:   " + ipa.bundleIdentifier + "\n" +
-                "  Code sign authority: " + ipa.codeSigningAuthority + "\n" +
+                "  Code sign authority: " + ipa.provisioningProfile!.codeSigningAuthority()! + "\n" +
                 "  Minimum OS version:  " + ipa.minimumOSVersion + "\n" +
                 "  Device family:       " + ipa.deviceFamily + "\n" +
                 "\n" +
