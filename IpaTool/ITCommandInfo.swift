@@ -24,10 +24,20 @@ class ITCommandInfo : ITCommand
                 "  Minimum OS version:  " + ipa.minimumOSVersion + "\n" +
                 "  Device family:       " + ipa.deviceFamily + "\n" +
                 "\n" +
-                "Provisioning:\n";
+                "Provisioning:\n" +
+                "  Name:                " + ipa.provisioningProfile!.provisioningName()! + "\n" +
+                "  Expiration:          " + formatDate(ipa.provisioningProfile!.expirationDate()!) + "\n" +
+                "  App ID name:         " + ipa.provisioningProfile!.appIdName()! + "\n" +
+                "  Team:                " + ipa.provisioningProfile!.teamName()! + "\n";
         }
         else {
             return "Error: " + error
         }
+    }
+    
+    private func formatDate(date:NSDate) -> String {
+        var df = NSDateFormatter()
+        df.dateFormat = "EEE MMM d HH:mm:ss v yyyy"
+        return df.stringFromDate(date)
     }
 }
