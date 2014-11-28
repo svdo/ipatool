@@ -42,7 +42,7 @@ class ITIpa
         let extractedIpaPath:String = tempDirUrl.path!
         let ok = SSZipArchive.unzipFileAtPath(path, toDestination: extractedIpaPath)
         if !ok {
-            return (false, "could not extract ipa")
+            return (false, "unzip error for \(path)")
         }
         
         extractAppName(extractedIpaPath)

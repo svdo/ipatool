@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2FDE4A34271F90C25457B492 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9F5E493F3E9CC300FEEA69 /* libPods.a */; };
 		981160227E8150F1C5339ED0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9F5E493F3E9CC300FEEA69 /* libPods.a */; };
+		F803A14A1A28FE9700FAD51A /* IPTCommandVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */; };
+		F803A14C1A28FF4600FAD51A /* IPTCommandVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */; };
+		F803A14D1A28FF4800FAD51A /* IPTCommandVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */; };
 		F829F4AB1A178F8C001A34A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4AA1A178F8C001A34A7 /* main.swift */; };
 		F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */; };
 		F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */; };
@@ -52,6 +55,8 @@
 /* Begin PBXFileReference section */
 		52AB2E1FDC5D8EFA9CD6B06D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E1DD26AF94CA682130E0EB65 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandVersionTests.swift; sourceTree = "<group>"; };
+		F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandVersion.swift; sourceTree = "<group>"; };
 		F829F4A71A178F8C001A34A7 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
 		F829F4AA1A178F8C001A34A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +152,7 @@
 				F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */,
 				F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */,
 				F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */,
+				F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */,
 			);
 			path = ipatool;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 				F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */,
 				F829F4C01A178FCE001A34A7 /* ITIpaTests.swift */,
 				F829F4C11A178FCE001A34A7 /* ITMainTests.swift */,
+				F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */,
 			);
 			path = ipatoolTests;
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F803A14C1A28FF4600FAD51A /* IPTCommandVersion.swift in Sources */,
 				F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */,
 				F829F4D41A179007001A34A7 /* ITIpa.swift in Sources */,
 				F829F4D51A179007001A34A7 /* ITMain.swift in Sources */,
@@ -359,8 +367,10 @@
 				F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */,
 				F829F4C51A178FCE001A34A7 /* ITMainTests.swift in Sources */,
 				F829F4D91A179110001A34A7 /* ITCommandInfo.swift in Sources */,
+				F803A14D1A28FF4800FAD51A /* IPTCommandVersion.swift in Sources */,
 				F829F4D71A179110001A34A7 /* ITCommand.swift in Sources */,
 				F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */,
+				F803A14A1A28FE9700FAD51A /* IPTCommandVersionTests.swift in Sources */,
 				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
 				F882C9271A1FC42700DDC548 /* ITSecCertificate.swift in Sources */,
 				F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */,

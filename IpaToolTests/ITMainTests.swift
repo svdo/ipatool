@@ -41,4 +41,11 @@ class ITMainTests: XCTestCase {
         XCTAssertNotNil(command)
         XCTAssertTrue(command is ITCommandInfo)
     }
+    
+    func testVersionCommand()
+    {
+        let command:ITCommand? = ipaTool.commandForArguments(["some.ipa", "version"])
+        XCTAssertNotNil(command)
+        XCTAssertTrue(command is IPTCommandVersion)
+    }
 }
