@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SampleApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>ipatool.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F803A15E1A29163600FAD51A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F803A1721A29163600FAD51A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F829F4A61A178F8C001A34A7</key>
 		<dict>
 			<key>primary</key>

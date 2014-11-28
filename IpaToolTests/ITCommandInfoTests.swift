@@ -33,21 +33,21 @@ class ITCommandInfoTests: XCTestCase {
     }
     
     func testReturnsInfoWithValidIpa() {
-        
-        let expectedOutput = "  App name:            Blaat.app\n" +
-            "  Display name:        Bèèèh!\n" +
-            "  Version:             1.0\n" +
-            "  Build:               1\n" +
-            "  Bundle identifier:   com.vandenoord.Blaat\n" +
-            "  Code sign authority: iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)\n" +
-            "  Minimum OS version:  8.0\n" +
-            "  Device family:       iphone\n" +
-            "\n" +
-            "Provisioning:\n" +
-            "  Name:                Blaat ad hoc\n" +
-            "  Expiration:          Wed Apr 15 17:48:44 CET 2015\n" +
-            "  App ID name:         Blaat\n" +
-            "  Team:                Stefan van den Oord\n";
+        let line1 = "  App name:            \(config.appName)\n"
+        let line2 = "  Display name:        \(config.displayName)\n"
+        let line3 = "  Version:             \(config.bundleShortVersionString)\n"
+        let line4 = "  Build:               \(config.bundleVersion)\n"
+        let line5 = "  Bundle identifier:   \(config.bundleIdentifier)\n"
+        let line6 = "  Code sign authority: \(config.codeSigningAuthority)\n"
+        let line7 = "  Minimum OS version:  \(config.minimumOSVersion)\n"
+        let line8 = "  Device family:       \(config.deviceFamily)\n"
+        let line9 = "\n"
+        let line10 = "Provisioning:\n"
+        let line11 = "  Name:                \(config.provisioningName)\n"
+        let line12 = "  Expiration:          \(infoCommand.formatDate(config.provisioningExpiration!))\n"
+        let line13 = "  App ID name:         \(config.provisioningAppIdName)\n"
+        let line14 = "  Team:                \(config.provisioningTeam)\n"
+        let expectedOutput = line1+line2+line3+line4+line5+line6+line7+line8+line9+line10+line11+line12+line13+line14
         let result = infoCommand.execute([config.ipaFullPath!])
         XCTAssertEqual(expectedOutput, result)
     }

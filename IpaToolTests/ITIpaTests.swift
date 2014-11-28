@@ -54,10 +54,8 @@ class ITIpaTests: XCTestCase
         tempDirUrl = ITIpa.createTempDir()
 
         ipa = ITIpa()
-        let ipaPath = config.ipaPath
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let ipaFullPath = bundle.pathForResource(ipaPath.stringByDeletingPathExtension, ofType:"ipa")
-        let (ok, error) = ipa.load(ipaFullPath!)
+        let ipaPath = config.ipaFullPath
+        let (ok, error) = ipa.load(ipaPath!)
         XCTAssertTrue(ok)
     }
     
@@ -73,7 +71,7 @@ class ITIpaTests: XCTestCase
     
     func testDisplayName()
     {
-        XCTAssertEqual(config.displayName, ipa.displayName)
+        XCTAssertEqual(config.displayName, ipa.displayName!)
     }
     
     func testBundleShortVersionString()

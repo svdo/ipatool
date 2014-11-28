@@ -15,6 +15,13 @@
 		F803A1521A29028000FAD51A /* IPTCommandBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1511A29028000FAD51A /* IPTCommandBuildTests.swift */; };
 		F803A1541A2902C900FAD51A /* IPTCommandBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1531A2902C900FAD51A /* IPTCommandBuild.swift */; };
 		F803A1551A2902C900FAD51A /* IPTCommandBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1531A2902C900FAD51A /* IPTCommandBuild.swift */; };
+		F803A1591A290B2F00FAD51A /* IPTCommandResign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1581A290B2F00FAD51A /* IPTCommandResign.swift */; };
+		F803A15A1A290B2F00FAD51A /* IPTCommandResign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1581A290B2F00FAD51A /* IPTCommandResign.swift */; };
+		F803A1641A29163600FAD51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1631A29163600FAD51A /* AppDelegate.swift */; };
+		F803A1661A29163600FAD51A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1651A29163600FAD51A /* ViewController.swift */; };
+		F803A1691A29163600FAD51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F803A1671A29163600FAD51A /* Main.storyboard */; };
+		F803A16B1A29163600FAD51A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F803A16A1A29163600FAD51A /* Images.xcassets */; };
+		F803A16E1A29163600FAD51A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F803A16C1A29163600FAD51A /* LaunchScreen.xib */; };
 		F829F4AB1A178F8C001A34A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4AA1A178F8C001A34A7 /* main.swift */; };
 		F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */; };
 		F829F4C31A178FCE001A34A7 /* ITCommandInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */; };
@@ -33,7 +40,6 @@
 		F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CE1A179007001A34A7 /* ITIpa.swift */; };
 		F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
 		F829F4DD1A179128001A34A7 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C61A178FDF001A34A7 /* testConfig.json */; };
-		F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C81A178FE8001A34A7 /* Blaat.ipa */; };
 		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 		F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
 		F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
@@ -62,6 +68,15 @@
 		F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandVersion.swift; sourceTree = "<group>"; };
 		F803A1511A29028000FAD51A /* IPTCommandBuildTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandBuildTests.swift; sourceTree = "<group>"; };
 		F803A1531A2902C900FAD51A /* IPTCommandBuild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandBuild.swift; sourceTree = "<group>"; };
+		F803A1561A2905CC00FAD51A /* IPTCommandResignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandResignTests.swift; sourceTree = "<group>"; };
+		F803A1581A290B2F00FAD51A /* IPTCommandResign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandResign.swift; sourceTree = "<group>"; };
+		F803A15F1A29163600FAD51A /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F803A1621A29163600FAD51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F803A1631A29163600FAD51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F803A1651A29163600FAD51A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F803A1681A29163600FAD51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F803A16A1A29163600FAD51A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F803A16D1A29163600FAD51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F829F4A71A178F8C001A34A7 /* ipatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipatool; sourceTree = BUILT_PRODUCTS_DIR; };
 		F829F4AA1A178F8C001A34A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipatoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +86,6 @@
 		F829F4C01A178FCE001A34A7 /* ITIpaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpaTests.swift; sourceTree = "<group>"; };
 		F829F4C11A178FCE001A34A7 /* ITMainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMainTests.swift; sourceTree = "<group>"; };
 		F829F4C61A178FDF001A34A7 /* testConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testConfig.json; sourceTree = "<group>"; };
-		F829F4C81A178FE8001A34A7 /* Blaat.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blaat.ipa; sourceTree = "<group>"; };
 		F829F4CA1A179007001A34A7 /* ITCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommand.swift; sourceTree = "<group>"; };
 		F829F4CB1A179007001A34A7 /* ITCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandFactory.swift; sourceTree = "<group>"; };
 		F829F4CC1A179007001A34A7 /* ITCommandInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommandInfo.swift; sourceTree = "<group>"; };
@@ -87,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F803A15C1A29163600FAD51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F829F4A41A178F8C001A34A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,12 +144,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F803A1601A29163600FAD51A /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				F803A1631A29163600FAD51A /* AppDelegate.swift */,
+				F803A1651A29163600FAD51A /* ViewController.swift */,
+				F803A1671A29163600FAD51A /* Main.storyboard */,
+				F803A16A1A29163600FAD51A /* Images.xcassets */,
+				F803A16C1A29163600FAD51A /* LaunchScreen.xib */,
+				F803A1611A29163600FAD51A /* Supporting Files */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		F803A1611A29163600FAD51A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F803A1621A29163600FAD51A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F829F49E1A178F8C001A34A7 = {
 			isa = PBXGroup;
 			children = (
 				F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */,
 				F829F4A91A178F8C001A34A7 /* ipatool */,
 				F829F4B61A178FAA001A34A7 /* ipatoolTests */,
+				F803A1601A29163600FAD51A /* SampleApp */,
 				F829F4A81A178F8C001A34A7 /* Products */,
 				DF23F40C11877DE61AF5726F /* Pods */,
 				62E796D7C3F93384917CE12E /* Frameworks */,
@@ -140,6 +183,7 @@
 			children = (
 				F829F4A71A178F8C001A34A7 /* ipatool */,
 				F829F4B51A178FAA001A34A7 /* ipatoolTests.xctest */,
+				F803A15F1A29163600FAD51A /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +203,7 @@
 				F882C9281A1FCDA700DDC548 /* ITProvisioningProfile.swift */,
 				F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */,
 				F803A1531A2902C900FAD51A /* IPTCommandBuild.swift */,
+				F803A1581A290B2F00FAD51A /* IPTCommandResign.swift */,
 			);
 			path = ipatool;
 			sourceTree = "<group>";
@@ -168,7 +213,6 @@
 			children = (
 				F829F4C61A178FDF001A34A7 /* testConfig.json */,
 				F882C91D1A179D5800DDC548 /* ITTestConfig.swift */,
-				F829F4C71A178FE8001A34A7 /* testdata */,
 				F829F4B71A178FAA001A34A7 /* Supporting Files */,
 				F829F4BE1A178FCE001A34A7 /* ITCommandFactoryTests.swift */,
 				F829F4BF1A178FCE001A34A7 /* ITCommandInfoTests.swift */,
@@ -176,6 +220,7 @@
 				F829F4C11A178FCE001A34A7 /* ITMainTests.swift */,
 				F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */,
 				F803A1511A29028000FAD51A /* IPTCommandBuildTests.swift */,
+				F803A1561A2905CC00FAD51A /* IPTCommandResignTests.swift */,
 			);
 			path = ipatoolTests;
 			sourceTree = "<group>";
@@ -188,17 +233,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F829F4C71A178FE8001A34A7 /* testdata */ = {
-			isa = PBXGroup;
-			children = (
-				F829F4C81A178FE8001A34A7 /* Blaat.ipa */,
-			);
-			path = testdata;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F803A15E1A29163600FAD51A /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F803A17B1A29163600FAD51A /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				F803A15B1A29163600FAD51A /* Sources */,
+				F803A15C1A29163600FAD51A /* Frameworks */,
+				F803A15D1A29163600FAD51A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleApp;
+			productName = SampleApp;
+			productReference = F803A15F1A29163600FAD51A /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F829F4A61A178F8C001A34A7 /* ipatool */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4AE1A178F8C001A34A7 /* Build configuration list for PBXNativeTarget "ipatool" */;
@@ -222,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4BD1A178FAA001A34A7 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
 			buildPhases = (
+				F803A1831A29172800FAD51A /* ShellScript */,
 				B2CFE18BB13E252F6499868E /* Check Pods Manifest.lock */,
 				F829F4B11A178FAA001A34A7 /* Sources */,
 				F829F4B21A178FAA001A34A7 /* Frameworks */,
@@ -246,6 +301,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Stefan van den Oord";
 				TargetAttributes = {
+					F803A15E1A29163600FAD51A = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					F829F4A61A178F8C001A34A7 = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -260,6 +318,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F829F49E1A178F8C001A34A7;
 			productRefGroup = F829F4A81A178F8C001A34A7 /* Products */;
@@ -268,17 +327,27 @@
 			targets = (
 				F829F4A61A178F8C001A34A7 /* ipatool */,
 				F829F4B41A178FAA001A34A7 /* ipatoolTests */,
+				F803A15E1A29163600FAD51A /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F803A15D1A29163600FAD51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F803A1691A29163600FAD51A /* Main.storyboard in Resources */,
+				F803A16E1A29163600FAD51A /* LaunchScreen.xib in Resources */,
+				F803A16B1A29163600FAD51A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F829F4B31A178FAA001A34A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F829F4DD1A179128001A34A7 /* testConfig.json in Resources */,
-				F829F4DE1A179132001A34A7 /* Blaat.ipa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +399,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F803A1831A29172800FAD51A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#rm \"$BUILT_PRODUCTS_DIR/SampleApp.ipa\"\nif ( ! test -f \"$BUILT_PRODUCTS_DIR/SampleApp.ipa\" ); then\n    xcodebuild -scheme SampleApp archive -archivePath \"$BUILT_PRODUCTS_DIR/SampleApp\"\n    xcodebuild -exportArchive -exportFormat ipa -archivePath \"$BUILT_PRODUCTS_DIR/SampleApp.xcarchive\" -exportPath \"$BUILT_PRODUCTS_DIR/SampleApp.ipa\"\n    cat \"$SRCROOT/ipatoolTests/testConfig.json\" |sed -E 's|^(.*\"ipaDir\":\")xyz(\".*)$|\\1'$BUILT_PRODUCTS_DIR'\\2|' > \"$SRCROOT/ipatoolTests/testConfig.json.new\"\n    mv \"$SRCROOT/ipatoolTests/testConfig.json.new\" \"$SRCROOT/ipatoolTests/testConfig.json\"\nfi\n";
+		};
 		FD2BA22E93A5E505C94DABC4 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +430,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F803A15B1A29163600FAD51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F803A1661A29163600FAD51A /* ViewController.swift in Sources */,
+				F803A1641A29163600FAD51A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F829F4A31A178F8C001A34A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +453,7 @@
 				F882C9261A1FC42700DDC548 /* ITSecCertificate.swift in Sources */,
 				F829F4AB1A178F8C001A34A7 /* main.swift in Sources */,
 				F829F4D21A179007001A34A7 /* ITCommandInfo.swift in Sources */,
+				F803A1591A290B2F00FAD51A /* IPTCommandResign.swift in Sources */,
 				F882C9291A1FCDA700DDC548 /* ITProvisioningProfile.swift in Sources */,
 				F829F4D11A179007001A34A7 /* ITCommandFactory.swift in Sources */,
 			);
@@ -380,6 +472,7 @@
 				F803A14D1A28FF4800FAD51A /* IPTCommandVersion.swift in Sources */,
 				F829F4D71A179110001A34A7 /* ITCommand.swift in Sources */,
 				F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */,
+				F803A15A1A290B2F00FAD51A /* IPTCommandResign.swift in Sources */,
 				F803A14A1A28FE9700FAD51A /* IPTCommandVersionTests.swift in Sources */,
 				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
 				F882C9271A1FC42700DDC548 /* ITSecCertificate.swift in Sources */,
@@ -394,7 +487,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		F803A1671A29163600FAD51A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F803A1681A29163600FAD51A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F803A16C1A29163600FAD51A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F803A16D1A29163600FAD51A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		F803A17C1A29163600FAD51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F803A17D1A29163600FAD51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F829F4AC1A178F8C001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,7 +577,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -468,7 +612,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -486,6 +629,7 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -504,6 +648,7 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -531,6 +676,7 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -555,12 +701,21 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F803A17B1A29163600FAD51A /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F803A17C1A29163600FAD51A /* Debug */,
+				F803A17D1A29163600FAD51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F829F4A21A178F8C001A34A7 /* Build configuration list for PBXProject "ipatool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

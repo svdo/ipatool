@@ -12,11 +12,10 @@ class ITTestConfig
 {
     private var config:NSDictionary? = nil
 
-    var ipaPath:String { get { return config!["ipaPath"] as String } }
+    var ipaPath:String { get { return "SampleApp.ipa" } }
     var ipaFullPath:String? { get {
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let ipaFullPath = bundle.pathForResource(self.ipaPath.stringByDeletingPathExtension, ofType:"ipa")
-        return ipaFullPath
+        let ipaDir = config!["ipaDir"] as String
+        return ipaDir.stringByAppendingPathComponent(ipaPath)
         } }
     var appName:String { get { return config!["appName"] as String } }
     var displayName:String { get { return config!["displayName"] as String } }
@@ -24,6 +23,7 @@ class ITTestConfig
     var bundleVersion:String { get { return config!["bundleVersion"] as String } }
     var bundleIdentifier:String { get { return config!["bundleIdentifier"] as String } }
     var minimumOSVersion:String { get { return config!["minimumOSVersion"] as String } }
+    var deviceFamily:String { get { return config!["deviceFamily"] as String } }
     var codeSigningAuthority:String { get { return config!["codeSigningAuthority"] as String } }
     var provisioningName:String { get { return config!["provisioningName"] as String } }
     var provisioningExpiration:NSDate? { get {

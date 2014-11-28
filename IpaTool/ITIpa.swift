@@ -13,7 +13,9 @@ class ITIpa
     var appName = ""
     var appPath = ""
     
-    var displayName:String { get { return infoPlistContents!["CFBundleDisplayName"] as String } }
+    var displayName:String? { get {
+        return infoPlistContents!["CFBundleDisplayName"] as? String
+        } }
     var bundleShortVersionString:String { get { return infoPlistContents!["CFBundleShortVersionString"] as String } }
     var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as String } }
     var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
@@ -81,6 +83,7 @@ class ITIpa
     {
         let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
         infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
+        assert(infoPlistContents != nil)
     }
     
     func extractProvisioningProfile(extractedIpaPath:String)

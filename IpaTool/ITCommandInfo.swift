@@ -15,8 +15,15 @@ class ITCommandInfo : ITCommand
         let (success,error) = ipa.load(args[0])
 
         if (success) {
+            var dispName:String
+            if let dn = ipa.displayName {
+                dispName = dn
+            }
+            else {
+                dispName = "[not set]"
+            }
             return "  App name:            " + ipa.appName + "\n" +
-                "  Display name:        " + ipa.displayName + "\n" +
+                "  Display name:        " + dispName + "\n" +
                 "  Version:             " + ipa.bundleShortVersionString + "\n" +
                 "  Build:               " + ipa.bundleVersion + "\n" +
                 "  Bundle identifier:   " + ipa.bundleIdentifier + "\n" +
@@ -35,7 +42,7 @@ class ITCommandInfo : ITCommand
         }
     }
     
-    private func formatDate(date:NSDate) -> String {
+    func formatDate(date:NSDate) -> String {
         var df = NSDateFormatter()
         df.dateFormat = "EEE MMM d HH:mm:ss v yyyy"
         return df.stringFromDate(date)
