@@ -14,7 +14,8 @@ class ITCommandFactory
         static var commandFactoryCommands:Dictionary<String, ITCommand> = [
             "info" : ITCommandInfo(),
             "usage": ITCommandUsage(),
-            "version": IPTCommandVersion()]
+            "version": IPTCommandVersion(),
+            "build": IPTCommandBuild()]
     }
     
     var commands : Dictionary<String, ITCommand>
