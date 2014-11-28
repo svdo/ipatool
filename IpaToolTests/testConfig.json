@@ -1,12 +1,6 @@
 {
     "ipaDir":"/Users/stefan/Library/Developer/Xcode/DerivedData/ipatool-dfxzjdhaxdikeibiwxkacgdrites/Build/Products/Debug",
-    "appName":"SampleApp.app",
-    "displayName":"Sample!",
-    "bundleShortVersionString":"1.0",
-    "bundleVersion":"1",
     "bundleIdentifier":"com.vandenoord.SampleApp",
-    "minimumOSVersion":"8.0",
-    "deviceFamily":"iphone ipad",
     "codeSigningAuthority":"iPhone Developer: Stefan van den Oord (2NG8JQ3ZKG)",
     "provisioningName":"iOS Team Provisioning Profile: *",
     "provisioningExpiration":"2015-04-16T09:35:56Z",

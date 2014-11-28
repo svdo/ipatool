@@ -17,13 +17,13 @@ class ITTestConfig
         let ipaDir = config!["ipaDir"] as String
         return ipaDir.stringByAppendingPathComponent(ipaPath)
         } }
-    var appName:String { get { return config!["appName"] as String } }
-    var displayName:String { get { return config!["displayName"] as String } }
-    var bundleShortVersionString:String { get { return config!["bundleShortVersionString"] as String } }
-    var bundleVersion:String { get { return config!["bundleVersion"] as String } }
+    var appName:String { get { return "SampleApp.app" } }
+    var displayName:String { get { return "Sample!" } }
+    var bundleShortVersionString:String { get { return "1.0" } }
+    var bundleVersion:String { get { return "1" } }
     var bundleIdentifier:String { get { return config!["bundleIdentifier"] as String } }
-    var minimumOSVersion:String { get { return config!["minimumOSVersion"] as String } }
-    var deviceFamily:String { get { return config!["deviceFamily"] as String } }
+    var minimumOSVersion:String { get { return "8.0" } }
+    var deviceFamily:String { get { return "iphone ipad" } }
     var codeSigningAuthority:String { get { return config!["codeSigningAuthority"] as String } }
     var provisioningName:String { get { return config!["provisioningName"] as String } }
     var provisioningExpiration:NSDate? { get {
