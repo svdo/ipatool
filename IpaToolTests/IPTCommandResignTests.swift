@@ -13,25 +13,59 @@ class IPTCommandResignTests: XCTestCase {
 
     var config = ITTestConfig()
     var resignCommand = IPTCommandResign()
+    var output = ""
+    var resignedPath = ""
     
     override func setUp() {
         config = ITTestConfig()
         config.load()
         resignCommand = IPTCommandResign()
+        resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
+        NSFileManager.defaultManager().removeItemAtPath(resignedPath, error:nil)
+        output = resignCommand.execute([config.ipaFullPath!])
     }
     
     func testReturnsExpectedOutput()
     {
-        let app = config.appName + ".ipa"
         let bundleId = config.bundleIdentifier
-        let expectedPath = config.ipaFullPath?.stringByDeletingLastPathComponent.stringByAppendingPathComponent("\(config.appName)_resigned.ipa")
-        let expectedOutputFirstLine = "\(app): replacing existing signature"
+        let appNameWithoutExtension = config.appName.stringByDeletingPathExtension
+        let expectedPath:String = config.ipaFullPath!.stringByDeletingLastPathComponent.stringByAppendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
+        let expectedOutputFirstLine = "\(config.appName): replacing existing signature"
         let expectedOutputLastLine = "Resigned ipa: \(expectedPath)"
         
-        let result = resignCommand.execute([config.ipaFullPath!])
-        let lines = result.componentsSeparatedByString("\n")
+        let lines = output.componentsSeparatedByString("\n")
         XCTAssertEqual(lines[0], expectedOutputFirstLine)
-        XCTAssertEqual(lines[lines.count-1], expectedOutputLastLine)
+        XCTAssertEqual(lines[lines.count-2], expectedOutputLastLine)
+    }
+    
+    func testCorrectResignFilePath()
+    {
+        let appNameWithoutExtension = config.appName.stringByDeletingPathExtension
+        let expectedPath:String = config.ipaFullPath!.stringByDeletingLastPathComponent.stringByAppendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
+        XCTAssertEqual(resignCommand.resignedPath, expectedPath)
+    }
+    
+    func testResignedIpaExists()
+    {
+        XCTAssertTrue(NSFileManager.defaultManager().fileExistsAtPath(resignCommand.resignedPath))
     }
 
+    func testShouldHaveCorrectProvisioning()
+    {
+        let resignedIpa = ITIpa()
+        let (success,_) = resignedIpa.load(resignedPath)
+        XCTAssertTrue(success)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.provisioningName()!, config.resignedProvisioningName)
+    }
+    
+    func testCanFindCodesignAllocate()
+    {
+        let path = resignCommand.codesignAllocate
+        XCTAssertNotNil(path)
+        XCTAssertEqual("codesign_allocate", path!.lastPathComponent)
+
+        let isExecutable = NSFileManager.defaultManager().isExecutableFileAtPath(path!)
+        XCTAssertTrue(isExecutable)
+    }
 }
+

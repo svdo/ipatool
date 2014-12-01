@@ -40,6 +40,10 @@
 		F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CE1A179007001A34A7 /* ITIpa.swift */; };
 		F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829F4CF1A179007001A34A7 /* ITMain.swift */; };
 		F829F4DD1A179128001A34A7 /* testConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F829F4C61A178FDF001A34A7 /* testConfig.json */; };
+		F83A04661A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */; };
+		F83A04671A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */; };
+		F83A04691A2D0C5100966DF4 /* IPTSystemCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04681A2D0C5100966DF4 /* IPTSystemCommandTests.swift */; };
+		F862CD511A29320900AC1B8B /* IPTCommandResignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1561A2905CC00FAD51A /* IPTCommandResignTests.swift */; };
 		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 		F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
 		F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
@@ -93,6 +97,8 @@
 		F829F4CE1A179007001A34A7 /* ITIpa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITIpa.swift; sourceTree = "<group>"; };
 		F829F4CF1A179007001A34A7 /* ITMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITMain.swift; sourceTree = "<group>"; };
 		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
+		F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTSystemCommand.swift; sourceTree = "<group>"; };
+		F83A04681A2D0C5100966DF4 /* IPTSystemCommandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTSystemCommandTests.swift; sourceTree = "<group>"; };
 		F882C91D1A179D5800DDC548 /* ITTestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITTestConfig.swift; sourceTree = "<group>"; };
 		F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCMSDecoder.swift; sourceTree = "<group>"; };
 		F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecCertificate.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */,
 				F803A1531A2902C900FAD51A /* IPTCommandBuild.swift */,
 				F803A1581A290B2F00FAD51A /* IPTCommandResign.swift */,
+				F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */,
 			);
 			path = ipatool;
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 				F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */,
 				F803A1511A29028000FAD51A /* IPTCommandBuildTests.swift */,
 				F803A1561A2905CC00FAD51A /* IPTCommandResignTests.swift */,
+				F83A04681A2D0C5100966DF4 /* IPTSystemCommandTests.swift */,
 			);
 			path = ipatoolTests;
 			sourceTree = "<group>";
@@ -443,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83A04661A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */,
 				F803A1541A2902C900FAD51A /* IPTCommandBuild.swift in Sources */,
 				F803A14C1A28FF4600FAD51A /* IPTCommandVersion.swift in Sources */,
 				F829F4D01A179007001A34A7 /* ITCommand.swift in Sources */,
@@ -472,15 +481,18 @@
 				F803A14D1A28FF4800FAD51A /* IPTCommandVersion.swift in Sources */,
 				F829F4D71A179110001A34A7 /* ITCommand.swift in Sources */,
 				F829F4C21A178FCE001A34A7 /* ITCommandFactoryTests.swift in Sources */,
+				F862CD511A29320900AC1B8B /* IPTCommandResignTests.swift in Sources */,
 				F803A15A1A290B2F00FAD51A /* IPTCommandResign.swift in Sources */,
 				F803A14A1A28FE9700FAD51A /* IPTCommandVersionTests.swift in Sources */,
 				F829F4C41A178FCE001A34A7 /* ITIpaTests.swift in Sources */,
 				F882C9271A1FC42700DDC548 /* ITSecCertificate.swift in Sources */,
+				F83A04671A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */,
 				F882C9211A1E8C3400DDC548 /* ITCMSDecoder.swift in Sources */,
 				F882C92A1A1FCDA700DDC548 /* ITProvisioningProfile.swift in Sources */,
 				F829F4DB1A179110001A34A7 /* ITIpa.swift in Sources */,
 				F829F4D81A179110001A34A7 /* ITCommandFactory.swift in Sources */,
 				F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */,
+				F83A04691A2D0C5100966DF4 /* IPTSystemCommandTests.swift in Sources */,
 				F829F4DC1A179110001A34A7 /* ITMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +727,7 @@
 				F803A17D1A29163600FAD51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F829F4A21A178F8C001A34A7 /* Build configuration list for PBXProject "ipatool" */ = {
 			isa = XCConfigurationList;
