@@ -29,7 +29,7 @@ class IPTSystemCommandTests: XCTestCase {
     func testCanExecuteCommandAndGetExitCode1()
     {
         let ok = cmd.execute("/usr/bin/false")
-        XCTAssertTrue(ok)
+        XCTAssertFalse(ok)
         
         let exitCode = cmd.exitCode
         XCTAssertEqual(Int32(1), exitCode)

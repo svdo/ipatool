@@ -12,15 +12,22 @@ class IPTSystemCommand
 {
     var exitCode:Int32 = 0
     var standardOutput:String? = nil
+    var workingDirectory:String? = nil
     
-    func execute(cmd:String, _ args:[String] = []) -> Bool {
+    func execute(cmd:String, _ args:[String] = [], _ env:[String:String] = [:]) -> Bool {
         let stdOutPipe = NSPipe()
         let stdOut = stdOutPipe.fileHandleForReading
         
         let task = NSTask()
         task.launchPath = cmd
-        if (args.count > 0) {
+        if args.count > 0 {
             task.arguments = args
+        }
+        if env.count > 0 {
+            task.environment = env
+        }
+        if workingDirectory != nil {
+            task.currentDirectoryPath = workingDirectory!
         }
         task.standardOutput = stdOutPipe
         task.launch()
@@ -34,6 +41,6 @@ class IPTSystemCommand
         standardOutput = NSString(data:stdOutData, encoding:NSUTF8StringEncoding)
         
         exitCode = task.terminationStatus
-        return true
+        return exitCode == 0
     }
 }

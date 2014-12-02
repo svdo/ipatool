@@ -6,5 +6,7 @@
     "provisioningExpiration":"2015-04-16T09:35:56Z",
     "provisioningAppIdName":"UICatalog",
     "provisioningTeam":"Stefan van den Oord",
-    "resignedProvisioningName": "SampleApp Ad Hoc"
+    "resignedProvisioningName": "SampleApp Ad Hoc",
+    "resignedCodeSigningAuthority": "iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)",
+    "resignProvisioningProfilePath": "/Users/stefan/Downloads/SampleApp_Ad_Hoc.mobileprovision"
 }

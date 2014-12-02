@@ -34,6 +34,8 @@ class ITTestConfig
     var provisioningAppIdName:String { get { return config!["provisioningAppIdName"] as String } }
     var provisioningTeam:String { get { return config!["provisioningTeam"] as String } }
     var resignedProvisioningName:String { get { return config!["resignedProvisioningName"] as String } }
+    var resignedCodeSigningAuthority:String { get { return config!["resignedCodeSigningAuthority"] as String } }
+    var resignProvisioningProfilePath:String { get { return config!["resignProvisioningProfilePath"] as String } }
 
     func load() {
         let bundle = NSBundle(forClass: self.dynamicType)

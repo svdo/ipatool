@@ -12,6 +12,7 @@ class ITIpa
 {
     var appName = ""
     var appPath = ""
+    var extractedIpaPath = ""
     
     var displayName:String? { get {
         return infoPlistContents!["CFBundleDisplayName"] as? String
@@ -38,10 +39,15 @@ class ITIpa
     var provisioningProfile:ITProvisioningProfile? = nil
     private var infoPlistContents:NSDictionary? = nil
     
+    deinit
+    {
+        NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
+    }
+    
     func load(path:String) -> (result:Bool, error:String!)
     {
         let tempDirUrl = ITIpa.createTempDir()
-        let extractedIpaPath:String = tempDirUrl.path!
+        extractedIpaPath = tempDirUrl.path!
         let ok = SSZipArchive.unzipFileAtPath(path, toDestination: extractedIpaPath)
         if !ok {
             return (false, "unzip error for \(path)")
@@ -51,7 +57,6 @@ class ITIpa
         extractInfoPlist(extractedIpaPath)
         extractProvisioningProfile(extractedIpaPath)
         
-        NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
         return (true, nil)
     }
     
@@ -89,12 +94,7 @@ class ITIpa
     func extractProvisioningProfile(extractedIpaPath:String)
     {
         let inputFileName = appPath.stringByAppendingPathComponent("embedded.mobileprovision")
-        let provisioningData = NSData(contentsOfFile:inputFileName)
-        assert(provisioningData != nil)
-        
-        var decoder = ITCMSDecoder()
-        decoder.decodeData(provisioningData!)
-        var cmsDecoder = decoder.cmsDecoder
-        provisioningProfile = decoder.provisioningProfile()
+        provisioningProfile = ITProvisioningProfile.loadFromPath(inputFileName)
     }
+
 }

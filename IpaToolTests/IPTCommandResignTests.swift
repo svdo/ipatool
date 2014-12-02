@@ -22,7 +22,7 @@ class IPTCommandResignTests: XCTestCase {
         resignCommand = IPTCommandResign()
         resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
         NSFileManager.defaultManager().removeItemAtPath(resignedPath, error:nil)
-        output = resignCommand.execute([config.ipaFullPath!])
+        output = resignCommand.execute([config.ipaFullPath!, config.resignProvisioningProfilePath])
     }
     
     func testReturnsExpectedOutput()
@@ -50,12 +50,13 @@ class IPTCommandResignTests: XCTestCase {
         XCTAssertTrue(NSFileManager.defaultManager().fileExistsAtPath(resignCommand.resignedPath))
     }
 
-    func testShouldHaveCorrectProvisioning()
+    func testShouldHaveCorrectProvisioningAndCodeSigningAuthority()
     {
         let resignedIpa = ITIpa()
         let (success,_) = resignedIpa.load(resignedPath)
         XCTAssertTrue(success)
         XCTAssertEqual(resignedIpa.provisioningProfile!.provisioningName()!, config.resignedProvisioningName)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.codeSigningAuthority()!, config.resignedCodeSigningAuthority)
     }
     
     func testCanFindCodesignAllocate()

@@ -17,6 +17,19 @@ class ITProvisioningProfile
         provisioningProfile = NSPropertyListSerialization.propertyListFromData(data, mutabilityOption: NSPropertyListMutabilityOptions.Immutable, format: nil, errorDescription: nil) as? NSDictionary
     }
     
+    class func loadFromPath(path:String) -> ITProvisioningProfile?
+    {
+        let provisioningData = NSData(contentsOfFile:path)
+        if provisioningData == nil {
+            return nil
+        }
+        
+        var decoder = ITCMSDecoder()
+        decoder.decodeData(provisioningData!)
+        var cmsDecoder = decoder.cmsDecoder
+        return decoder.provisioningProfile()
+    }
+    
     func subjectCNForCertificateAtIndex(i:Int) -> String?
     {
         if let prof = provisioningProfile
