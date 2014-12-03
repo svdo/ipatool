@@ -36,6 +36,7 @@ class ITTestConfig
     var resignedProvisioningName:String { get { return config!["resignedProvisioningName"] as String } }
     var resignedCodeSigningAuthority:String { get { return config!["resignedCodeSigningAuthority"] as String } }
     var resignProvisioningProfilePath:String { get { return config!["resignProvisioningProfilePath"] as String } }
+    var resignedBundleIdentifier:String { get { return config!["resignedBundleIdentifier"] as String } }
 
     func load() {
         let bundle = NSBundle(forClass: self.dynamicType)

@@ -8,5 +8,6 @@
     "provisioningTeam":"Stefan van den Oord",
     "resignedProvisioningName": "SampleApp Ad Hoc",
     "resignedCodeSigningAuthority": "iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)",
-    "resignProvisioningProfilePath": "/Users/stefan/Downloads/SampleApp_Ad_Hoc.mobileprovision"
+    "resignProvisioningProfilePath": "/Users/stefan/Downloads/SampleApp_Ad_Hoc.mobileprovision",
+    "resignedBundleIdentifier": "com.vandenoord.dist.SampleApp"
 }

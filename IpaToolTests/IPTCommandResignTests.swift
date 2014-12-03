@@ -22,7 +22,7 @@ class IPTCommandResignTests: XCTestCase {
         resignCommand = IPTCommandResign()
         resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
         NSFileManager.defaultManager().removeItemAtPath(resignedPath, error:nil)
-        output = resignCommand.execute([config.ipaFullPath!, config.resignProvisioningProfilePath])
+        output = resignCommand.execute([config.ipaFullPath!, config.resignProvisioningProfilePath, config.resignedBundleIdentifier])
     }
     
     func testReturnsExpectedOutput()
@@ -50,13 +50,14 @@ class IPTCommandResignTests: XCTestCase {
         XCTAssertTrue(NSFileManager.defaultManager().fileExistsAtPath(resignCommand.resignedPath))
     }
 
-    func testShouldHaveCorrectProvisioningAndCodeSigningAuthority()
+    func testShouldHaveCorrectProvisioningAndCodeSigningAuthorityAndBundleIdentifier()
     {
         let resignedIpa = ITIpa()
         let (success,_) = resignedIpa.load(resignedPath)
         XCTAssertTrue(success)
         XCTAssertEqual(resignedIpa.provisioningProfile!.provisioningName()!, config.resignedProvisioningName)
         XCTAssertEqual(resignedIpa.provisioningProfile!.codeSigningAuthority()!, config.resignedCodeSigningAuthority)
+        XCTAssertEqual(resignedIpa.bundleIdentifier, config.resignedBundleIdentifier)
     }
     
     func testCanFindCodesignAllocate()
@@ -67,6 +68,42 @@ class IPTCommandResignTests: XCTestCase {
 
         let isExecutable = NSFileManager.defaultManager().isExecutableFileAtPath(path!)
         XCTAssertTrue(isExecutable)
+    }
+    
+    func testValidateArgs_none()
+    {
+        let (ok,_) = resignCommand.validateArgs([])
+        XCTAssertFalse(ok)
+    }
+
+    func testValidateArgs_one()
+    {
+        let (ok,_) = resignCommand.validateArgs([config.ipaFullPath!])
+        XCTAssertFalse(ok)
+    }
+
+    func testValidateArgs_two()
+    {
+        let (ok,_) = resignCommand.validateArgs([config.ipaFullPath!,"arg2"])
+        XCTAssertTrue(ok)
+    }
+
+    func testValidateArgs_three()
+    {
+        let (ok,_) = resignCommand.validateArgs([config.ipaFullPath!,"arg2","arg3"])
+        XCTAssertTrue(ok)
+    }
+
+    func testValidateArgs_four()
+    {
+        let (ok,_) = resignCommand.validateArgs([config.ipaFullPath!,"arg2","arg3","arg4"])
+        XCTAssertFalse(ok)
+    }
+
+    func testValidateArgs_invalidWhenFirstIsNotIpa()
+    {
+        let (ok,_) = resignCommand.validateArgs(["arg1","arg2"])
+        XCTAssertFalse(ok)
     }
 }
 

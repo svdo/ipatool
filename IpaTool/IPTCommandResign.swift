@@ -29,6 +29,18 @@ class IPTCommandResign : ITCommand
         return path.stringByDeletingPathExtension + "_resigned.ipa"
     }
 
+    func validateArgs(args: [String]) -> (ok:Bool, error:String?) {
+        if (args.count < 2 || args.count > 3) {
+            return (false, "Need parameters for ipa path and new provisioning profile")
+        }
+
+        if (!NSFileManager.defaultManager().isReadableFileAtPath(args[0])) {
+            return (false, "First parameter must be path of ipa file")
+        }
+        
+        return (true, nil)
+    }
+    
     override func execute(args: [String]) -> String {
         var ipa = ITIpa()
         ipaPath = args[0]
@@ -36,11 +48,15 @@ class IPTCommandResign : ITCommand
         if !success {
             return "Error: " + error
         }
+        var bundleIdentifier:String? = nil
+        if (args.count == 3) {
+            bundleIdentifier = args[2]
+        }
         
-        return resign(ipa, args[1])
+        return resign(ipa, args[1], bundleIdentifier)
     }
     
-    func resign(ipa:ITIpa, _ provPath:String) -> String {
+    func resign(ipa:ITIpa, _ provPath:String, _ bundleIdentifier:String? = nil) -> String {
         var error:NSError? = nil
         
         if let alloc = codesignAllocate {

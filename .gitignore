@@ -4,3 +4,4 @@ IpaTool.xcworkspace/xcuserdata
 Pods/Pods.xcodeproj/xcuserdata
 .ruby-gemset
 .ruby-version
+*.idea/workspace.xml
