@@ -35,7 +35,7 @@ Provisioning:
 
 Resign IPA files
 ----------------
-Invocation: `ipatool.sh myapp.ipa resign enterpriseprof.mobileprovision com.example.enterprise.myapp`
+Invocation: `ipatool myapp.ipa resign enterpriseprof.mobileprovision com.example.enterprise.myapp`
 
 This invocation will resign the IPA using the provisioning profile found in `enterpriseprof.mobileprovision`. In the process, it will change the bundle identifier to `com.example.enterprise.myapp`.
 
