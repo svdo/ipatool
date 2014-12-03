@@ -44,3 +44,7 @@ Note for Developers
 The unit tests work on an actual ipa that is also part of this project. It is built using a shell script build phase in the `ipatoolTests` target. This means that it will be code-signed using your own certificate and provisioning profile.
 
 The tests check whether the code signing that this `SampleApp.ipa` has matches what is expected. Since this will be different for everybody, the expected values are put in `testConfig.json`. In order for the tests to pass, you will have to modify `testConfig.json` so that it contains the values that are valid for you.
+
+Wiki
+====
+Please refer to the wiki for more information on [Managing Archives and Code Signing with xcodebuild](https://github.com/svdo/ipatool/wiki/Managing-Archives-and-Code-Signing-with-xodebuild).
