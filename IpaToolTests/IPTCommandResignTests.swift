@@ -116,6 +116,13 @@ class IPTCommandResignTests_preconditions: XCTestCase {
         let (ok,_) = resignCommand.validateArgs([config.ipaFullPath!,"arg2"])
         XCTAssertFalse(ok)
     }
+    
+    func testExecuteCallsValidate()
+    {
+        let result = resignCommand.execute([])
+        let range = result.rangeOfString("error", options:NSStringCompareOptions.CaseInsensitiveSearch)
+        XCTAssertFalse(range == nil)
+    }
 }
 
 class IPTCommandResignTests_newBundleIdentifier: XCTestCase {

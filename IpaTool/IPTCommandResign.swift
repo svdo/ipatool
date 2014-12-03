@@ -46,6 +46,11 @@ class IPTCommandResign : ITCommand
     }
     
     override func execute(args: [String]) -> String {
+        let (ok, message) = validateArgs(args)
+        if (!ok) {
+            return "Error: " + message!
+        }
+        
         var ipa = ITIpa()
         ipaPath = args[0]
         let (success,error) = ipa.load(ipaPath)
