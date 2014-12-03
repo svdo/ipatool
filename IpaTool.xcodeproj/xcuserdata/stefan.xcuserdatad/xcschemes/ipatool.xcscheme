@@ -60,7 +60,7 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "$BUILT_PRODUCTS_DIR/SampleApp.ipa"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "usage"
@@ -68,7 +68,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "info"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "version"

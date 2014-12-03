@@ -48,9 +48,14 @@ class ITIpa
     {
         let tempDirUrl = ITIpa.createTempDir()
         extractedIpaPath = tempDirUrl.path!
+
+        if !NSFileManager.defaultManager().isReadableFileAtPath(path) {
+            return (false, "File not found: \(path)")
+        }
+        
         let ok = SSZipArchive.unzipFileAtPath(path, toDestination: extractedIpaPath)
         if !ok {
-            return (false, "unzip error for \(path)")
+            return (false, "Failed to extract \(path)")
         }
         
         extractAppName(extractedIpaPath)
