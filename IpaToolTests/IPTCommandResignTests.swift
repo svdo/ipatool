@@ -151,3 +151,43 @@ class IPTCommandResignTests_newBundleIdentifier: XCTestCase {
         XCTAssertEqual(resignedIpa.bundleIdentifier, config.resignedBundleIdentifier)
     }
 }
+
+class IPTCommandResignTests_compatibilityMode: XCTestCase {
+    
+    var config = ITTestConfig()
+    var resignCommand = IPTCommandResign()
+    var output = ""
+    var resignedPath = ""
+    
+    override func setUp() {
+        config = ITTestConfig()
+        config.load()
+        resignCommand = IPTCommandResign()
+        resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
+        NSFileManager.defaultManager().removeItemAtPath(resignedPath, error:nil)
+    }
+    
+    func testFirstForm()
+    {
+        output = resignCommand.execute([config.ipaFullPath!, "provisioning-profile", config.resignProvisioningProfilePath, "bundle-identifier", config.resignedBundleIdentifier])
+
+        let resignedIpa = ITIpa()
+        let (success,_) = resignedIpa.load(resignedPath)
+        XCTAssertTrue(success)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.provisioningName()!, config.resignedProvisioningName)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.codeSigningAuthority()!, config.resignedCodeSigningAuthority)
+        XCTAssertEqual(resignedIpa.bundleIdentifier, config.resignedBundleIdentifier)
+    }
+
+    func testSecondForm()
+    {
+        output = resignCommand.execute([config.ipaFullPath!, "bundle-identifier", config.resignedBundleIdentifier, "provisioning-profile", config.resignProvisioningProfilePath])
+        
+        let resignedIpa = ITIpa()
+        let (success,_) = resignedIpa.load(resignedPath)
+        XCTAssertTrue(success)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.provisioningName()!, config.resignedProvisioningName)
+        XCTAssertEqual(resignedIpa.provisioningProfile!.codeSigningAuthority()!, config.resignedCodeSigningAuthority)
+        XCTAssertEqual(resignedIpa.bundleIdentifier, config.resignedBundleIdentifier)
+    }
+}

@@ -45,7 +45,9 @@ class IPTCommandResign : ITCommand
         return (true, nil)
     }
     
-    override func execute(args: [String]) -> String {
+    override func execute(arguments: [String]) -> String {
+        let args = convertArgsForCompatibility(arguments)
+        
         let (ok, message) = validateArgs(args)
         if (!ok) {
             return "Error: " + message!
@@ -63,6 +65,27 @@ class IPTCommandResign : ITCommand
         }
         
         return resign(ipa, args[1], bundleIdentifier)
+    }
+    
+    func convertArgsForCompatibility(args:[String]) -> [String]
+    {
+        if (args.count >= 2 &&
+            (args[1] == "provisioning-profile" || args[1] == "bundle-identifier")) {
+            var converted:[String] = []
+            converted.append(args[0])
+                if (args[1] == "bundle-identifier") {
+                    converted.append(args[4])
+                    converted.append(args[2])
+                }
+                else {
+                    converted.append(args[2])
+                    if (args.count > 3) {
+                        converted.append(args[4])
+                    }
+                }
+            return converted
+        }
+        return args
     }
     
     func resign(ipa:ITIpa, _ provPath:String, _ bundleIdentifier:String? = nil) -> String {
