@@ -48,3 +48,7 @@ The tests check whether the code signing that this `SampleApp.ipa` has matches w
 Wiki
 ====
 Please refer to the wiki for more information on [Managing Archives and Code Signing with xcodebuild](https://github.com/svdo/ipatool/wiki/Managing-Archives-and-Code-Signing-with-xodebuild).
+
+TODO
+====
+* Use `IPT` class prefix everywhere instead of `IT`.
