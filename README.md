@@ -1,23 +1,19 @@
 ipatool
 =======
 
-Please Note
------------
-I'm currently rewriting this tool in Swift, in a test-driven fashion. At the moment, I'm not worrying about the ability to run the command-line tool itself, I'm only focussing on the unit tests. The reason is that running the command-line version requires OS X SDK 10.10, which is not available yet.
-
 Introduction
 ------------
-Shell script to query iOS IPA files and to resign an IPA with a new provisioning profile. Sample use cases:
+Command line utility to query iOS IPA files and to resign an IPA with a new provisioning profile (and optionally a new bundle identifier). Sample use cases:
 
    * Check expiration of enterprise-signed IPAs so that you know when you have to ship new releases to your customers.
    * Resign enterprise-signed IPA that has expired with a new provisioning profile.
    * Resign appstore-signed IPA with enterprise provisioning profile, so that you can test the actual binary that you will upload to Apple.
    
-Since this is a standard shell script, you can of course use it in continuous integration setups such as Jenkins etc.
+Since this is a command line utility, you can of course use it in continuous integration setups such as Jenkins etc.
 
 Query IPA files
 ---------------
-Invocation: `ipatool.sh myapp.ipa`
+Invocation: `ipatool myapp.ipa`
 
 Sample output:
 <pre>
@@ -39,7 +35,7 @@ Provisioning:
 
 Resign IPA files
 ----------------
-Invocation: `ipatool.sh myapp.ipa resign provisioning-profile enterpriseprof.mobileprovision bundle-identifier com.example.enterprise.myapp`
+Invocation: `ipatool.sh myapp.ipa resign enterpriseprof.mobileprovision com.example.enterprise.myapp`
 
 This invocation will resign the IPA using the provisioning profile found in `enterpriseprof.mobileprovision`. In the process, it will change the bundle identifier to `com.example.enterprise.myapp`.
 
