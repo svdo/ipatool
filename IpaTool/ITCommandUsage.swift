@@ -13,7 +13,9 @@ class ITCommandUsage : ITCommand
     
     override func execute(args:[String]) -> String
     {
-        return "Usage: ipatool IPA [OPTIONS]\n" +
+        return "ipatool version \(ITMain.version()). Copyright (c) 2014 Stefan van den Oord\n" +
+            "\n" +
+            "Usage: ipatool IPA [OPTIONS]\n" +
             "IPA is a file with extension '.ipa'\n" +
             "\n" +
             "Available options:\n" +

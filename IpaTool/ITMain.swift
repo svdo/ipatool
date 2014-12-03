@@ -10,6 +10,10 @@ import Foundation
 
 class ITMain
 {
+    class func version() -> String {
+        return "1.0"
+    }
+    
     let commandFactory : ITCommandFactory = ITCommandFactory()
 
     func run(args:[String]) -> String

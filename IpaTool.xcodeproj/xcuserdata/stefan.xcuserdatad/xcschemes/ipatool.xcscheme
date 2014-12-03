@@ -64,11 +64,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "usage"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "info"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "version"
