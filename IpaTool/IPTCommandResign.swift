@@ -38,6 +38,10 @@ class IPTCommandResign : ITCommand
             return (false, "First parameter must be path of ipa file")
         }
         
+        if (!NSFileManager.defaultManager().isReadableFileAtPath(args[1])) {
+            return (false, "Second parameter must be path of provisioning profile")
+        }
+        
         return (true, nil)
     }
     
@@ -63,6 +67,13 @@ class IPTCommandResign : ITCommand
             let prof = ITProvisioningProfile.loadFromPath(provPath)
             if prof == nil {
                 return "Error: could not load provisioning profile from path \(provPath)"
+            }
+            
+            if (bundleIdentifier != nil) {
+                let ok = replaceBundleIdentifier(ipa.appPath.stringByAppendingPathComponent("Info.plist"), bundleIdentifier!)
+                if (!ok) {
+                    return "Error: failed to replace bundle identifier in Info.plist"
+                }
             }
 
             copyProvisioningProfileToExtractedIpa(ipa, provPath)
@@ -99,6 +110,25 @@ class IPTCommandResign : ITCommand
         NSFileManager.defaultManager().removeItemAtPath(dest, error: nil)
         let ok = NSFileManager.defaultManager().copyItemAtPath(provPath, toPath: dest, error: &error)
         assert(ok && error == nil, error!.description)
+    }
+    
+    func replaceBundleIdentifier(infoPlistPath:String, _ bundleIdentifier:String) -> Bool
+    {
+        let d:NSDictionary? = NSDictionary(contentsOfFile: infoPlistPath) as NSDictionary?
+        if (d == nil) {
+            return false
+        }
+        
+        var plist:NSMutableDictionary = d!.mutableCopy() as NSMutableDictionary
+        plist["CFBundleIdentifier"] = bundleIdentifier
+
+        var error:NSError?
+        let data:NSData? = NSPropertyListSerialization.dataWithPropertyList(plist, format: NSPropertyListFormat.BinaryFormat_v1_0, options: 0, error: &error)
+        if (data == nil) {
+            return false
+        }
+        
+        return data!.writeToFile(infoPlistPath, atomically: true)
     }
 
 }
