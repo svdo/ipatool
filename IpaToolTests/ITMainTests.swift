@@ -30,7 +30,7 @@ class ITMainTests: XCTestCase {
     
     func testShowsUsageWithInvalidParameters()
     {
-        let output = ipaTool.run(["invalid_parameter"])
+        let output = ipaTool.run(["some_ipa", "invalid_parameter"])
         let range = output.lowercaseString.rangeOfString("usage")
         XCTAssertTrue(range != nil)
     }
@@ -54,5 +54,19 @@ class ITMainTests: XCTestCase {
         let command:ITCommand? = ipaTool.commandForArguments(["some.ipa", "build"])
         XCTAssertNotNil(command)
         XCTAssertTrue(command is IPTCommandBuild)
+    }
+    
+    func testResignCommand()
+    {
+        let command:ITCommand? = ipaTool.commandForArguments(["some.ipa", "resign"])
+        XCTAssertNotNil(command)
+        XCTAssertTrue(command is IPTCommandResign)
+    }
+
+    func testDefaultCommandIsInfo()
+    {
+        let command:ITCommand? = ipaTool.commandForArguments(["some.ipa"])
+        XCTAssertNotNil(command)
+        XCTAssertTrue(command is ITCommandInfo)
     }
 }

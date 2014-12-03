@@ -59,8 +59,12 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$SRCROOT/ipatoolTests/testdata/Blaat.ipa"
+            argument = "$BUILT_PRODUCTS_DIR/SampleApp.ipa"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "usage"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "info"

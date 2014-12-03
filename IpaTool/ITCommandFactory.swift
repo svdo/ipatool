@@ -15,7 +15,8 @@ class ITCommandFactory
             "info" : ITCommandInfo(),
             "usage": ITCommandUsage(),
             "version": IPTCommandVersion(),
-            "build": IPTCommandBuild()]
+            "build": IPTCommandBuild(),
+            "resign": IPTCommandResign()]
     }
     
     var commands : Dictionary<String, ITCommand>

@@ -27,8 +27,16 @@ class ITMain
     
     func commandForArguments(args:[String]) -> ITCommand?
     {
-        var commandName = (args.count >= 2) ? args[1] : "usage"
-        let command = commandFactory.commandWithName(commandName)
+        var commandName = ""
+        switch (args.count) {
+            case 0: commandName = "usage"
+            case 1: commandName = "info"
+            default: commandName = args[1]
+        }
+        var command = commandFactory.commandWithName(commandName)
+        if command == nil {
+            command = commandFactory.commandWithName("usage")
+        }
         return command
     }
 }

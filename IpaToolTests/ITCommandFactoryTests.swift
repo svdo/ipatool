@@ -14,10 +14,11 @@ class ITCommandFactoryTests: XCTestCase {
     {
         let factory = ITCommandFactory()
         let commands : Dictionary<String, ITCommand> = factory.commands
-        XCTAssertEqual(commands.count, 4)
+        XCTAssertEqual(commands.count, 5)
         XCTAssertNotNil(commands["info"])
         XCTAssertNotNil(commands["usage"])
         XCTAssertNotNil(commands["version"])
         XCTAssertNotNil(commands["build"])
+        XCTAssertNotNil(commands["resign"])
     }
 }

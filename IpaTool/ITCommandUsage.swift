@@ -13,7 +13,7 @@ class ITCommandUsage : ITCommand
     
     override func execute(args:[String]) -> String
     {
-        return "Usage: ipatool.sh IPA [OPTIONS]\n" +
+        return "Usage: ipatool IPA [OPTIONS]\n" +
             "IPA is a file with extension '.ipa'\n" +
             "\n" +
             "Available options:\n" +
@@ -25,8 +25,12 @@ class ITCommandUsage : ITCommand
             "  expiration      Shows expiration date of the embedded provisioning profile\n" +
             "  resign          Resign the IPA and write the resigned IPA to the current\n" +
             "                  working directory according to the given options:\n" +
-            "                  bundle-identifier NEW-BUNDLE-IDENTIFIER [optional]\n" +
-            "                  provisioning-profile NEW-PROVISIONING-PROFILE [required]\n" +
-        "\n"
+            "                  NEW-PROVISIONING-PROFILE [required]\n" +
+            "                  NEW-BUNDLE-IDENTIFIER [optional]\n" +
+            "\n" +
+            "Example:\n" +
+            "\n" +
+            "ipatool myApp.ipa resign /path/to/profile.mobileprovision com.example.new.bundleIdentifier\n" +
+            "\n"
     }
 }
