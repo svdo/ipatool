@@ -69,8 +69,8 @@ class IPTCommandResign : ITCommand
     
     func convertArgsForCompatibility(args:[String]) -> [String]
     {
-        if (args.count >= 2 &&
-            (args[1] == "provisioning-profile" || args[1] == "bundle-identifier")) {
+        while (args.count >= 2 &&
+            (args[1] == "provisioning-profile" || args[1] == "bundle-identifier" || args[1] == "resign")) {
             var converted:[String] = []
             converted.append(args[0])
                 if (args[1] == "bundle-identifier") {
@@ -80,7 +80,7 @@ class IPTCommandResign : ITCommand
                 else {
                     converted.append(args[2])
                     if (args.count > 3) {
-                        converted.append(args[4])
+                        converted.append(args[3])
                     }
                 }
             return converted

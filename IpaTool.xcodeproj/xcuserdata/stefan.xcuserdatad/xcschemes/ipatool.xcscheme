@@ -48,7 +48,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
@@ -59,11 +60,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$BUILT_PRODUCTS_DIR/SampleApp.ipa"
+            argument = "usage"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "usage"
+            argument = "$BUILT_PRODUCTS_DIR/SampleApp.ipa"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -72,6 +73,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "version"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "resign"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/stefan/Downloads/SampleApp_Ad_Hoc.mobileprovision"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "com.vandenoord.dist.SampleApp"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -84,7 +97,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
