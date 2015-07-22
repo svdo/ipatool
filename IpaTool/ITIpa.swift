@@ -17,14 +17,14 @@ class ITIpa
     var displayName:String? { get {
         return infoPlistContents!["CFBundleDisplayName"] as? String
         } }
-    var bundleShortVersionString:String { get { return infoPlistContents!["CFBundleShortVersionString"] as String } }
-    var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as String } }
-    var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as String } }
-    var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as String } }
+    var bundleShortVersionString:String { get { return infoPlistContents!["CFBundleShortVersionString"] as! String } }
+    var bundleVersion:String { get { return infoPlistContents!["CFBundleVersion"] as! String } }
+    var bundleIdentifier:String { get { return infoPlistContents!["CFBundleIdentifier"] as! String } }
+    var minimumOSVersion:String { get { return infoPlistContents!["MinimumOSVersion"] as! String } }
     var deviceFamily:String {
         get {
             var result = ""
-            let families:Array<Int> = infoPlistContents!["UIDeviceFamily"] as Array<Int>
+            let families:Array<Int> = infoPlistContents!["UIDeviceFamily"] as! Array<Int>
             for f in families {
                 switch f as Int {
                     case 1: result += "iphone "
@@ -84,7 +84,7 @@ class ITIpa
     func extractAppName(extractedIpaPath:String)
     {
         let payloadDir:String = extractedIpaPath.stringByAppendingPathComponent("Payload")
-        let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir, error: nil) as [String]
+        let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir, error: nil) as! [String]
         appName = contents[0]
         appPath = payloadDir.stringByAppendingPathComponent(appName)
     }

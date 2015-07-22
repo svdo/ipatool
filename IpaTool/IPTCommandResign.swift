@@ -147,7 +147,7 @@ class IPTCommandResign : ITCommand
             return false
         }
         
-        var plist:NSMutableDictionary = d!.mutableCopy() as NSMutableDictionary
+        var plist:NSMutableDictionary = d!.mutableCopy() as! NSMutableDictionary
         plist["CFBundleIdentifier"] = bundleIdentifier
 
         var error:NSError?

@@ -38,7 +38,7 @@ class IPTSystemCommand
         }
         stdOutData.appendData(stdOut.readDataToEndOfFile())
         stdOut.closeFile()
-        standardOutput = NSString(data:stdOutData, encoding:NSUTF8StringEncoding)
+        standardOutput = NSString(data:stdOutData, encoding:NSUTF8StringEncoding) as String?
         
         exitCode = task.terminationStatus
         return exitCode == 0

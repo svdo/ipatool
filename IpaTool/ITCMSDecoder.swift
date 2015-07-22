@@ -27,7 +27,7 @@ class ITCMSDecoder
         let l = data.length
         var bytes = UnsafeMutablePointer<Void>.alloc(l)
         data.getBytes(bytes, length:l)
-        var status = CMSDecoderUpdateMessage(cmsDecoder, bytes, UInt(l))
+        var status = CMSDecoderUpdateMessage(cmsDecoder, bytes, Int(l))
         assert(status == noErr)
         
         status = CMSDecoderFinalizeMessage(cmsDecoder)
@@ -43,7 +43,7 @@ class ITCMSDecoder
         assert(status == noErr)
         if let d = data {
             _decodedData = d.takeRetainedValue()
-            _decodedString = NSString(data:_decodedData!, encoding: NSUTF8StringEncoding)
+            _decodedString = NSString(data:_decodedData!, encoding: NSUTF8StringEncoding) as String?
         }
     }
     

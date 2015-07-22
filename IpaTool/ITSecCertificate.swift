@@ -24,13 +24,13 @@ class ITSecCertificate
         get {
             var cn:Unmanaged<CFString>? = nil
             SecCertificateCopyCommonName(_secCertificate, &cn)
-            return cn?.takeRetainedValue()
+            return cn?.takeRetainedValue() as String?
         }
     }
     
     var subject : String? {
         get {
-            return SecCertificateCopySubjectSummary(_secCertificate).takeRetainedValue()
+            return SecCertificateCopySubjectSummary(_secCertificate).takeRetainedValue() as String?
         }
     }
     
