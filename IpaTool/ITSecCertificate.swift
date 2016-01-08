@@ -17,26 +17,26 @@ class ITSecCertificate
     }
     
     init(_ data:NSData) {
-        _secCertificate = SecCertificateCreateWithData(nil, data).takeRetainedValue()
+        _secCertificate = SecCertificateCreateWithData(nil, data)!;
     }
     
     var commonName : String? {
         get {
-            var cn:Unmanaged<CFString>? = nil
-            SecCertificateCopyCommonName(_secCertificate, &cn)
-            return cn?.takeRetainedValue() as String?
+            var cn:CFString? = nil;
+            SecCertificateCopyCommonName(_secCertificate, &cn);
+            return cn! as String?;
         }
     }
     
     var subject : String? {
         get {
-            return SecCertificateCopySubjectSummary(_secCertificate).takeRetainedValue() as String?
+            return SecCertificateCopySubjectSummary(_secCertificate) as String?; //.takeRetainedValue() as String?
         }
     }
     
     var values : NSDictionary? {
         get {
-            return SecCertificateCopyValues(_secCertificate, nil, nil).takeRetainedValue()
+            return SecCertificateCopyValues(_secCertificate, nil, nil); //.takeRetainedValue()
         }
     }
 }

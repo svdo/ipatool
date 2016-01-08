@@ -14,7 +14,12 @@ class ITProvisioningProfile
     
     init(_ data:NSData)
     {
-        provisioningProfile = NSPropertyListSerialization.propertyListWithData(data, options: Int(NSPropertyListMutabilityOptions.Immutable.rawValue), format: nil, error: nil) as? NSDictionary
+        do {
+            provisioningProfile = try NSPropertyListSerialization.propertyListWithData(data,
+                options: NSPropertyListMutabilityOptions.Immutable, format: nil) as? NSDictionary
+        } catch _ {
+            fatalError("Cannot initialize the provisioning profile");
+        }
     }
     
     class func loadFromPath(path:String) -> ITProvisioningProfile?
@@ -24,9 +29,9 @@ class ITProvisioningProfile
             return nil
         }
         
-        var decoder = ITCMSDecoder()
+        let decoder = ITCMSDecoder()
         decoder.decodeData(provisioningData!)
-        var cmsDecoder = decoder.cmsDecoder
+        //let cmsDecoder = decoder.cmsDecoder
         return decoder.provisioningProfile()
     }
     
@@ -34,9 +39,9 @@ class ITProvisioningProfile
     {
         if let prof = provisioningProfile
         {
-            var certs:[NSData] = prof["DeveloperCertificates"] as! [NSData]
-            var cert = certs[i]
-            var secCert:ITSecCertificate = ITSecCertificate(cert)
+            let certs:[NSData] = prof["DeveloperCertificates"] as! [NSData]
+            let cert = certs[i]
+            let secCert:ITSecCertificate = ITSecCertificate(cert)
             return secCert.subject
         }
         else {

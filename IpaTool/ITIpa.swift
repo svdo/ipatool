@@ -41,7 +41,11 @@ class ITIpa
     
     deinit
     {
-        NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath, error: nil)
+        do {
+            try NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath);
+        } catch _ {
+            /* error happens */
+        }
     }
     
     func load(path:String) -> (result:Bool, error:String!)
@@ -69,36 +73,43 @@ class ITIpa
     {
         let systemTempDir = NSTemporaryDirectory()
         let uniqueId = NSProcessInfo.processInfo().globallyUniqueString
-        let tempDirPath = systemTempDir.stringByAppendingPathComponent(uniqueId)
+        let tempDirPath = (systemTempDir as NSString).stringByAppendingPathComponent(uniqueId)
+        //let tempDirPath = systemTempDir.URLByAppendingPathComponent(uniqueId)
         let tempDirUrl = NSURL.fileURLWithPath(tempDirPath, isDirectory: true)
-//        println("tempDirUrl = \(tempDirUrl!)") // TODO: find properway of doing configurable logging, preferably at least as powerful as Android logging
+//      print("tempDirUrl = \(tempDirUrl!)") // TODO: find properway of doing configurable logging, preferably at least as powerful as Android logging
+        let tempDirString = tempDirUrl.absoluteString
         
-        var error:NSError?
-        let created = NSFileManager.defaultManager().createDirectoryAtURL(tempDirUrl!, withIntermediateDirectories: true, attributes: nil, error: &error)
-
-        assert(created, "Failed to create temp dir: \(error!.description)")
-
-        return created ? tempDirUrl : nil
+        do {
+            try NSFileManager.defaultManager().createDirectoryAtPath(tempDirString, withIntermediateDirectories:true, attributes:nil);
+            return tempDirUrl;
+        } catch _ {
+            print("Failed to create temp dir: \(tempDirString)");
+            return nil;
+        }
     }
     
     func extractAppName(extractedIpaPath:String)
     {
-        let payloadDir:String = extractedIpaPath.stringByAppendingPathComponent("Payload")
-        let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir, error: nil) as! [String]
-        appName = contents[0]
-        appPath = payloadDir.stringByAppendingPathComponent(appName)
+        let payloadDir:String = (extractedIpaPath as NSString).stringByAppendingPathComponent("Payload")
+        do {
+          let contents = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir);
+          appName = contents[0]
+          appPath = (payloadDir as NSString).stringByAppendingPathComponent(appName)
+        } catch _ {
+          /* error happens */
+        }
     }
     
     func extractInfoPlist(extractedIpaPath:String)
     {
-        let infoPlistPath = appPath.stringByAppendingPathComponent("Info.plist")
+        let infoPlistPath = (appPath as NSString).stringByAppendingPathComponent("Info.plist")
         infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
         assert(infoPlistContents != nil)
     }
     
     func extractProvisioningProfile(extractedIpaPath:String)
     {
-        let inputFileName = appPath.stringByAppendingPathComponent("embedded.mobileprovision")
+        let inputFileName = (appPath as NSString).stringByAppendingPathComponent("embedded.mobileprovision")
         provisioningProfile = ITProvisioningProfile.loadFromPath(inputFileName)
     }
 
