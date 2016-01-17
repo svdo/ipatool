@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SSZipArchive
 
 class IPTCommandResign : ITCommand
 {
@@ -26,7 +27,7 @@ class IPTCommandResign : ITCommand
     }
 
     class func resignedPathForPath(path:String) -> String {
-        return path.stringByDeletingPathExtension + "_resigned.ipa"
+        return (path as NSString).stringByDeletingPathExtension + "_resigned.ipa"
     }
 
     func validateArgs(args: [String]) -> (ok:Bool, error:String?) {
@@ -53,7 +54,7 @@ class IPTCommandResign : ITCommand
             return "Error: " + message!
         }
         
-        var ipa = ITIpa()
+        let ipa = ITIpa()
         ipaPath = args[0]
         let (success,error) = ipa.load(ipaPath)
         if !success {
@@ -80,7 +81,12 @@ class IPTCommandResign : ITCommand
                 else {
                     converted.append(args[2])
                     if (args.count > 3) {
-                        converted.append(args[3])
+                        if (args[3] == "bundle-identifier") {
+                            converted.append(args[4])
+                        }
+                        else {
+                            converted.append(args[3])
+                        }
                     }
                 }
             return converted
@@ -89,8 +95,6 @@ class IPTCommandResign : ITCommand
     }
     
     func resign(ipa:ITIpa, _ provPath:String, _ bundleIdentifier:String? = nil) -> String {
-        var error:NSError? = nil
-        
         if let alloc = codesignAllocate {
             let prof = ITProvisioningProfile.loadFromPath(provPath)
             if prof == nil {
@@ -98,7 +102,7 @@ class IPTCommandResign : ITCommand
             }
             
             if (bundleIdentifier != nil) {
-                let ok = replaceBundleIdentifier(ipa.appPath.stringByAppendingPathComponent("Info.plist"), bundleIdentifier!)
+                let ok = replaceBundleIdentifier((ipa.appPath as NSString).stringByAppendingPathComponent("Info.plist"), bundleIdentifier!)
                 if (!ok) {
                     return "Error: failed to replace bundle identifier in Info.plist"
                 }
@@ -110,15 +114,15 @@ class IPTCommandResign : ITCommand
             let appName = ipa.appName
             let args:[String] = ["-f", "-vv", "-s", signer, appName]
             let env:[String:String] = ["CODESIGN_ALLOCATE":alloc, "EMBEDDED_PROFILE_NAME":"embedded.mobileprovision"]
-            let payloadDir = ipa.appPath.stringByDeletingLastPathComponent
+            let payloadDir = (ipa.appPath as NSString).stringByDeletingLastPathComponent
             cmd.workingDirectory = payloadDir
             var ok = cmd.execute("/usr/bin/codesign", args, env)
             
             if !ok {
-                return error!.description
+                return "Execution of codesign failed"
             }
             
-            ok = SSZipArchive.createZipFileAtPath(resignedPath, withContentsOfDirectory: payloadDir.stringByDeletingLastPathComponent)
+            ok = SSZipArchive.createZipFileAtPath(resignedPath, withContentsOfDirectory: (payloadDir as NSString).stringByDeletingLastPathComponent)
             if ok {
                 return "\(ipa.appName): replacing existing signature\n" + "\n" + "Resigned ipa: \(resignedPath)\n"
             }
@@ -134,9 +138,19 @@ class IPTCommandResign : ITCommand
     func copyProvisioningProfileToExtractedIpa(ipa:ITIpa, _ provPath:String)
     {
         var error:NSError?
-        let dest = ipa.appPath.stringByAppendingPathComponent("embedded.mobileprovision")
-        NSFileManager.defaultManager().removeItemAtPath(dest, error: nil)
-        let ok = NSFileManager.defaultManager().copyItemAtPath(provPath, toPath: dest, error: &error)
+        let dest = (ipa.appPath as NSString).stringByAppendingPathComponent("embedded.mobileprovision")
+        do {
+            try NSFileManager.defaultManager().removeItemAtPath(dest)
+        } catch _ {
+        }
+        let ok: Bool
+        do {
+            try NSFileManager.defaultManager().copyItemAtPath(provPath, toPath: dest)
+            ok = true
+        } catch let error1 as NSError {
+            error = error1
+            ok = false
+        }
         assert(ok && error == nil, error!.description)
     }
     
@@ -147,12 +161,13 @@ class IPTCommandResign : ITCommand
             return false
         }
         
-        var plist:NSMutableDictionary = d!.mutableCopy() as! NSMutableDictionary
+        let plist:NSMutableDictionary = d!.mutableCopy() as! NSMutableDictionary
         plist["CFBundleIdentifier"] = bundleIdentifier
 
-        var error:NSError?
-        let data:NSData? = NSPropertyListSerialization.dataWithPropertyList(plist, format: NSPropertyListFormat.BinaryFormat_v1_0, options: 0, error: &error)
-        if (data == nil) {
+        var data:NSData? = nil
+        do {
+            data = try NSPropertyListSerialization.dataWithPropertyList(plist, format: NSPropertyListFormat.BinaryFormat_v1_0, options: 0)
+        } catch {
             return false
         }
         

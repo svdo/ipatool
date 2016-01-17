@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array {
-    var match : (head: T, tail: [T])? {
+    var match : (head: Element, tail: [Element])? {
         return (count > 0) ? (self[0],Array(self[1..<count])) : nil
     }
 }
@@ -17,5 +17,5 @@ extension Array {
 
 let ipaTool = ITMain()
 let (_,args) = Process.arguments.match!
-println(ipaTool.run(args))
+print(ipaTool.run(args))
 

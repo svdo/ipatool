@@ -11,7 +11,7 @@ import Foundation
 class ITCommandInfo : ITCommand
 {
     override func execute(args: [String]) -> String {
-        var ipa = ITIpa()
+        let ipa = ITIpa()
         let (success,error) = ipa.load(args[0])
 
         if (success) {
@@ -43,7 +43,7 @@ class ITCommandInfo : ITCommand
     }
     
     func formatDate(date:NSDate) -> String {
-        var df = NSDateFormatter()
+        let df = NSDateFormatter()
         df.dateFormat = "EEE MMM d HH:mm:ss v yyyy"
         return df.stringFromDate(date)
     }

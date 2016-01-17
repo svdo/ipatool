@@ -39,7 +39,7 @@ class IPTSystemCommandTests: XCTestCase {
     {
         let tempDir = NSTemporaryDirectory()
         let tempFile = NSUUID().UUIDString
-        let tempPath = tempDir.stringByAppendingPathComponent(tempFile)
+        let tempPath = (tempDir as NSString).stringByAppendingPathComponent(tempFile)
         XCTAssertFalse(NSFileManager.defaultManager().isReadableFileAtPath(tempPath))
         
         let ok = cmd.execute("/usr/bin/touch", [tempPath])
@@ -50,7 +50,10 @@ class IPTSystemCommandTests: XCTestCase {
         XCTAssertEqual(Int32(0), exitCode)
         
         XCTAssertTrue(NSFileManager.defaultManager().isReadableFileAtPath(tempPath))
-        NSFileManager.defaultManager().removeItemAtPath(tempPath, error: nil)
+        do {
+            try NSFileManager.defaultManager().removeItemAtPath(tempPath)
+        } catch _ {
+        }
     }
     
     func testCanReadStandardOutput()

@@ -10,22 +10,22 @@ import Foundation
 
 class ITCMSDecoder
 {
-    var cmsDecoder:CMSDecoder?
+    var cmsDecoder:CMSDecoder!
     private var _decodedString:String?
     private var _decodedData:NSData?
     
     init()
     {
-        var d: Unmanaged<CMSDecoder>? = nil
-        var status = CMSDecoderCreate(&d)
+        var d:CMSDecoder? = nil
+        let status = CMSDecoderCreate(&d)
         assert(status == noErr)
-        cmsDecoder = d!.takeRetainedValue()
+        cmsDecoder = d
     }
     
     func decodeData(data:NSData)
     {
         let l = data.length
-        var bytes = UnsafeMutablePointer<Void>.alloc(l)
+        let bytes = UnsafeMutablePointer<Void>.alloc(l)
         data.getBytes(bytes, length:l)
         var status = CMSDecoderUpdateMessage(cmsDecoder, bytes, Int(l))
         assert(status == noErr)
@@ -38,11 +38,11 @@ class ITCMSDecoder
     
     func decodeString()
     {
-        var data:Unmanaged<CFData>? = nil
-        var status = CMSDecoderCopyContent(cmsDecoder, &data)
+        var data:CFData? = nil
+        let status = CMSDecoderCopyContent(cmsDecoder, &data)
         assert(status == noErr)
         if let d = data {
-            _decodedData = d.takeRetainedValue()
+            _decodedData = d as NSData
             _decodedString = NSString(data:_decodedData!, encoding: NSUTF8StringEncoding) as String?
         }
     }

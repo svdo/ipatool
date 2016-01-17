@@ -11,7 +11,7 @@ import Foundation
 class IPTCommandVersion : ITCommand
 {
     override func execute(args: [String]) -> String {
-        var ipa = ITIpa()
+        let ipa = ITIpa()
         let (success,error) = ipa.load(args[0])
         
         if (success) {

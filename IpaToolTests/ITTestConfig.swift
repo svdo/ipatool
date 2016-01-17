@@ -15,7 +15,7 @@ class ITTestConfig
     var ipaPath:String { get { return "SampleApp.ipa" } }
     var ipaFullPath:String? { get {
         let ipaDir = config!["ipaDir"] as! String
-        return ipaDir.stringByAppendingPathComponent(ipaPath)
+        return (ipaDir as NSString).stringByAppendingPathComponent(ipaPath)
         } }
     var appName:String { get { return "SampleApp.app" } }
     var displayName:String { get { return "Sample!" } }
@@ -27,7 +27,7 @@ class ITTestConfig
     var codeSigningAuthority:String { get { return config!["codeSigningAuthority"] as! String } }
     var provisioningName:String { get { return config!["provisioningName"] as! String } }
     var provisioningExpiration:NSDate? { get {
-        var df = NSDateFormatter()
+        let df = NSDateFormatter()
         df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return df.dateFromString(config!["provisioningExpiration"] as! String)
         } }
@@ -43,10 +43,16 @@ class ITTestConfig
         let configFilePath:String? = bundle.pathForResource("testConfig", ofType: "json")
         assert(configFilePath != nil)
         
-        var error:NSError?
-        let jsonData = NSData(contentsOfFile:configFilePath!, options:NSDataReadingOptions(0), error: &error)
+        var jsonData: NSData? = nil
+        do {
+            jsonData = try NSData(contentsOfFile:configFilePath!, options:NSDataReadingOptions(rawValue: 0))
+        } catch {}
         assert(jsonData != nil)
-        let config: NSDictionary? = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions(0), error:&error) as? NSDictionary
+        
+        var config: NSDictionary? = nil
+        do {
+            config = try NSJSONSerialization.JSONObjectWithData(jsonData!, options:[]) as? NSDictionary
+        } catch {}
         assert(config != nil)
         
         self.config = config

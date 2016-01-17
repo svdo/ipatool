@@ -32,7 +32,7 @@ class IPTSystemCommand
         task.standardOutput = stdOutPipe
         task.launch()
 
-        var stdOutData = NSMutableData()
+        let stdOutData = NSMutableData()
         while (task.running) {
             stdOutData.appendData(stdOut.readDataToEndOfFile())
         }

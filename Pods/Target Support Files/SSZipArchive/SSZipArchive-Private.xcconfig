@@ -1,0 +1,6 @@
+#include "SSZipArchive.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SSZipArchive" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SSZipArchive"
+OTHER_LDFLAGS = ${SSZIPARCHIVE_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
