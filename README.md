@@ -1,4 +1,4 @@
-ipatool ![](https://travis-ci.org/svdo/ipatool.svg)
+ipatool
 =======
 
 Quick Start
