@@ -1,5 +1,4 @@
 {
-    "ipaDir":"/Users/stefan/Library/Developer/Xcode/DerivedData/ipatool-dfxzjdhaxdikeibiwxkacgdrites/Build/Products/Debug",
     "bundleIdentifier":"com.vandenoord.SampleApp",
     "codeSigningAuthority":"iPhone Developer: Stefan van den Oord (2NG8JQ3ZKG)",
     "provisioningName":"iOSTeam Provisioning Profile: *",
@@ -8,6 +7,6 @@
     "provisioningTeam":"Stefan van den Oord",
     "resignedProvisioningName": "SampleApp Ad Hoc",
     "resignedCodeSigningAuthority": "iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)",
-    "resignProvisioningProfilePath": "/Users/stefan/Downloads/SampleApp_Ad_Hoc.mobileprovision",
+    "resignProvisioningProfilePath": "SampleApp_Ad_Hoc.mobileprovision",
     "resignedBundleIdentifier": "com.vandenoord.dist.SampleApp"
 }

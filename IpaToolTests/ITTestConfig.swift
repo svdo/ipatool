@@ -8,14 +8,39 @@
 
 import Foundation
 
+extension NSFileManager {
+    func findPathOfFile(name:String, startPath:NSString, maxLevelsUp: Int, maxLevelsDown: Int) -> String? {
+        let filePath = startPath.stringByAppendingPathComponent(name)
+        if fileExistsAtPath(filePath) {
+            return filePath
+        }
+        if (maxLevelsUp > 0) {
+            let parent = startPath.stringByDeletingLastPathComponent
+            return findPathOfFile(name, startPath: parent, maxLevelsUp: maxLevelsUp - 1, maxLevelsDown: maxLevelsDown)
+        }
+        if (maxLevelsDown > 0) {
+            if let subFolders = subpathsAtPath(startPath as String) {
+                for sub in subFolders {
+                    if let s = findPathOfFile(name, startPath: sub, maxLevelsUp: 0, maxLevelsDown: maxLevelsDown - 1) {
+                        return s
+                    }
+                }
+            }
+        }
+        return nil
+    }
+}
+
 class ITTestConfig
 {
     private var config:NSDictionary? = nil
 
     var ipaPath:String { get { return "SampleApp.ipa" } }
     var ipaFullPath:String? { get {
-        let ipaDir = config!["ipaDir"] as! String
-        return (ipaDir as NSString).stringByAppendingPathComponent(ipaPath)
+        let bundlePath = NSBundle(forClass:self.dynamicType).bundlePath
+        let fullPath = NSFileManager.defaultManager().findPathOfFile(self.ipaPath, startPath: bundlePath, maxLevelsUp: 3, maxLevelsDown: 5)
+        assert(fullPath != nil, "Could not find SampleApp.ipa")
+        return fullPath
         } }
     var appName:String { get { return "SampleApp.app" } }
     var displayName:String { get { return "Sample!" } }
@@ -35,7 +60,10 @@ class ITTestConfig
     var provisioningTeam:String { get { return config!["provisioningTeam"] as! String } }
     var resignedProvisioningName:String { get { return config!["resignedProvisioningName"] as! String } }
     var resignedCodeSigningAuthority:String { get { return config!["resignedCodeSigningAuthority"] as! String } }
-    var resignProvisioningProfilePath:String { get { return config!["resignProvisioningProfilePath"] as! String } }
+    var resignProvisioningProfilePath:String { get {
+        let fileName = config!["resignProvisioningProfilePath"] as! String
+        return NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: nil)!
+        } }
     var resignedBundleIdentifier:String { get { return config!["resignedBundleIdentifier"] as! String } }
 
     func load() {
