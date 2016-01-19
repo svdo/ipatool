@@ -26,7 +26,6 @@ class ITProvisioningProfile
         
         let decoder = ITCMSDecoder()
         decoder.decodeData(provisioningData!)
-//        var cmsDecoder = decoder.cmsDecoder
         return decoder.provisioningProfile()
     }
     

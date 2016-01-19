@@ -137,21 +137,13 @@ class IPTCommandResign : ITCommand
     
     func copyProvisioningProfileToExtractedIpa(ipa:ITIpa, _ provPath:String)
     {
-        var error:NSError?
         let dest = (ipa.appPath as NSString).stringByAppendingPathComponent("embedded.mobileprovision")
         do {
             try NSFileManager.defaultManager().removeItemAtPath(dest)
-        } catch _ {
-        }
-        let ok: Bool
-        do {
             try NSFileManager.defaultManager().copyItemAtPath(provPath, toPath: dest)
-            ok = true
-        } catch let error1 as NSError {
-            error = error1
-            ok = false
+        } catch let e {
+            assert(false, "\(e)")
         }
-        assert(ok && error == nil, error!.description)
     }
     
     func replaceBundleIdentifier(infoPlistPath:String, _ bundleIdentifier:String) -> Bool
