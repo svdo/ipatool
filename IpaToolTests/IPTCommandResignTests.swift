@@ -36,7 +36,7 @@ class IPTCommandResignTests: XCTestCase {
 
     func testReturnsExpectedOutput()
     {
-        let bundleId = config.bundleIdentifier
+//        let bundleId = config.bundleIdentifier
         let appNameWithoutExtension = (config.appName as NSString).deletingPathExtension
         let expectedPath:String = ((config.ipaFullPath! as NSString).deletingLastPathComponent as NSString).appendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
         let expectedOutputFirstLine = "\(config.appName): replacing existing signature"

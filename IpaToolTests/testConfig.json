@@ -1,9 +1,9 @@
 {
     "bundleIdentifier":"com.vandenoord.SampleApp",
-    "codeSigningAuthority":"iPhone Developer: Stefan van den Oord (2NG8JQ3ZKG)",
-    "provisioningName":"iOSTeam Provisioning Profile: *",
-    "provisioningExpiration":"2016-05-25T15:36:55Z",
-    "provisioningAppIdName":"UICatalog",
+    "codeSigningAuthority":"iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)",
+    "provisioningName":"XC iOS Ad Hoc: *",
+    "provisioningExpiration":"2018-09-06T09:57:41Z",
+    "provisioningAppIdName":"Shopping List",
     "provisioningTeam":"Stefan van den Oord",
     "resignedProvisioningName": "SampleApp Ad Hoc",
     "resignedCodeSigningAuthority": "iPhone Distribution: Stefan van den Oord (7EQ9KX3BR9)",

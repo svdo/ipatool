@@ -58,7 +58,7 @@ class IPTSystemCommandTests: XCTestCase {
     
     func testCanReadStandardOutput()
     {
-        cmd.execute("/bin/echo", ["test1", "test2", "test3"])
+        _ = cmd.execute("/bin/echo", ["test1", "test2", "test3"])
         XCTAssertNotNil(cmd.standardOutput)
         XCTAssertEqual("test1 test2 test3\n", cmd.standardOutput!)
     }

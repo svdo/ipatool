@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D75977C1626AB3ACDC937B4 /* Pods_ipatool_ipatoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25598A1DEC1D79E64DBBBF2 /* Pods_ipatool_ipatoolTests.framework */; };
-		CA4AA7F2F1820CCE26689209 /* Pods_ipatool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ADB19236BA71C248B4087D /* Pods_ipatool.framework */; };
+		1DFB6B36377FE1514A8AFBA6 /* Pods_ipatool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6448FFABE10D1E7AD0DF352 /* Pods_ipatool.framework */; };
+		EF4E861B04B8AD125C181E59 /* Pods_ipatool_ipatoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23383AB1ED86DB9A85141D20 /* Pods_ipatool_ipatoolTests.framework */; };
 		F803A14A1A28FE9700FAD51A /* IPTCommandVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */; };
 		F803A14C1A28FF4600FAD51A /* IPTCommandVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */; };
 		F803A14D1A28FF4800FAD51A /* IPTCommandVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */; };
@@ -43,6 +43,7 @@
 		F83A04661A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */; };
 		F83A04671A2D0C3C00966DF4 /* IPTSystemCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */; };
 		F83A04691A2D0C5100966DF4 /* IPTSystemCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A04681A2D0C5100966DF4 /* IPTSystemCommandTests.swift */; };
+		F858704E1F5FFE340000E7D0 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F858704C1F5FFD610000E7D0 /* SSZipArchive.framework */; };
 		F862CD511A29320900AC1B8B /* IPTCommandResignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803A1561A2905CC00FAD51A /* IPTCommandResignTests.swift */; };
 		F882C91E1A179D5800DDC548 /* ITTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91D1A179D5800DDC548 /* ITTestConfig.swift */; };
 		F882C9201A1E8B0E00DDC548 /* ITCMSDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */; };
@@ -77,12 +78,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		58ADB19236BA71C248B4087D /* Pods_ipatool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ipatool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		722ECF9FCFD34AC579E424C5 /* Pods-ipatool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool/Pods-ipatool.debug.xcconfig"; sourceTree = "<group>"; };
-		728F86A7347155B16F60D471 /* Pods-ipatool-ipatoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool-ipatoolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests.release.xcconfig"; sourceTree = "<group>"; };
-		A3DE8BCB58EC4E3B1D9903F1 /* Pods-ipatool-ipatoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool-ipatoolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B25598A1DEC1D79E64DBBBF2 /* Pods_ipatool_ipatoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ipatool_ipatoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50F550FB9CB50E34559E220 /* Pods-ipatool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool/Pods-ipatool.release.xcconfig"; sourceTree = "<group>"; };
+		13BA98BF844B905A6D678D99 /* Pods-ipatool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool/Pods-ipatool.release.xcconfig"; sourceTree = "<group>"; };
+		23383AB1ED86DB9A85141D20 /* Pods_ipatool_ipatoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ipatool_ipatoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0D96E4559B988C7877855A /* Pods-ipatool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool/Pods-ipatool.debug.xcconfig"; sourceTree = "<group>"; };
+		66700EB0B04EC85B6B453287 /* Pods-ipatool-ipatoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool-ipatoolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6448FFABE10D1E7AD0DF352 /* Pods_ipatool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ipatool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB21367DF2C02A87DC9793B0 /* Pods-ipatool-ipatoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipatool-ipatoolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F803A1491A28FE9700FAD51A /* IPTCommandVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandVersionTests.swift; sourceTree = "<group>"; };
 		F803A14B1A28FF4600FAD51A /* IPTCommandVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandVersion.swift; sourceTree = "<group>"; };
 		F803A1511A29028000FAD51A /* IPTCommandBuildTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTCommandBuildTests.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		F829F4D61A179015001A34A7 /* ipatool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ipatool-Bridging-Header.h"; sourceTree = "<group>"; };
 		F83A04651A2D0C3C00966DF4 /* IPTSystemCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTSystemCommand.swift; sourceTree = "<group>"; };
 		F83A04681A2D0C5100966DF4 /* IPTSystemCommandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPTSystemCommandTests.swift; sourceTree = "<group>"; };
+		F858704C1F5FFD610000E7D0 /* SSZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSZipArchive.framework; path = "../../../../Library/Developer/Xcode/DerivedData/IpaTool-bohinbcevrnftaeoqtxkjfjglzbg/Build/Products/Debug/SSZipArchive/SSZipArchive.framework"; sourceTree = "<group>"; };
 		F882C91D1A179D5800DDC548 /* ITTestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITTestConfig.swift; sourceTree = "<group>"; };
 		F882C91F1A1E8B0E00DDC548 /* ITCMSDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCMSDecoder.swift; sourceTree = "<group>"; };
 		F882C9251A1FC42700DDC548 /* ITSecCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITSecCertificate.swift; sourceTree = "<group>"; };
@@ -133,7 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4AA7F2F1820CCE26689209 /* Pods_ipatool.framework in Frameworks */,
+				1DFB6B36377FE1514A8AFBA6 /* Pods_ipatool.framework in Frameworks */,
+				F858704E1F5FFE340000E7D0 /* SSZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,31 +144,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D75977C1626AB3ACDC937B4 /* Pods_ipatool_ipatoolTests.framework in Frameworks */,
+				EF4E861B04B8AD125C181E59 /* Pods_ipatool_ipatoolTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AF96DC7E1BA8FF42AD6993E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D96E4559B988C7877855A /* Pods-ipatool.debug.xcconfig */,
+				13BA98BF844B905A6D678D99 /* Pods-ipatool.release.xcconfig */,
+				DB21367DF2C02A87DC9793B0 /* Pods-ipatool-ipatoolTests.debug.xcconfig */,
+				66700EB0B04EC85B6B453287 /* Pods-ipatool-ipatoolTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		547C36FE7A8108E88FF6809A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58ADB19236BA71C248B4087D /* Pods_ipatool.framework */,
-				B25598A1DEC1D79E64DBBBF2 /* Pods_ipatool_ipatoolTests.framework */,
+				F858704C1F5FFD610000E7D0 /* SSZipArchive.framework */,
+				A6448FFABE10D1E7AD0DF352 /* Pods_ipatool.framework */,
+				23383AB1ED86DB9A85141D20 /* Pods_ipatool_ipatoolTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		94223787DED7FD0CCF615C8C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				722ECF9FCFD34AC579E424C5 /* Pods-ipatool.debug.xcconfig */,
-				B50F550FB9CB50E34559E220 /* Pods-ipatool.release.xcconfig */,
-				A3DE8BCB58EC4E3B1D9903F1 /* Pods-ipatool-ipatoolTests.debug.xcconfig */,
-				728F86A7347155B16F60D471 /* Pods-ipatool-ipatoolTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		F803A1601A29163600FAD51A /* SampleApp */ = {
@@ -197,8 +201,8 @@
 				F829F4B61A178FAA001A34A7 /* ipatoolTests */,
 				F803A1601A29163600FAD51A /* SampleApp */,
 				F829F4A81A178F8C001A34A7 /* Products */,
-				94223787DED7FD0CCF615C8C /* Pods */,
 				547C36FE7A8108E88FF6809A /* Frameworks */,
+				4AF96DC7E1BA8FF42AD6993E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,11 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4AE1A178F8C001A34A7 /* Build configuration list for PBXNativeTarget "ipatool" */;
 			buildPhases = (
-				9D11E5970E9B318C3C65F4C5 /* [CP] Check Pods Manifest.lock */,
+				47051A3241BFC6B6325E9AD0 /* [CP] Check Pods Manifest.lock */,
 				F829F4A31A178F8C001A34A7 /* Sources */,
 				F829F4A41A178F8C001A34A7 /* Frameworks */,
 				F829F4A51A178F8C001A34A7 /* CopyFiles */,
-				C2F1DC8D2E1EE47C96580A61 /* [CP] Copy Pods Resources */,
+				A96874D1C81735094BAE8EED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,13 +307,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F829F4BD1A178FAA001A34A7 /* Build configuration list for PBXNativeTarget "ipatoolTests" */;
 			buildPhases = (
-				48ADC54300D01EC13CC837B9 /* [CP] Check Pods Manifest.lock */,
+				50250267946AE631B07E09EA /* [CP] Check Pods Manifest.lock */,
 				F803A1831A29172800FAD51A /* ShellScript */,
 				F829F4B11A178FAA001A34A7 /* Sources */,
 				F829F4B21A178FAA001A34A7 /* Frameworks */,
 				F829F4B31A178FAA001A34A7 /* Resources */,
-				56D12393E355CCF7C7DF1957 /* [CP] Embed Pods Frameworks */,
-				531E5FB977E02CFDA86F6F02 /* [CP] Copy Pods Resources */,
+				E906DBC9091825F9500EF813 /* [CP] Embed Pods Frameworks */,
+				EE0296ECF4A8F464A905C620 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,58 +394,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		48ADC54300D01EC13CC837B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ipatool-ipatoolTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		531E5FB977E02CFDA86F6F02 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		56D12393E355CCF7C7DF1957 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D11E5970E9B318C3C65F4C5 /* [CP] Check Pods Manifest.lock */ = {
+		47051A3241BFC6B6325E9AD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,7 +412,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2F1DC8D2E1EE47C96580A61 /* [CP] Copy Pods Resources */ = {
+		50250267946AE631B07E09EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ipatool-ipatoolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A96874D1C81735094BAE8EED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,6 +443,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipatool/Pods-ipatool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E906DBC9091825F9500EF813 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE0296ECF4A8F464A905C620 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipatool-ipatoolTests/Pods-ipatool-ipatoolTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F803A1831A29172800FAD51A /* ShellScript */ = {
@@ -693,17 +697,10 @@
 		};
 		F829F4AF1A178F8C001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 722ECF9FCFD34AC579E424C5 /* Pods-ipatool.debug.xcconfig */;
+			baseConfigurationReference = 4B0D96E4559B988C7877855A /* Pods-ipatool.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-l\"Pods-SSZipArchive\"",
-					"-l\"z\"",
-					"-lssl",
-					"-lcrypto",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -713,17 +710,10 @@
 		};
 		F829F4B01A178F8C001A34A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B50F550FB9CB50E34559E220 /* Pods-ipatool.release.xcconfig */;
+			baseConfigurationReference = 13BA98BF844B905A6D678D99 /* Pods-ipatool.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-l\"Pods-SSZipArchive\"",
-					"-l\"z\"",
-					"-lssl",
-					"-lcrypto",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -732,7 +722,7 @@
 		};
 		F829F4BB1A178FAA001A34A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3DE8BCB58EC4E3B1D9903F1 /* Pods-ipatool-ipatoolTests.debug.xcconfig */;
+			baseConfigurationReference = DB21367DF2C02A87DC9793B0 /* Pods-ipatool-ipatoolTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -746,13 +736,6 @@
 				);
 				INFOPLIST_FILE = ipatoolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-l\"Pods-SSZipArchive\"",
-					"-l\"z\"",
-					"-lssl",
-					"-lcrypto",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -762,7 +745,7 @@
 		};
 		F829F4BC1A178FAA001A34A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 728F86A7347155B16F60D471 /* Pods-ipatool-ipatoolTests.release.xcconfig */;
+			baseConfigurationReference = 66700EB0B04EC85B6B453287 /* Pods-ipatool-ipatoolTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -772,13 +755,6 @@
 				);
 				INFOPLIST_FILE = ipatoolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-l\"Pods-SSZipArchive\"",
-					"-l\"z\"",
-					"-lssl",
-					"-lcrypto",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ipatool-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
