@@ -1,7 +1,10 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '6.0'
 
-source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-pod 'SSZipArchive', '~> 0.3.1', :inhibit_warnings => true
-link_with 'ipatool', 'ipatoolTests'
+target 'ipatool' do
+    pod 'SSZipArchive', '~> 2.0'
+
+    target 'ipatoolTests'
+end

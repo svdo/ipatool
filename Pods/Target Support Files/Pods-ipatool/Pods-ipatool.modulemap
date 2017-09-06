@@ -1,0 +1,6 @@
+framework module Pods_ipatool {
+  umbrella header "Pods-ipatool-umbrella.h"
+
+  export *
+  module * { export * }
+}

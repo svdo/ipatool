@@ -1,10 +1,12 @@
 PODS:
-  - SSZipArchive (0.3.3)
+  - SSZipArchive (2.0.4)
 
 DEPENDENCIES:
-  - SSZipArchive (~> 0.3.1)
+  - SSZipArchive (~> 2.0)
 
 SPEC CHECKSUMS:
-  SSZipArchive: 2cf2a6d3ac9f03252b7d96f93728b9b983be9afb
+  SSZipArchive: c77fc6ec8194f4e6d57876da1348e46cd63b90ba
 
-COCOAPODS: 0.38.1
+PODFILE CHECKSUM: a7b24a3fd523942a9d4f94de98da0a3521be8ff9
+
+COCOAPODS: 1.3.1
