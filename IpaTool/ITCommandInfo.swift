@@ -10,7 +10,7 @@ import Foundation
 
 class ITCommandInfo : ITCommand
 {
-    override func execute(args: [String]) -> String {
+    override func execute(_ args: [String]) -> String {
         let ipa = ITIpa()
         let (success,error) = ipa.load(args[0])
 
@@ -33,18 +33,18 @@ class ITCommandInfo : ITCommand
                 "\n" +
                 "Provisioning:\n" +
                 "  Name:                " + ipa.provisioningProfile!.provisioningName()! + "\n" +
-                "  Expiration:          " + formatDate(ipa.provisioningProfile!.expirationDate()!) + "\n" +
+                "  Expiration:          " + formatDate(ipa.provisioningProfile!.expirationDate()! as Date) + "\n" +
                 "  App ID name:         " + ipa.provisioningProfile!.appIdName()! + "\n" +
                 "  Team:                " + ipa.provisioningProfile!.teamName()! + "\n";
         }
         else {
-            return "Error: " + error
+            return "Error: " + (error ?? "(nil)")
         }
     }
     
-    func formatDate(date:NSDate) -> String {
-        let df = NSDateFormatter()
+    func formatDate(_ date:Date) -> String {
+        let df = DateFormatter()
         df.dateFormat = "EEE MMM d HH:mm:ss v yyyy"
-        return df.stringFromDate(date)
+        return df.string(from: date)
     }
 }

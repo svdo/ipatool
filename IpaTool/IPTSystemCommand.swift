@@ -14,11 +14,11 @@ class IPTSystemCommand
     var standardOutput:String? = nil
     var workingDirectory:String? = nil
     
-    func execute(cmd:String, _ args:[String] = [], _ env:[String:String] = [:]) -> Bool {
-        let stdOutPipe = NSPipe()
+    func execute(_ cmd:String, _ args:[String] = [], _ env:[String:String] = [:]) -> Bool {
+        let stdOutPipe = Pipe()
         let stdOut = stdOutPipe.fileHandleForReading
         
-        let task = NSTask()
+        let task = Process()
         task.launchPath = cmd
         if args.count > 0 {
             task.arguments = args
@@ -33,12 +33,12 @@ class IPTSystemCommand
         task.launch()
 
         let stdOutData = NSMutableData()
-        while (task.running) {
-            stdOutData.appendData(stdOut.readDataToEndOfFile())
+        while (task.isRunning) {
+            stdOutData.append(stdOut.readDataToEndOfFile())
         }
-        stdOutData.appendData(stdOut.readDataToEndOfFile())
+        stdOutData.append(stdOut.readDataToEndOfFile())
         stdOut.closeFile()
-        standardOutput = NSString(data:stdOutData, encoding:NSUTF8StringEncoding) as String?
+        standardOutput = NSString(data:stdOutData as Data, encoding:String.Encoding.utf8.rawValue) as String?
         
         exitCode = task.terminationStatus
         return exitCode == 0

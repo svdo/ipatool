@@ -10,7 +10,7 @@ import Foundation
 
 class ITCommand
 {
-    func execute(args:[String]) -> String
+    func execute(_ args:[String]) -> String
     {
         fatalError("abstract method")
     }

@@ -16,8 +16,8 @@ class ITSecCertificate
         _secCertificate = secCertificate
     }
     
-    init(_ data:NSData) {
-        _secCertificate = SecCertificateCreateWithData(nil, data)!
+    init(_ data:Data) {
+        _secCertificate = SecCertificateCreateWithData(nil, data as CFData)!
     }
     
     var commonName : String? {

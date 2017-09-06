@@ -12,7 +12,7 @@ class ITCMSDecoder
 {
     var cmsDecoder:CMSDecoder!
     private var _decodedString:String?
-    private var _decodedData:NSData?
+    private var _decodedData:Data?
     
     init()
     {
@@ -22,11 +22,11 @@ class ITCMSDecoder
         cmsDecoder = d
     }
     
-    func decodeData(data:NSData)
+    func decodeData(_ data:Data)
     {
-        let l = data.length
-        let bytes = UnsafeMutablePointer<Void>.alloc(l)
-        data.getBytes(bytes, length:l)
+        let l = data.count
+        var bytes = [UInt8](repeating: 0, count: l)
+        (data as NSData).getBytes(&bytes, length:l)
         var status = CMSDecoderUpdateMessage(cmsDecoder, bytes, Int(l))
         assert(status == noErr)
         
@@ -42,8 +42,8 @@ class ITCMSDecoder
         let status = CMSDecoderCopyContent(cmsDecoder, &data)
         assert(status == noErr)
         if let d = data {
-            _decodedData = d as NSData
-            _decodedString = NSString(data:_decodedData!, encoding: NSUTF8StringEncoding) as String?
+            _decodedData = d as Data
+            _decodedString = NSString(data:_decodedData!, encoding: String.Encoding.utf8.rawValue) as String?
         }
     }
     

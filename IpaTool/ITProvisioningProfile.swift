@@ -12,14 +12,14 @@ class ITProvisioningProfile
 {
     var provisioningProfile:NSDictionary?
     
-    init(_ data:NSData)
+    init(_ data:Data)
     {
-        provisioningProfile = (try? NSPropertyListSerialization.propertyListWithData(data, options: [NSPropertyListMutabilityOptions.Immutable], format: nil)) as? NSDictionary
+        provisioningProfile = (try? PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.MutabilityOptions(), format: nil)) as? NSDictionary
     }
     
-    class func loadFromPath(path:String) -> ITProvisioningProfile?
+    class func loadFromPath(_ path:String) -> ITProvisioningProfile?
     {
-        let provisioningData = NSData(contentsOfFile:path)
+        let provisioningData = try? Data(contentsOf: URL(fileURLWithPath: path))
         if provisioningData == nil {
             return nil
         }
@@ -29,11 +29,11 @@ class ITProvisioningProfile
         return decoder.provisioningProfile()
     }
     
-    func subjectCNForCertificateAtIndex(i:Int) -> String?
+    func subjectCNForCertificateAtIndex(_ i:Int) -> String?
     {
         if let prof = provisioningProfile
         {
-            var certs:[NSData] = prof["DeveloperCertificates"] as! [NSData]
+            var certs:[Data] = prof["DeveloperCertificates"] as! [Data]
             let cert = certs[i]
             let secCert:ITSecCertificate = ITSecCertificate(cert)
             return secCert.subject
@@ -48,9 +48,9 @@ class ITProvisioningProfile
         return subjectCNForCertificateAtIndex(0)
     }
     
-    func expirationDate() -> NSDate?
+    func expirationDate() -> Date?
     {
-         return provisioningProfile!["ExpirationDate"] as? NSDate
+         return provisioningProfile!["ExpirationDate"] as? Date
     }
     
     func provisioningName() -> String?

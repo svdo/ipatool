@@ -16,7 +16,7 @@ class ITMain
     
     let commandFactory : ITCommandFactory = ITCommandFactory()
 
-    func run(args:[String]) -> String
+    func run(_ args:[String]) -> String
     {
         let command = commandForArguments(args)
         var output:String
@@ -29,7 +29,7 @@ class ITMain
         return output
     }
     
-    func commandForArguments(args:[String]) -> ITCommand?
+    func commandForArguments(_ args:[String]) -> ITCommand?
     {
         var commandName = ""
         switch (args.count) {

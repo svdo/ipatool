@@ -34,30 +34,30 @@ class ITIpa
                 default: continue
                 }
             }
-            return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            return result.trimmingCharacters(in: CharacterSet.whitespaces)
         }
     }
     var provisioningProfile:ITProvisioningProfile? = nil
-    private var infoPlistContents:NSDictionary? = nil
+    fileprivate var infoPlistContents:NSDictionary? = nil
     
     deinit
     {
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(extractedIpaPath)
+            try FileManager.default.removeItem(atPath: extractedIpaPath)
         } catch _ {
         }
     }
     
-    func load(path:String) -> (result:Bool, error:String!)
+    func load(_ path:String) -> (result:Bool, error:String?)
     {
         let tempDirUrl = ITIpa.createTempDir()
-        extractedIpaPath = tempDirUrl.path!
+        extractedIpaPath = tempDirUrl!.path
 
-        if !NSFileManager.defaultManager().isReadableFileAtPath(path) {
+        if !FileManager.default.isReadableFile(atPath: path) {
             return (false, "File not found: \(path)")
         }
         
-        let ok = SSZipArchive.unzipFileAtPath(path, toDestination: extractedIpaPath)
+        let ok = SSZipArchive.unzipFile(atPath: path, toDestination: extractedIpaPath)
         if !ok {
             return (false, "Failed to extract \(path)")
         }
@@ -69,15 +69,15 @@ class ITIpa
         return (true, nil)
     }
     
-    class func createTempDir() -> NSURL!
+    class func createTempDir() -> URL!
     {
         let systemTempDir = NSTemporaryDirectory()
-        let uniqueId = NSProcessInfo.processInfo().globallyUniqueString
-        let tempDirPath = (systemTempDir as NSString).stringByAppendingPathComponent(uniqueId)
-        let tempDirUrl = NSURL.fileURLWithPath(tempDirPath, isDirectory: true)
+        let uniqueId = ProcessInfo.processInfo.globallyUniqueString
+        let tempDirPath = (systemTempDir as NSString).appendingPathComponent(uniqueId)
+        let tempDirUrl = URL(fileURLWithPath: tempDirPath, isDirectory: true)
         
         do {
-            try NSFileManager.defaultManager().createDirectoryAtURL(tempDirUrl, withIntermediateDirectories: true, attributes: nil)
+            try FileManager.default.createDirectory(at: tempDirUrl, withIntermediateDirectories: true, attributes: nil)
         } catch let e {
             assert(false, "Failed to create temp dir: \(e)")
             return nil
@@ -86,24 +86,24 @@ class ITIpa
         return tempDirUrl
     }
     
-    func extractAppName(extractedIpaPath:String)
+    func extractAppName(_ extractedIpaPath:String)
     {
-        let payloadDir:String = (extractedIpaPath as NSString).stringByAppendingPathComponent("Payload")
-        let contents = (try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(payloadDir)) 
+        let payloadDir:String = (extractedIpaPath as NSString).appendingPathComponent("Payload")
+        let contents = (try! FileManager.default.contentsOfDirectory(atPath: payloadDir)) 
         appName = contents[0]
-        appPath = (payloadDir as NSString).stringByAppendingPathComponent(appName)
+        appPath = (payloadDir as NSString).appendingPathComponent(appName)
     }
     
-    func extractInfoPlist(extractedIpaPath:String)
+    func extractInfoPlist(_ extractedIpaPath:String)
     {
-        let infoPlistPath = (appPath as NSString).stringByAppendingPathComponent("Info.plist")
+        let infoPlistPath = (appPath as NSString).appendingPathComponent("Info.plist")
         infoPlistContents = NSDictionary(contentsOfFile: infoPlistPath)
         assert(infoPlistContents != nil)
     }
     
-    func extractProvisioningProfile(extractedIpaPath:String)
+    func extractProvisioningProfile(_ extractedIpaPath:String)
     {
-        let inputFileName = (appPath as NSString).stringByAppendingPathComponent("embedded.mobileprovision")
+        let inputFileName = (appPath as NSString).appendingPathComponent("embedded.mobileprovision")
         provisioningProfile = ITProvisioningProfile.loadFromPath(inputFileName)
     }
 

@@ -11,7 +11,7 @@ import Foundation
 class ITCommandUsage : ITCommand
 {
     
-    override func execute(args:[String]) -> String
+    override func execute(_ args:[String]) -> String
     {
         return "ipatool version \(ITMain.version()). Copyright (c) 2014 Stefan van den Oord\n" +
             "\n" +

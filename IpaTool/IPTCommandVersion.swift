@@ -10,7 +10,7 @@ import Foundation
 
 class IPTCommandVersion : ITCommand
 {
-    override func execute(args: [String]) -> String {
+    override func execute(_ args: [String]) -> String {
         let ipa = ITIpa()
         let (success,error) = ipa.load(args[0])
         
@@ -18,7 +18,7 @@ class IPTCommandVersion : ITCommand
             return ipa.bundleShortVersionString;
         }
         else {
-            return "Error: " + error
+            return "Error: " + (error ?? "(nil)")
         }
     }
 }
