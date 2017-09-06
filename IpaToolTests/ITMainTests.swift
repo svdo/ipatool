@@ -24,14 +24,14 @@ class ITMainTests: XCTestCase {
     func testShowsUsageWithoutParameters()
     {
         let output = ipaTool.run([])
-        let range = output.lowercaseString.rangeOfString("usage")
+        let range = output.lowercased().range(of: "usage")
         XCTAssertTrue(range != nil)
     }
     
     func testShowsUsageWithInvalidParameters()
     {
         let output = ipaTool.run(["some_ipa", "invalid_parameter"])
-        let range = output.lowercaseString.rangeOfString("usage")
+        let range = output.lowercased().range(of: "usage")
         XCTAssertTrue(range != nil)
     }
     

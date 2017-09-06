@@ -11,8 +11,8 @@ import Foundation
 class ITCMSDecoder
 {
     var cmsDecoder:CMSDecoder!
-    private var _decodedString:String?
-    private var _decodedData:Data?
+    fileprivate var _decodedString:String?
+    fileprivate var _decodedData:Data?
     
     init()
     {

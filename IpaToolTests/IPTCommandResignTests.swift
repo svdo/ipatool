@@ -21,7 +21,7 @@ class IPTCommandResignTests: XCTestCase {
         resignCommand = IPTCommandResign()
         resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(resignedPath)
+            try FileManager.default.removeItem(atPath: resignedPath)
         } catch _ {
         }
         output = resignCommand.execute([config.ipaFullPath!, config.resignProvisioningProfilePath])
@@ -29,20 +29,20 @@ class IPTCommandResignTests: XCTestCase {
 
     func testCorrectResignFilePath()
     {
-        let appNameWithoutExtension = (config.appName as NSString).stringByDeletingPathExtension
-        let expectedPath:String = ((config.ipaFullPath! as NSString).stringByDeletingLastPathComponent as NSString).stringByAppendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
+        let appNameWithoutExtension = (config.appName as NSString).deletingPathExtension
+        let expectedPath:String = ((config.ipaFullPath! as NSString).deletingLastPathComponent as NSString).appendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
         XCTAssertEqual(resignCommand.resignedPath, expectedPath)
     }
 
     func testReturnsExpectedOutput()
     {
         let bundleId = config.bundleIdentifier
-        let appNameWithoutExtension = (config.appName as NSString).stringByDeletingPathExtension
-        let expectedPath:String = ((config.ipaFullPath! as NSString).stringByDeletingLastPathComponent as NSString).stringByAppendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
+        let appNameWithoutExtension = (config.appName as NSString).deletingPathExtension
+        let expectedPath:String = ((config.ipaFullPath! as NSString).deletingLastPathComponent as NSString).appendingPathComponent("\(appNameWithoutExtension)_resigned.ipa")
         let expectedOutputFirstLine = "\(config.appName): replacing existing signature"
         let expectedOutputLastLine = "Resigned ipa: \(expectedPath)"
         
-        let lines = output.componentsSeparatedByString("\n")
+        let lines = output.components(separatedBy: "\n")
         XCTAssertEqual(lines[0], expectedOutputFirstLine)
         XCTAssertEqual(lines[lines.count-2], expectedOutputLastLine)
     }
@@ -74,7 +74,7 @@ class IPTCommandResignTests_preconditions: XCTestCase {
         XCTAssertNotNil(path)
         XCTAssertEqual("codesign_allocate", (path! as NSString).lastPathComponent)
 
-        let isExecutable = NSFileManager.defaultManager().isExecutableFileAtPath(path!)
+        let isExecutable = FileManager.default.isExecutableFile(atPath: path!)
         XCTAssertTrue(isExecutable)
     }
 
@@ -123,7 +123,7 @@ class IPTCommandResignTests_preconditions: XCTestCase {
     func testExecuteCallsValidate()
     {
         let result = resignCommand.execute([])
-        let range = result.rangeOfString("error", options:NSStringCompareOptions.CaseInsensitiveSearch)
+        let range = result.range(of: "error", options:NSString.CompareOptions.caseInsensitive)
         XCTAssertFalse(range == nil)
     }
 }
@@ -141,7 +141,7 @@ class IPTCommandResignTests_newBundleIdentifier: XCTestCase {
         resignCommand = IPTCommandResign()
         resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(resignedPath)
+            try FileManager.default.removeItem(atPath: resignedPath)
         } catch _ {
         }
         output = resignCommand.execute([config.ipaFullPath!, config.resignProvisioningProfilePath, config.resignedBundleIdentifier])
@@ -171,7 +171,7 @@ class IPTCommandResignTests_compatibilityMode: XCTestCase {
         resignCommand = IPTCommandResign()
         resignedPath = IPTCommandResign.resignedPathForPath(config.ipaFullPath!)
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(resignedPath)
+            try FileManager.default.removeItem(atPath: resignedPath)
         } catch _ {
         }
     }

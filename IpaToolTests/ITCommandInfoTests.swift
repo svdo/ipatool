@@ -22,13 +22,13 @@ class ITCommandInfoTests: XCTestCase {
     
     func testReturnsErrorWithInvalidIpa() {
         let result = infoCommand.execute(["bla"])
-        let range = result.rangeOfString("error", options:NSStringCompareOptions.CaseInsensitiveSearch)
+        let range = result.range(of: "error", options:NSString.CompareOptions.caseInsensitive)
         XCTAssertFalse(range == nil)
     }
     
     func testReturnsNoErrorWithValidIpa() {
         let result = infoCommand.execute([config.ipaFullPath!])
-        let range = result.rangeOfString("error", options:NSStringCompareOptions.CaseInsensitiveSearch)
+        let range = result.range(of: "error", options:NSString.CompareOptions.caseInsensitive)
         XCTAssertTrue(range == nil)
     }
     
@@ -44,7 +44,7 @@ class ITCommandInfoTests: XCTestCase {
         let line9 = "\n"
         let line10 = "Provisioning:\n"
         let line11 = "  Name:                \(config.provisioningName)\n"
-        let line12 = "  Expiration:          \(infoCommand.formatDate(config.provisioningExpiration!))\n"
+        let line12 = "  Expiration:          \(infoCommand.formatDate(config.provisioningExpiration! as Date))\n"
         let line13 = "  App ID name:         \(config.provisioningAppIdName)\n"
         let line14 = "  Team:                \(config.provisioningTeam)\n"
         let expectedOutput = line1+line2+line3+line4+line5+line6+line7+line8+line9+line10+line11+line12+line13+line14

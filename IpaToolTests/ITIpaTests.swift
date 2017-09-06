@@ -12,7 +12,7 @@ import SSZipArchive
 class ITIpaTests_testConfig: XCTestCase {
 
     var config = ITTestConfig()
-    var tempDirUrl:NSURL!
+    var tempDirUrl:URL!
     
     override func setUp() {
         config.load()
@@ -21,7 +21,7 @@ class ITIpaTests_testConfig: XCTestCase {
     
     override func tearDown() {
         do {
-            try NSFileManager.defaultManager().removeItemAtURL(tempDirUrl)
+            try FileManager.default.removeItem(at: tempDirUrl)
         } catch {}
     }
     
@@ -39,7 +39,7 @@ class ITIpaTests_testConfig: XCTestCase {
 
     func testExtractIpa()
     {
-        let ok = SSZipArchive.unzipFileAtPath(config.ipaFullPath!, toDestination: tempDirUrl?.path!)
+        let ok = SSZipArchive.unzipFile(atPath: config.ipaFullPath!, toDestination: (tempDirUrl?.path)!)
         XCTAssertTrue(ok)
     }
     
@@ -48,7 +48,7 @@ class ITIpaTests_testConfig: XCTestCase {
 class ITIpaTests: XCTestCase
 {
     var config = ITTestConfig()
-    var tempDirUrl:NSURL!
+    var tempDirUrl:URL!
     var ipa:ITIpa!
 
     override func setUp() {
@@ -63,7 +63,7 @@ class ITIpaTests: XCTestCase
     
     override func tearDown() {
         do {
-            try NSFileManager.defaultManager().removeItemAtURL(tempDirUrl)
+            try FileManager.default.removeItem(at: tempDirUrl)
         } catch {}
     }
 
@@ -100,7 +100,7 @@ class ITIpaTests: XCTestCase
     func testReadProvisioningInformation()
     {
         let provisioningProfile = ipa.provisioningProfile!
-        XCTAssertEqual(config.provisioningExpiration!, provisioningProfile.expirationDate()!)
+        XCTAssertEqual(config.provisioningExpiration! as Date, provisioningProfile.expirationDate()!)
         XCTAssertEqual(config.provisioningName, provisioningProfile.provisioningName()!)
         XCTAssertEqual(config.provisioningAppIdName, provisioningProfile.appIdName()!)
         XCTAssertEqual(config.provisioningTeam, provisioningProfile.teamName()!)

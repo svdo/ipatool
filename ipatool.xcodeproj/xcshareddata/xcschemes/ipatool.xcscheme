@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
                BuildableName = "ipatool"
                BlueprintName = "ipatool"
-               ReferencedContainer = "container:ipatool.xcodeproj">
+               ReferencedContainer = "container:IpaTool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
-            ReferencedContainer = "container:ipatool.xcodeproj">
+            ReferencedContainer = "container:IpaTool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
-            ReferencedContainer = "container:ipatool.xcodeproj">
+            ReferencedContainer = "container:IpaTool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -107,7 +107,7 @@
             BlueprintIdentifier = "F829F4A61A178F8C001A34A7"
             BuildableName = "ipatool"
             BlueprintName = "ipatool"
-            ReferencedContainer = "container:ipatool.xcodeproj">
+            ReferencedContainer = "container:IpaTool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
