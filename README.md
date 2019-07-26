@@ -1,3 +1,6 @@
+> I'm archiving this repo. After all these years this is probably not the best way to do
+> things anymore. If you disagree I'd be happy to put a link to your fork here.
+
 ipatool
 =======
 
